@@ -3,7 +3,7 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-09-07T05:54:46Z`; 1526 nodes, 3923 edges). Run and analytic-evidence details live in the
+`2026-09-07T06:15:32Z`; 1535 nodes, 3938 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
 verifies stored artifact and policy hashes; use the current validator output for counts.
@@ -23,6 +23,8 @@ the full paired Ward defect converges to the Green face functional with an expli
 bound. A normalized smooth witness gives -1/(48*pi^2); interior, common Dirichlet and common real
 Robin pairs give zero. The analytic distribution proof is separate from the 18 symbolic checks and
 five finite Lean boundary-jet proofs. Other faces, physical products and full BFV sources remain open.
+
+The follow-up [Ward-domain result](../../cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN.md) separates that local flux cancellation from a stronger all-ghost same-smooth-space BFV-domain ansatz. Its complex Robin, primary and full Weyl-jet controls show that $H$ fails to preserve this ansatz, while $p_N$ preservation requires $\partial_N r=0$. This is an inference/domain diagnostic only: it does not rule out self-adjoint Robin extensions, differently graded domains, a quantum CPT lift, or a physical state.
 
 Read the [existing finite-width report](../../cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md)
 first. Its nonzero defect/Gaussian quotient alone does not answer the limit questions. The new

@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T05:54:46Z",
+  "updated_at_utc": "2026-09-07T06:15:32Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1727,7 +1727,7 @@
     {
       "id": "reading-path:starobinsky-seam-ward-regulator-removal",
       "title": "Gaussian 접합: 경계상태에 작용시킨 잔여항과 규제 제거",
-      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 기존 모든 양의 폭의 exact nonclosure 뒤에, a=2 면에만 닿는 실수 smooth compact test pairing의 O(sqrt(tau)) 수렴과 Green 경계형식 결과가 연결된다. 정규화 예시는 -1/(48*pi^2), interior/common Dirichlet/real Robin 쌍은 0이다. 첫 두 질문은 한 면만 부분 해소됐고 physical BFV state/product, 다른 domain과 full source는 계속 미해결이다. 이 경로는 원래 cycle, 물리 CPT 위반, 빅뱅 또는 TOE 증거가 아니다.",
+      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다.",
       "nodes": [
         "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
         "scope:starobinsky-gaussian-seam-ward-flat-core",
@@ -1738,6 +1738,11 @@
         "scope:starobinsky-seam-ward-a2-compact-test-limit",
         "evidence:starobinsky-ward-face-limit-result",
         "artifact:starobinsky-ward-face-limit-report",
+        "concept:starobinsky-local-ward-cancellation-versus-invariant-bfv-common-test-space",
+        "claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT",
+        "scope:starobinsky-ward-domain-all-ghost-smooth-robin-ansatz",
+        "evidence:starobinsky-ward-domain-result",
+        "artifact:starobinsky-ward-domain-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16669,8 +16674,8 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "A declared real compact-smooth test pairing is now resolved for the fixed-box a=2 face: the full Ward pairing tends to the Green face functional with an explicit O(sqrt(tau)) bound. A normalized test witness has a nonzero limit, while interior and common Dirichlet/real Robin pairs have zero limits. Other boundary test spaces, complex or physical products and joint regulator-removal orders remain open; the finite-width contradiction is unchanged.",
-      "state": "OPEN_PARTIAL_A2_REAL_COMPACT_TEST_LIMIT_RESOLVED_PHYSICAL_STATES_OPEN",
+      "summary": "A declared real compact-smooth a=2 pairing is resolved, and the same-space all-ghost smooth Robin/Dirichlet ansatz is now shown not invariant under the declared BFV H and p_N. These are local diagnostics only: complex/physical products, a closed graded domain, a quantum CPT lift and joint regulator-removal orders remain open; the finite-width contradiction is unchanged.",
+      "state": "OPEN_PARTIAL_A2_REAL_TEST_AND_LOCAL_ALL_GHOST_DOMAIN_ANSATZ_DIAGNOSTICS_PHYSICAL_STATES_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
         "The declared homogeneous Starobinsky Weyl operator, graded kernel and flat-density convention; compare the same model and pairing throughout",
@@ -16825,7 +16830,109 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT.md",
       "sha256": "42355545345a1b3727847da739aaebd134e574f9690b32e4f71bd3c14b7d56a1"
-    }
+    },
+{
+    "id": "concept:starobinsky-local-ward-cancellation-versus-invariant-bfv-common-test-space",
+    "type": "concept",
+    "title": "Local Ward-flux cancellation versus an invariant all-ghost BFV common test space",
+    "summary": "A boundary bilinear flux can cancel for common Robin or Dirichlet traces while the same first-order boundary condition fails to be preserved by H or p_N on every ghost coefficient. This distinguishes a paired Ward cancellation from the stronger declared all-ghost common-domain ansatz; it is not a self-adjointness theorem or a physical BRST construction.",
+    "state": "SCOPED_BOUNDARY_DOMAIN_ANSATZ_DIAGNOSTIC"
+},
+{
+    "id": "scope:starobinsky-ward-domain-all-ghost-smooth-robin-ansatz",
+    "type": "scope",
+    "title": "Starobinsky all-ghost smooth Robin/Dirichlet test-space ansatz scope",
+    "summary": "One fixed a=2 local complex Robin/Dirichlet condition in the flat-density Weyl chart, imposed on every coefficient of D_r^sm tensor Lambda(c,rho), with smooth compact tests separated from all other box faces.",
+    "state": "DECLARED_SUPPORTING_LOCAL_SMOOTH_DOMAIN_ANSATZ_SCOPE",
+    "includes": [
+        "The declared Weyl H, p_N=-i partial_N and Omega=cH+rho p_N on smooth compact ambient tests near the a=2 cutoff face",
+        "Complex Robin Green-flux classification, kinematic conjugation, p_N product rule, full H normal-jet calculation and explicit smooth cubic/quadratic witnesses",
+        "The algebraically invariant conditional set D_{r,infinity}^sm only as a possible smooth test set, including its L2-density through interior compact tests"
+    ],
+    "excludes": [
+        "A closed or self-adjoint Robin/Dirichlet realization, graph-core theorem, nonzero face-trace theorem or physical Hilbert product",
+        "A full quantum CPT lift, BFV cohomology/anomaly conclusion, sewn bulk source, original relative cycle, G1 closure or physical/TOE promotion"
+    ]
+},
+{
+    "id": "claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT",
+    "type": "claim",
+    "claim_id": "STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT",
+    "title": "The all-ghost same-smooth-space Robin/Dirichlet ansatz is not invariant",
+    "statement": "For the declared all-ghost same-smooth-space Robin/Dirichlet ansatz D_r^sm tensor Lambda(c,rho), local Ward-flux cancellation does not imply invariance under Omega=cH+rho p_N: p_N preservation requires partial_N r=0, and H fails to preserve D_r^sm for explicit smooth cubic Robin and quadratic Dirichlet witnesses. This does not rule out self-adjoint extensions or differently graded domains.",
+    "summary": "Supported as a scoped negative result by the full Weyl normal-jet formula, a real lapse-dependent Robin counterexample, explicit smooth H witnesses, 17 symbolic checks and five finite Lean jet proofs. It identifies a missing common-domain input for this ansatz only.",
+    "epistemic_state": "SUPPORTED",
+    "state": "SUPPORTED_SCOPED_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_NONINVARIANCE"
+},
+{
+    "id": "evidence:starobinsky-ward-domain-result",
+    "type": "evidence",
+    "title": "Starobinsky local Ward-domain evidence",
+    "summary": "One clean run checks complex Robin flux, the primary product rule, the actual Weyl H boundary-jet formula and smooth counterexamples; Lean checks five finite complex/real jet identities. The raw result is the complete check ledger.",
+    "state": "VALID_RUN_SYMBOLIC_AND_FINITE_LEAN_DOMAIN_CONTROLS",
+    "observed_status": "SCOPED_LOCAL_WARD_CANCELLATION_DOES_NOT_DEFINE_INVARIANT_BFV_TEST_SPACE",
+    "check_ids": [
+        "symbolic.checks.complex_Robin_flux_formula",
+        "symbolic.checks.primary_boundary_product_rule",
+        "symbolic.checks.full_actual_Weyl_Robin_jet_formula",
+        "symbolic.checks.cubic_H_Robin_obstruction",
+        "symbolic.checks.quadratic_H_Dirichlet_obstruction",
+        "lean.theorems.CptSewing.WardDomain.robinResidual_cubic_zerojet_nonzero"
+    ]
+},
+{
+    "id": "artifact:starobinsky-ward-domain-runner",
+    "type": "artifact",
+    "title": "Starobinsky Ward-domain symbolic and Lean runner",
+    "summary": "Clean bounded runner for the complex Robin, primary and full Weyl jet controls; it does not construct a closed operator or physical BFV domain.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "runner",
+    "path": "cpt_temporal_folded_susy/starobinsky_ward_domain.py",
+    "sha256": "aa0dc121bc33ae0ad73803ed1e5a98196e3f7b0922e8fac7cb26778e2193b6f3",
+    "introduced_in_commit": "b48948bed6ef1efe1200d36acc9ed10c8574ed58"
+},
+{
+    "id": "artifact:starobinsky-ward-domain-derivation",
+    "type": "artifact",
+    "title": "Analytic Starobinsky Ward-domain derivation",
+    "summary": "Pinned same-space all-ghost ansatz, complex Robin classification, primary/H jet obstruction, smooth witnesses and scoped conditional repair discussion.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "analytic_derivation",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN_DERIVATION.md",
+    "sha256": "a7a62e4084554eba5f1dd5b9100903f1ea689c448c9952062d69686daa2f098f",
+    "introduced_in_commit": "b48948bed6ef1efe1200d36acc9ed10c8574ed58"
+},
+{
+    "id": "artifact:starobinsky-ward-domain-lean",
+    "type": "artifact",
+    "title": "Finite complex Robin and real Weyl-jet Lean proofs",
+    "summary": "Five finite complex Green-flux and real normal-jet theorems, with audited standard Lean axioms only; no operator-domain theorem.",
+    "state": "TRACKED_COMMITTED_SOURCE",
+    "artifact_kind": "lean_source",
+    "path": "formal/cpt_sewing/CptSewing/WardDomain.lean",
+    "sha256": "95e11db1ed279bb9bcf4ecb753705e460fcacb8c73d784690093ec3f8aed9a66",
+    "introduced_in_commit": "b48948bed6ef1efe1200d36acc9ed10c8574ed58"
+},
+{
+    "id": "artifact:starobinsky-ward-domain-result",
+    "type": "artifact",
+    "title": "Starobinsky Ward-domain raw result",
+    "summary": "Raw SSOT for the 17 symbolic checks, five Lean theorem audits, exact pins and scoped output.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "result",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN_RESULT.json",
+    "sha256": "929bc9d5acdf583e7335efa57255a2cca48665dced009b3fe4f6e35c9305c5e9"
+},
+{
+    "id": "artifact:starobinsky-ward-domain-report",
+    "type": "artifact",
+    "title": "Starobinsky Ward-domain report",
+    "summary": "Completed scoped result, complex Robin/all-ghost common-test-space distinction, smooth counterexamples, finite Lean controls and explicit domain exclusions.",
+    "state": "TRACKED_SCOPED_RESULT",
+    "artifact_kind": "report",
+    "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN.md",
+    "sha256": "97d7c7282d5ff5ce7de944b266d40f729111961d85ed4fa72aa9465b7ea82b99"
+}
   ],
   "edges": [
     {
@@ -37293,7 +37400,22 @@
     {"id":"edge:3924","from":"evidence:starobinsky-ward-face-limit-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-ward-face-limit-lean","note":"Lean proves finite boundary-jet facts only."},
     {"id":"edge:3925","from":"evidence:starobinsky-ward-face-limit-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-gaussian-seam-ward-result","note":"Reuses the same operator/kernel convention and finite-width result; this dependency is not independent physical evidence."},
     {"id":"edge:3926","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Narrows the existing question by resolving one real compact-test topology; other pairings and physical states remain open."},
-    {"id":"edge:3927","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-cutoff-boundary-limit","note":"Narrows the existing question to other faces and domain/joint-limit choices after the a=2 combined functional is resolved; no automatic successor run."}
+    {"id":"edge:3927","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-cutoff-boundary-limit","note":"Narrows the existing question to other faces and domain/joint-limit choices after the a=2 combined functional is resolved; no automatic successor run."},
+    {"id":"edge:3928","from":"concept:starobinsky-local-ward-cancellation-versus-invariant-bfv-common-test-space","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"One supporting boundary-domain distinction only; it does not define a quantum CPT source."},
+    {"id":"edge:3929","from":"concept:starobinsky-local-ward-cancellation-versus-invariant-bfv-common-test-space","relation":"CONTRASTS_WITH","to":"concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux","note":"The previous paired flux cancellation is weaker than the new declared same-space all-ghost invariance condition."},
+    {"id":"edge:3930","from":"scope:starobinsky-ward-domain-all-ghost-smooth-robin-ansatz","relation":"PART_OF","to":"programme:cpt-temporal-folded-susy","note":"The scope remains a local supporting domain diagnostic and excludes source/cycle promotion."},
+    {"id":"edge:3931","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"ABOUT","to":"concept:starobinsky-local-ward-cancellation-versus-invariant-bfv-common-test-space"},
+    {"id":"edge:3932","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"VALID_WITHIN","to":"scope:starobinsky-ward-domain-all-ghost-smooth-robin-ansatz"},
+    {"id":"edge:3933","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-ward-domain-result","polarity":"SUPPORTS","note":"The evidence contradicts invariance of this named all-ghost same-smooth-space ansatz only; it is not a self-adjointness or general BFV-domain no-go."},
+    {"id":"edge:3934","from":"evidence:starobinsky-ward-domain-result","relation":"PART_OF","to":"concept:starobinsky-local-ward-cancellation-versus-invariant-bfv-common-test-space"},
+    {"id":"edge:3935","from":"evidence:starobinsky-ward-domain-result","relation":"DEFINED_IN","to":"artifact:starobinsky-ward-domain-runner"},
+    {"id":"edge:3936","from":"evidence:starobinsky-ward-domain-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-ward-domain-derivation","note":"The analytic source fixes the ansatz, smooth counterexamples and exclusions."},
+    {"id":"edge:3937","from":"evidence:starobinsky-ward-domain-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-ward-domain-lean","note":"Lean proves finite jet identities only."},
+    {"id":"edge:3938","from":"evidence:starobinsky-ward-domain-result","relation":"RECORDED_IN","to":"artifact:starobinsky-ward-domain-result","note":"Raw result is the sole complete check ledger."},
+    {"id":"edge:3939","from":"evidence:starobinsky-ward-domain-result","relation":"DERIVED_FROM","to":"evidence:starobinsky-ward-face-limit-result","note":"Reuses the same local Weyl/box convention and preceding flux context; this is not independent physical evidence."},
+    {"id":"edge:3940","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Narrows the still-open state question: local flux cancellation does not by itself supply a closed graded test/domain or physical state; no automatic successor run."},
+    {"id":"edge:3941","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-ward-domain-report"},
+    {"id":"edge:3942","from":"claim:STAROBINSKY_ALL_GHOST_SMOOTH_ROBIN_DIRICHLET_ANSATZ_IS_NOT_INVARIANT","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","note":"The same-space domain test follows the paired a=2 flux result; it neither reverses that limit nor selects a closed domain."}
   ],
   "kg_bridges": [
     {

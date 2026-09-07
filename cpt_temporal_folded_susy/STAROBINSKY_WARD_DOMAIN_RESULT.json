@@ -1,0 +1,463 @@
+{
+  "schema": "ice-starobinsky-ward-domain/v1",
+  "status": "SCOPED_LOCAL_WARD_CANCELLATION_DOES_NOT_DEFINE_INVARIANT_BFV_TEST_SPACE",
+  "started_at_utc": "2026-09-07T06:10:51.905927+00:00",
+  "question": "Does local a=2 Ward cancellation define the same invariant smooth test space in every BFV ghost coefficient?",
+  "scope": "Supporting complex local boundary test-space ansatz with fixed Weyl operator",
+  "non_claim": "No self-adjoint-extension no-go, physical BRST anomaly, CPT lift, selected physical state or original cycle.",
+  "reproduction_command": "./ice run starobinsky_ward_domain",
+  "provenance": {
+    "source_commit": "b48948bed6ef1efe1200d36acc9ed10c8574ed58",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_ward_domain.py": {
+        "sha256": "aa0dc121bc33ae0ad73803ed1e5a98196e3f7b0922e8fac7cb26778e2193b6f3",
+        "bytes": 12040
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN_DERIVATION.md": {
+        "sha256": "a7a62e4084554eba5f1dd5b9100903f1ea689c448c9952062d69686daa2f098f",
+        "bytes": 8142
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT_RESULT.json": {
+        "sha256": "e4d922b054ee5d8ad448fef856f82dc0239d3ca405ee3430f4eb8f47e0976a92",
+        "bytes": 16372
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT_DERIVATION.md": {
+        "sha256": "5c09c5bfb9677cf02cec53a1657b3dda998097c88b733b4f4b30920ba211cd64",
+        "bytes": 8386
+      },
+      "formal/cpt_sewing/CptSewing/WardDomain.lean": {
+        "sha256": "95e11db1ed279bb9bcf4ecb753705e460fcacb8c73d784690093ec3f8aed9a66",
+        "bytes": 2438
+      },
+      "formal/cpt_sewing/ward-domain-proof-index.json": {
+        "sha256": "2b31c9e6af5ab28930beb38ad957f3d38d6342578f1c8e3be326ab2aad432176",
+        "bytes": 317
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "complex_Robin_flux_formula",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "imaginary_Robin_flux_coefficient",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "real_Robin_sesquilinear_cancellation",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "imaginary_Robin_unit_trace_counterexample",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "conjugation_maps_Robin_to_conjugate_Robin",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "primary_boundary_product_rule",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "formal_H_primary_commutator",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "lapse_dependent_real_Robin_input",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "lapse_dependent_real_Robin_primary_failure",
+        "group": "complex_and_primary",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "full_actual_Weyl_Robin_jet_formula",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "cubic_witness_satisfies_every_Robin_condition",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "cubic_H_value_zero",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "cubic_H_Robin_obstruction",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "quadratic_witness_satisfies_Dirichlet",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "quadratic_H_Dirichlet_obstruction",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "cubic_face_coeff_from_independent_jet_formula",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "cubic_obstruction_coefficient_positive",
+        "group": "normal_jet_obstruction",
+        "passed": true,
+        "value": "1/(8*pi**2)"
+      }
+    ],
+    "operator": {
+      "f": "-1/(24*pi**2*a)",
+      "b": "1/(4*pi**2*a**3)",
+      "W": "3*pi**2*a**3*(1 - exp(-sqrt(6)*phi/3))**2/2 - 6*pi**2*a + 1/(48*pi**2*a**3)",
+      "p_N": "-i partial_N",
+      "ordering_density": "Weyl, hbar=1, flat complex auxiliary pairing"
+    },
+    "ansatz": "D_r^sm tensor exterior(c,rho), same first-order boundary test space in every ghost coefficient",
+    "boundary": "B_r u=(partial_a-r(phi,N))u at a=2; compact support away from every other box face",
+    "classification": {
+      "all_trace_sesquilinear_zero": "iff r=conjugate(r)",
+      "kinematic_conjugation_invariant": "real r; does not select its value or give full CPT",
+      "all_trace_primary_preserved": "iff partial_N r=0",
+      "same_space_H_preserved": false,
+      "same_space_Dirichlet_H_preserved": false
+    },
+    "formulas": {
+      "primary_residual": "-i (partial_N r) u|_2",
+      "full_Robin_H_jet": "(-r(phi, N)/(24*pi**2*a) - 1/(12*pi**2*a**2))*Derivative(u(a, phi, N), (a, 2)) + (9*pi**2*a**2*(1 - exp(-sqrt(6)*phi/3))**2/2 - 6*pi**2 + r(phi, N)**2/(24*pi**2*a**2) + r(phi, N)/(12*pi**2*a**3) - Derivative(r(phi, N), (phi, 2))/(4*pi**2*a**3) - 1/(16*pi**2*a**4))*u(a, phi, N) + Derivative(u(a, phi, N), (a, 3))/(24*pi**2*a) - Derivative(r(phi, N), phi)*Derivative(u(a, phi, N), phi)/(2*pi**2*a**3) + 3*Derivative(u(a, phi, N), (phi, 2))/(4*pi**2*a**4)",
+      "cubic_Robin_residual": "psi(phi, N)/(8*pi**2)",
+      "quadratic_Dirichlet_residual": "psi(phi, N)/(24*pi**2)"
+    },
+    "analytic_proof": "cpt_temporal_folded_susy/STAROBINSKY_WARD_DOMAIN_DERIVATION.md",
+    "proof_boundaries": "local germs have smooth compact extensions; functional interpretation is analytic, not Lean",
+    "repair_scope": "all B_r H^k p_N^m traces zero is algebraically invariant and contains interior tests; no selected graph core or physical states established"
+  },
+  "lean": {
+    "version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ],
+    "elaboration": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--json",
+        "-DwarningAsError=true",
+        "<temporary>/WardDomainAudit.lean"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "payload_sha256": "f34eff81c37258f39fdd898649dc394af732eddf03b2e35d80b9c3899a436449",
+      "messages": [
+        {
+          "caption": "",
+          "data": "CptSewing.WardDomain.sesquiFlux_robin_formula (k r u v : ℂ) :\n  CptSewing.WardDomain.sesquiFlux k u (r * u) v (r * v) = k * ((r - (starRingEnd ℂ) r) * (starRingEnd ℂ) u * v)",
+          "endPos": {
+            "column": 6,
+            "line": 66
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 66
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardDomain.sesquiFlux_robin_formula' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 67
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 67
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardDomain.sesquiFlux_real_robin (k u v : ℂ) (r : ℝ) :\n  CptSewing.WardDomain.sesquiFlux k u (↑r * u) v (↑r * v) = 0",
+          "endPos": {
+            "column": 6,
+            "line": 68
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 68
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardDomain.sesquiFlux_real_robin' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 69
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 69
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardDomain.scalarH0_dirichlet_quadratic (f f1 w z : ℝ) :\n  CptSewing.WardDomain.scalarH0 f f1 w 0 0 (2 * z) = -2 * f * z",
+          "endPos": {
+            "column": 6,
+            "line": 70
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 70
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardDomain.scalarH0_dirichlet_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 71
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 71
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardDomain.robinResidual_cubic_zerojet (f f1 f2 w w1 r z : ℝ) :\n  CptSewing.WardDomain.robinResidual f f1 f2 w w1 r 0 0 0 (6 * z) = -6 * f * z",
+          "endPos": {
+            "column": 6,
+            "line": 72
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 72
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardDomain.robinResidual_cubic_zerojet' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 73
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 73
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardDomain.robinResidual_cubic_zerojet_nonzero (f f1 f2 w w1 r z : ℝ) (hf : f ≠ 0) (hz : z ≠ 0) :\n  CptSewing.WardDomain.robinResidual f f1 f2 w w1 r 0 0 0 (6 * z) ≠ 0",
+          "endPos": {
+            "column": 6,
+            "line": 74
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 74
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardDomain.robinResidual_cubic_zerojet_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 75
+          },
+          "fileName": "/var/tmp/orca/ice-ward-domain-azqil82s/WardDomainAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 75
+          },
+          "severity": "information"
+        }
+      ]
+    },
+    "scope": "finite complex Green and real normal-jet algebra; not an operator-domain theorem",
+    "theorems": {
+      "CptSewing.WardDomain.sesquiFlux_robin_formula": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardDomain.sesquiFlux_real_robin": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardDomain.scalarH0_dirichlet_quadratic": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardDomain.robinResidual_cubic_zerojet": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardDomain.robinResidual_cubic_zerojet_nonzero": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      }
+    },
+    "theorem_count": 5,
+    "accepted": true
+  },
+  "elapsed_seconds": 3.398441942874342
+}
