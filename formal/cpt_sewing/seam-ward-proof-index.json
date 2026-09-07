@@ -1,0 +1,14 @@
+{
+  "schema": "ice-lean-proof-index/v1",
+  "source": "CptSewing/SeamWard.lean",
+  "namespace": "CptSewing.SeamWard",
+  "theorems": [
+    "g3_ext",
+    "cSum_wedge_kernel_zero",
+    "r1_minus_r2_wedge_kernel_zero",
+    "c1_wedge_kernel_nonzero",
+    "constraintGhost_wedge_kernel",
+    "differenceRegulator_diagonal_shift",
+    "potential_witness_difference"
+  ]
+}
