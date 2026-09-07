@@ -113,10 +113,10 @@ theorem differenceRegulator_diagonal_shift (f : ℝ → ℝ) (n1 n2 t : ℝ) :
   exact congrArg f (by ring : (n1 + t) - (n2 + t) = n1 - n2)
 
 /-- Starobinsky's potential in the positive chart coordinate `y=exp(-β φ)`. -/
-def starobinskyY (y : ℝ) : ℝ := (3 : ℝ) / 4 * (1 - y) ^ 2
+noncomputable def starobinskyY (y : ℝ) : ℝ := (3 : ℝ) / 4 * (1 - y) ^ 2
 
 /-- The `a=1` Lorentzian potential contribution used in the finite witness. -/
-def potentialContribution (y : ℝ) : ℝ := 2 * Real.pi ^ 2 * starobinskyY y
+noncomputable def potentialContribution (y : ℝ) : ℝ := 2 * Real.pi ^ 2 * starobinskyY y
 
 theorem potential_witness_difference :
     potentialContribution 1 - potentialContribution ((1 : ℝ) / 2) =

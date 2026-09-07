@@ -1,0 +1,563 @@
+{
+  "schema": "ice-starobinsky-bfv-seam-ward/v1",
+  "started_at_utc": "2026-09-07T00:24:47.596090+00:00",
+  "status": "FAILED",
+  "question": "Is the declared Gaussian-regulated Starobinsky boundary sewing exactly BFV closed at finite width?",
+  "scope": "Supporting quantum boundary-pairing discriminator only, not a finite bulk path integral",
+  "non_claim": "No full trajectory source, original relative class, self-adjoint completion, physical CPT or discovery.",
+  "reproduction_command": "./ice run starobinsky_bfv_seam_ward",
+  "provenance": {
+    "source_commit": "5682720899ffa2b8f7390e4789758e3c4e37d49d",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_bfv_seam_ward.py": {
+        "sha256": "2b10fc919422bb25dbf75fec346fcfc71b38b08f93f107c1fe6fedaad410adbf",
+        "bytes": 14495
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "formal/cpt_sewing/CptSewing/SeamWard.lean": {
+        "sha256": "e87432af89a256faa49b52970351ad5e2c8bc1b7b437130ffe4133c9a55c073b",
+        "bytes": 4605
+      },
+      "formal/cpt_sewing/seam-ward-proof-index.json": {
+        "sha256": "09c6ee13499de467b570bfef2542c8c406b1e765727bac0c136ccb509de1e8e1",
+        "bytes": 364
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "gaussian_H_difference_from_direct_derivatives",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "primary_lapse_interior_cancellation",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "gaussian_normalized_difference_symmetry",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "positive_y_chart_witness",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "Starobinsky_nonzero_Ward_witness",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "witness_nonzero_for_every_positive_width",
+        "passed": true,
+        "coefficient": "-3*pi**2/8",
+        "kernel_at_witness": "sqrt(2)*exp(-3*log(2)**2/(4*tau))/(4*pi**(3/2)*tau**(3/2))"
+      },
+      {
+        "id": "formal_transpose_boundary_current",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "window_commutator_exact",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "primary_window_flux_exact",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "hard_face_first_derivative",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "hard_face_second_derivative",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "graded_constraint_pair_cancellation",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "graded_primary_pair_equality",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "graded_Ward_factorization",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "Berezin_pullback_one",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "Berezin_pullback_c2",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "Berezin_pullback_rho2",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "Berezin_pullback_c2rho2",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "constraint_ghost_factor_nonzero",
+        "passed": true,
+        "coefficients": {
+          "11": "1",
+          "7": "-1"
+        }
+      },
+      {
+        "id": "wrong_ghost_sign_predicted_defect",
+        "passed": true,
+        "residual": {}
+      },
+      {
+        "id": "wrong_ghost_sign_nonzero",
+        "passed": true
+      },
+      {
+        "id": "constant_coefficient_control",
+        "passed": true,
+        "residual": "0"
+      }
+    ],
+    "kernel": {
+      "bosonic": "sqrt(2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))/(4*pi**(3/2)*tau**(3/2))",
+      "ghost_order": [
+        "c1",
+        "c2",
+        "rho1",
+        "rho2"
+      ],
+      "ghost_coefficients": {
+        "10": "1",
+        "6": "-1",
+        "9": "1",
+        "5": "-1"
+      },
+      "fiber_Berezin_convention": "integral d rho2 d c2 [A(c1,rho1) c2 rho2] = A(c1,rho1)",
+      "body_domain_per_copy": {
+        "a": [
+          "1/2",
+          "2"
+        ],
+        "phi": [
+          "-1",
+          "2"
+        ],
+        "N": [
+          "1/4",
+          "2"
+        ]
+      },
+      "boundary_extension": "product of hard interval indicators; distribution derivatives retained",
+      "polarization": "(a,phi,N;c,rho); conjugate momenta act by derivatives, not additional delta constraints",
+      "width": "tau>0 in declared reduced coordinate units; Gaussian normalized on R^3, not renormalized at box faces"
+    },
+    "operator": {
+      "ordering": "Weyl, hbar=1, flat bosonic density; formal C_c^infty interior core only",
+      "H_W": "-f d_a^2-f_prime d_a-f_second/4-b d_phi^2+U",
+      "f": "-1/(24*pi**2*a1)",
+      "b": "1/(4*pi**2*a1**3)",
+      "U": "3*pi**2*a1**3*(1 - exp(-sqrt(6)*phi1/3))**2/2 - 6*pi**2*a1",
+      "Omega_i": "c_i H_W_i - i rho_i d_N_i; all odd factors multiply from the left in one graded tensor algebra"
+    },
+    "defect": {
+      "interior_H_difference_divided_by_Gaussian": "3*pi**2*a1**3*(1 - exp(-sqrt(6)*phi1/3))**2/2 - 6*pi**2*a1 - 3*pi**2*a2**3*(1 - exp(-sqrt(6)*phi2/3))**2/2 + 6*pi**2*a2 + (-1/tau + (a1 - a2)**2/tau**2)*(-1/(24*pi**2*a2) + 1/(24*pi**2*a1)) - (-1/tau + (phi1 - phi2)**2/tau**2)*(-1/(4*pi**2*a2**3) + 1/(4*pi**2*a1**3)) + (a1 - a2)*(1/(24*pi**2*a2**2) + 1/(24*pi**2*a1**2))/tau - 1/(48*pi**2*a2**3) + 1/(48*pi**2*a1**3)",
+      "full_graded_form": "c1*g*(H1-H2)(chi1 chi2 D_tau) - i*rho1*g*(d_N1+d_N2)(chi1 chi2 D_tau)",
+      "window_commutator_copy1": "-(-sqrt(2)*(-2*a1 + 2*a2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))/(96*pi**(7/2)*a1*tau**(5/2)) + sqrt(2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))/(96*pi**(7/2)*a1**2*tau**(3/2)))*Derivative(chi(a1, phi1, N1), a1) + sqrt(2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))*Derivative(chi(a1, phi1, N1), (a1, 2))/(96*pi**(7/2)*a1*tau**(3/2)) - sqrt(2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))*Derivative(chi(a1, phi1, N1), (phi1, 2))/(16*pi**(7/2)*a1**3*tau**(3/2)) - sqrt(2)*(-2*phi1 + 2*phi2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))*Derivative(chi(a1, phi1, N1), phi1)/(16*pi**(7/2)*a1**3*tau**(5/2))",
+      "copy2_rule": "swap copy indices; subtract for H1-H2",
+      "hard_window_derivatives": [
+        "chi'=delta(x-lower)-delta(x-upper)",
+        "chi''=delta'(x-lower)-delta'(x-upper)"
+      ],
+      "primary_flux": "D_tau*(chi2*d_N1 chi1 + chi1*d_N2 chi2)",
+      "lapse_lower_face": "N=1/4, positive delta coefficient in derivative of zero extension; not N=0 contact",
+      "lapse_upper_face": "N=2, negative delta coefficient in derivative of zero extension; not infinity",
+      "zero_lapse_contact": "UNRESOLVED: no trajectory kernel or nu->0 identity limit constructed",
+      "witness": {
+        "a1": "1",
+        "a2": "1",
+        "phi1": "0",
+        "phi2": "sqrt(6)*log(2)/2",
+        "N1": "1",
+        "N2": "1",
+        "coefficient": "-3*pi**2/8"
+      }
+    },
+    "limits": {
+      "formal_delta_seam": "distributional identity on smooth compact interior test functions by formal transpose, not a self-adjoint/domain theorem",
+      "finite_width": "nonzero pointwise Ward defect for every tau>0; this does not refute a controlled distributional tau->0 limit",
+      "trajectory_source": "NOT_CONSTRUCTED",
+      "physical_CPT": "NOT_CONSTRUCTED",
+      "original_relative_cycle": "NOT_CONSTRUCTED"
+    }
+  },
+  "lean": {
+    "version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ],
+    "elaboration": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--json",
+        "-DwarningAsError=true",
+        "<temporary>/SeamWardAudit.lean"
+      ],
+      "exit_code": 1,
+      "stderr": "",
+      "payload_sha256": "69955293323c4a9f7cef2d1a3f500e2bf9675f9750a73ac82795cc7a0892c4a1",
+      "messages": [
+        {
+          "caption": "",
+          "data": "failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'",
+          "endPos": {
+            "column": 16,
+            "line": 116
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "lean.dependsOnNoncomputable._namedError",
+          "pos": {
+            "column": 4,
+            "line": 116
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.pi', which is 'noncomputable'",
+          "endPos": {
+            "column": 25,
+            "line": 119
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "lean.dependsOnNoncomputable._namedError",
+          "pos": {
+            "column": 4,
+            "line": 119
+          },
+          "severity": "error"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.SeamWard.g3_ext (x y : CptSewing.SeamWard.G3) (h123 : x.c1c2r1 = y.c1c2r1) (h124 : x.c1c2r2 = y.c1c2r2)\n  (h134 : x.c1r1r2 = y.c1r1r2) (h234 : x.c2r1r2 = y.c2r1r2) : x = y",
+          "endPos": {
+            "column": 6,
+            "line": 129
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 129
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.SeamWard.g3_ext' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 130
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 130
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.SeamWard.cSum_wedge_kernel_zero :\n  CptSewing.SeamWard.wedge12 CptSewing.SeamWard.cSum CptSewing.SeamWard.kernelGhost = CptSewing.SeamWard.zero3",
+          "endPos": {
+            "column": 6,
+            "line": 131
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 131
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.SeamWard.cSum_wedge_kernel_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 132
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 132
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.SeamWard.r1_minus_r2_wedge_kernel_zero :\n  CptSewing.SeamWard.wedge12\n      (CptSewing.SeamWard.add1 CptSewing.SeamWard.r1 (CptSewing.SeamWard.scale1 (-1) CptSewing.SeamWard.r2))\n      CptSewing.SeamWard.kernelGhost =\n    CptSewing.SeamWard.zero3",
+          "endPos": {
+            "column": 6,
+            "line": 133
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 133
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.SeamWard.r1_minus_r2_wedge_kernel_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 134
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 134
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.SeamWard.c1_wedge_kernel_nonzero :\n  CptSewing.SeamWard.wedge12 CptSewing.SeamWard.c1 CptSewing.SeamWard.kernelGhost ≠ CptSewing.SeamWard.zero3",
+          "endPos": {
+            "column": 6,
+            "line": 135
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 135
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.SeamWard.c1_wedge_kernel_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 136
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 136
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.SeamWard.constraintGhost_wedge_kernel (h1 h2 : ℝ) :\n  CptSewing.SeamWard.wedge12 (CptSewing.SeamWard.constraintGhost h1 h2) CptSewing.SeamWard.kernelGhost =\n    CptSewing.SeamWard.scale3 (h1 - h2)\n      (CptSewing.SeamWard.wedge12 CptSewing.SeamWard.c1 CptSewing.SeamWard.kernelGhost)",
+          "endPos": {
+            "column": 6,
+            "line": 137
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 137
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.SeamWard.constraintGhost_wedge_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 138
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 138
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.SeamWard.differenceRegulator_diagonal_shift (f : ℝ → ℝ) (n1 n2 t : ℝ) :\n  CptSewing.SeamWard.differenceRegulator f (n1 + t) (n2 + t) = CptSewing.SeamWard.differenceRegulator f n1 n2",
+          "endPos": {
+            "column": 6,
+            "line": 139
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 139
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.SeamWard.differenceRegulator_diagonal_shift' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 140
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 140
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.SeamWard.potential_witness_difference :\n  CptSewing.SeamWard.potentialContribution 1 - CptSewing.SeamWard.potentialContribution (1 / 2) = -3 * Real.pi ^ 2 / 8",
+          "endPos": {
+            "column": 6,
+            "line": 141
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 141
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.SeamWard.potential_witness_difference' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 142
+          },
+          "fileName": "/var/tmp/orca/ice-seam-ward-zmo8eg5_/SeamWardAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 142
+          },
+          "severity": "information"
+        }
+      ]
+    },
+    "accepted": false
+  },
+  "failure": "ValueError: symbolic or Lean audit failed; see raw diagnostics",
+  "elapsed_seconds": 4.102208922151476
+}
