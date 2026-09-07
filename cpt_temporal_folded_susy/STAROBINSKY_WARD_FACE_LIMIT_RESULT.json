@@ -1,0 +1,512 @@
+{
+  "schema": "ice-starobinsky-ward-face-limit/v1",
+  "status": "SCOPED_A2_WARD_LIMIT_EQUALS_GREEN_FACE_FUNCTIONAL",
+  "started_at_utc": "2026-09-07T05:49:30.533568+00:00",
+  "question": "Does the full Gaussian Ward pairing on declared a=2 tests converge to the Green face functional?",
+  "scope": "Supporting fixed-box smooth-test boundary functional",
+  "non_claim": "No physical BFV state, self-adjoint realization, full source or original relative cycle.",
+  "reproduction_command": "./ice run starobinsky_ward_face_limit",
+  "provenance": {
+    "source_commit": "015dec477f28da101804ce5bd197b20dcbcdf5f7",
+    "inputs": {
+      "cpt_temporal_folded_susy/starobinsky_ward_face_limit.py": {
+        "sha256": "193634930b93e1fc539e546075d22d5ea524011e15b1e5f657d9872c294a91b3",
+        "bytes": 13608
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT_DERIVATION.md": {
+        "sha256": "5c09c5bfb9677cf02cec53a1657b3dda998097c88b733b4f4b30920ba211cd64",
+        "bytes": 8386
+      },
+      "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
+        "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
+        "bytes": 9149
+      },
+      "cpt_temporal_folded_susy/starobinsky_bfv_seam_ward.py": {
+        "sha256": "cd98cc9c2cad0f3aead59a769fdbf6f475702f250f80636e3b73ce3743c36671",
+        "bytes": 16509
+      },
+      "cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD_RESULT.json": {
+        "sha256": "778964e519ec85e5602cbbd7960f2b6a8a302fd655cfb3fe24ee49155dd62bef",
+        "bytes": 26059
+      },
+      "formal/cpt_sewing/CptSewing/WardFace.lean": {
+        "sha256": "c8506c49c143e26e7defc63fa475af0e9767458e98b10a188b1495bbb4279f54",
+        "bytes": 2292
+      },
+      "formal/cpt_sewing/ward-face-proof-index.json": {
+        "sha256": "2d20c083908cf045cdf960707e6b44ebf6112c6b9892c0227f574884e8960760",
+        "bytes": 304
+      },
+      "formal/cpt_sewing/lean-toolchain": {
+        "sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
+        "bytes": 25
+      },
+      "formal/cpt_sewing/lakefile.toml": {
+        "sha256": "7a2f9c2fc36fe3286f682c22473f7c16550fde815a356a8f985cf85a77bbaf8e",
+        "bytes": 246
+      },
+      "formal/cpt_sewing/lake-manifest.json": {
+        "sha256": "af05d09893d2052d3443c4ac6a5dfe9d8f1ed25b0ce047db475698bb07278042",
+        "bytes": 3165
+      },
+      "uv.lock": {
+        "sha256": "f1a035568b9a50ab147e83c3a962e844e9d497e9b2124a44493eb8bd0cd64875",
+        "bytes": 13673
+      }
+    },
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "predecessor_status": "SCOPED_GAUSSIAN_SEAM_HAS_NONZERO_BFV_WARD_DEFECT"
+  },
+  "symbolic": {
+    "checks": [
+      {
+        "id": "Green_current_from_actual_Weyl_operator",
+        "group": "transpose_and_ghost",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "Berezin_dual_reads_constraint_and_kills_primary",
+        "group": "transpose_and_ghost",
+        "passed": true,
+        "constraint": {
+          "15": "1"
+        },
+        "primary": {}
+      },
+      {
+        "id": "primary_diagonal_N_derivative",
+        "group": "transpose_and_ghost",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "witness_current_profile",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "witness_diagonal_bulk_is_face_primitive",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "upper_a2_kinetic_coefficient",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "normalized_face_witness_is_strictly_negative",
+        "group": "boundary_algebra",
+        "passed": true,
+        "value": "-1/(48*pi**2)"
+      },
+      {
+        "id": "orientation_swap_reverses_flux",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "common_Dirichlet_cancellation",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "common_real_Robin_cancellation",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "distinct_Robin_test_pair_current",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "distinct_Robin_test_pair_face_zero",
+        "group": "boundary_algebra",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "Gaussian_absolute_first_moment",
+        "group": "limit_bound",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "box_volume",
+        "group": "limit_bound",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "box_overlap_area_sum",
+        "group": "limit_bound",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "overlap_loss_telescopes",
+        "group": "limit_bound",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "declared_pairing_error_bound_coefficients",
+        "group": "limit_bound",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "pairing_error_bound_tends_to_zero",
+        "group": "limit_bound",
+        "passed": true,
+        "residual": "0"
+      }
+    ],
+    "operator": {
+      "f": "-1/(24*pi**2*a)",
+      "b": "1/(4*pi**2*a**3)",
+      "U": "3*pi**2*a**3*(1 - exp(-sqrt(6)*phi/3))**2/2 - 6*pi**2*a",
+      "ordering": "Weyl; hbar=1; flat real bilinear distribution pairing"
+    },
+    "pairing": {
+      "box": {
+        "a": [
+          "1/2",
+          "2"
+        ],
+        "phi": [
+          "-1",
+          "2"
+        ],
+        "N": [
+          "1/4",
+          "2"
+        ]
+      },
+      "test_space": "real C_c^infty((0,infinity)xR^2), zero near every box face except a=2",
+      "definition": "<(H1-H2)(chi1 chi2 D_tau), u(q1)v(q2)> over the ambient open chart",
+      "exact_transpose_form": "integral_BxB D_tau * [(Hu)(q1)v(q2)-u(q1)(Hv)(q2)]",
+      "ghost_dual": "left rho1 wedge, then coefficient c1*c2*rho1*rho2 = +1",
+      "primary_component": "zero: diagonal N derivative cancels and tests vanish at both N faces"
+    },
+    "analytic_limit": {
+      "proof": "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT_DERIVATION.md",
+      "proof_kind": "analytic derivation with symbolic subidentity and independent reading audits; not Lean distribution formalization",
+      "limit": "f(2) integral_(phi,N) [u*d_a(v)-v*d_a(u)]_(a=2)",
+      "error_bound": "sqrt(2)*sqrt(tau)*(189*L/8 + 99*M0/8)/sqrt(pi)",
+      "L": "max over BxB and i of abs(partial_y_i A(x,y))",
+      "M0": "max over B of abs(A(q,q))",
+      "conditions": "one fixed smooth test pair; coefficients smooth near the compact box; fixed box; tau>0",
+      "overlap_inequality": "0<=d_i=min(abs(Z_i),l_i)<=l_i; telescoping loss<=sum_i abs(Z_i) product_(j!=i)l_j",
+      "boundary_half_factor": "none in full pairing limit; separate face terms were not independently limited",
+      "operator_norm_convergence": "NOT_CLAIMED"
+    },
+    "witness": {
+      "u": "eta(a)*psi(phi,N)",
+      "v": "(a-1)*eta(a)*psi(phi,N)",
+      "eta": "S(4a-6)*S(10-4a); S(t)=E(t)/(E(t)+E(1-t)); E(t)=exp(-1/t) for t>0, else 0",
+      "psi": "L2-normalized E(1-4phi^2)*E(1-16(N-1)^2)",
+      "a2_jets_after_factoring_psi": [
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      "integral_psi_squared": "1",
+      "limit_value": "-1/(48*pi**2)",
+      "normalization_scope": "diagnostic test normalization, not a physical Hilbert product"
+    },
+    "boundary_controls": {
+      "Dirichlet": "u_D=(a-2)eta psi, v_D=(a-2)^2 eta psi; both face values zero",
+      "Robin": "u_R=exp(r(a-2))eta psi, v_R=(1+(a-2)^2)u_R; same real r, distinct functions",
+      "limits": {
+        "interior_test_pair": "0",
+        "common_Dirichlet": "0",
+        "common_real_Robin": "0"
+      },
+      "physical_equivalence_of_boundary_choices": "NOT_ASSUMED"
+    }
+  },
+  "lean": {
+    "version": "Lean (version 4.33.0, x86_64-unknown-linux-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "dependencies": [
+      {
+        "name": "mathlib",
+        "rev": "db584cd6d46c92f209a44c0f1c829460d327499d"
+      },
+      {
+        "name": "plausible",
+        "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+      },
+      {
+        "name": "LeanSearchClient",
+        "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+      },
+      {
+        "name": "importGraph",
+        "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+      },
+      {
+        "name": "proofwidgets",
+        "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+      },
+      {
+        "name": "aesop",
+        "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+      },
+      {
+        "name": "Qq",
+        "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+      },
+      {
+        "name": "batteries",
+        "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+      },
+      {
+        "name": "Cli",
+        "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+      }
+    ],
+    "elaboration": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--json",
+        "-DwarningAsError=true",
+        "<temporary>/WardFaceAudit.lean"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "payload_sha256": "71b567c8cb25e9e060ca4f7f8b1e2843c1c521ed5a2bc65e43873d236dec820a",
+      "messages": [
+        {
+          "caption": "",
+          "data": "CptSewing.WardFace.faceFlux_antisymmetric (k u du v dv : ℝ) :\n  CptSewing.WardFace.faceFlux k u du v dv = -CptSewing.WardFace.faceFlux k v dv u du",
+          "endPos": {
+            "column": 6,
+            "line": 68
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 68
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardFace.faceFlux_antisymmetric' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 69
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 69
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardFace.faceFlux_common_dirichlet (k du dv : ℝ) : CptSewing.WardFace.faceFlux k 0 du 0 dv = 0",
+          "endPos": {
+            "column": 6,
+            "line": 70
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 70
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardFace.faceFlux_common_dirichlet' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 71
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 71
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardFace.faceFlux_common_robin (k r u v : ℝ) : CptSewing.WardFace.faceFlux k u (r * u) v (r * v) = 0",
+          "endPos": {
+            "column": 6,
+            "line": 72
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 72
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardFace.faceFlux_common_robin' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 73
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 73
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardFace.scaleUpperFace_witness_value :\n  CptSewing.WardFace.faceFlux CptSewing.WardFace.scaleUpperFaceK 1 0 1 1 = -1 / (48 * Real.pi ^ 2)",
+          "endPos": {
+            "column": 6,
+            "line": 74
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 74
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardFace.scaleUpperFace_witness_value' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 75
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 75
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "CptSewing.WardFace.scaleUpperFace_witness_nonzero :\n  CptSewing.WardFace.faceFlux CptSewing.WardFace.scaleUpperFaceK 1 0 1 1 ≠ 0",
+          "endPos": {
+            "column": 6,
+            "line": 76
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 76
+          },
+          "severity": "information"
+        },
+        {
+          "caption": "",
+          "data": "'CptSewing.WardFace.scaleUpperFace_witness_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+          "endPos": {
+            "column": 6,
+            "line": 77
+          },
+          "fileName": "/var/tmp/orca/ice-ward-face-8e6yaup6/WardFaceAudit.lean",
+          "isSilent": false,
+          "keepFullRange": false,
+          "kind": "[anonymous]",
+          "pos": {
+            "column": 0,
+            "line": 77
+          },
+          "severity": "information"
+        }
+      ]
+    },
+    "scope": "finite real boundary-jet algebra, not the distributional limit",
+    "theorems": {
+      "CptSewing.WardFace.faceFlux_antisymmetric": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardFace.faceFlux_common_dirichlet": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardFace.faceFlux_common_robin": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardFace.scaleUpperFace_witness_value": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      },
+      "CptSewing.WardFace.scaleUpperFace_witness_nonzero": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "accepted": true
+      }
+    },
+    "theorem_count": 5,
+    "accepted": true
+  },
+  "elapsed_seconds": 4.116181204095483
+}

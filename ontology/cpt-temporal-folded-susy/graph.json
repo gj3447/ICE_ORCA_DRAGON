@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T00:55:17Z",
+  "updated_at_utc": "2026-09-07T05:54:46Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1727,12 +1727,17 @@
     {
       "id": "reading-path:starobinsky-seam-ward-regulator-removal",
       "title": "Gaussian 접합: 경계상태에 작용시킨 잔여항과 규제 제거",
-      "summary": "사용자 질문: 비영인가에서 더 나아가, 허용한 경계상태에 작용시켰을 때 규제를 제거하며 사라지는가, 경계에 무엇이 남는가? 기존 finite-width 반례와 raw face ledger를 읽고, test-state pairing과 극한 위상, 내부와 경계의 제거 순서, 물리적 해석 조건을 별도 미해결 질문으로 추적한다. 세 질문은 SUPPORTING/CONDITIONAL이며 새 계산 결과나 실행 승인이 아니다. 기존 Gaussian의 exact nonclosure를 뒤집거나 G1 해소, 양자 anomaly, CPT 위반, 빅뱅 원인 또는 TOE 발견을 주장하지 않는다.",
+      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 기존 모든 양의 폭의 exact nonclosure 뒤에, a=2 면에만 닿는 실수 smooth compact test pairing의 O(sqrt(tau)) 수렴과 Green 경계형식 결과가 연결된다. 정규화 예시는 -1/(48*pi^2), interior/common Dirichlet/real Robin 쌍은 0이다. 첫 두 질문은 한 면만 부분 해소됐고 physical BFV state/product, 다른 domain과 full source는 계속 미해결이다. 이 경로는 원래 cycle, 물리 CPT 위반, 빅뱅 또는 TOE 증거가 아니다.",
       "nodes": [
         "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
         "scope:starobinsky-gaussian-seam-ward-flat-core",
         "evidence:starobinsky-gaussian-seam-ward-result",
         "artifact:starobinsky-bfv-seam-ward-report",
+        "concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux",
+        "claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX",
+        "scope:starobinsky-seam-ward-a2-compact-test-limit",
+        "evidence:starobinsky-ward-face-limit-result",
+        "artifact:starobinsky-ward-face-limit-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -16664,8 +16669,8 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "Every-positive-width nonclosure leaves the state-paired regulator-removal question open. The value -3*pi^2/8 is the off-diagonal defect/Gaussian quotient, not a surviving physical amplitude. Declare the boundary test space, graded pairing and measure, convergence topology and cutoff-removal order before classifying the actual paired defect. Smooth compact interior test functions are a possible starting domain, not an already constructed physical BFV state space.",
-      "state": "OPEN_SUPPORTING_BOUNDARY_STATE_PAIRING_AND_LIMIT_UNRESOLVED",
+      "summary": "A declared real compact-smooth test pairing is now resolved for the fixed-box a=2 face: the full Ward pairing tends to the Green face functional with an explicit O(sqrt(tau)) bound. A normalized test witness has a nonzero limit, while interior and common Dirichlet/real Robin pairs have zero limits. Other boundary test spaces, complex or physical products and joint regulator-removal orders remain open; the finite-width contradiction is unchanged.",
+      "state": "OPEN_PARTIAL_A2_REAL_COMPACT_TEST_LIMIT_RESOLVED_PHYSICAL_STATES_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
         "The declared homogeneous Starobinsky Weyl operator, graded kernel and flat-density convention; compare the same model and pairing throughout",
@@ -16683,8 +16688,8 @@
       "id": "open:starobinsky-seam-ward-cutoff-boundary-limit",
       "type": "open_problem",
       "title": "Determine what remains on the hard-box boundary in the Gaussian seam limit",
-      "summary": "The existing raw result specifies twelve finite-width face distributions, but their action and limit on a declared boundary-state class remain untested. Distinguish removing Gaussian smoothing with the hard box fixed from changing or removing the box. A formal [H,chi] boundary commutator is a target for domain-aware verification, not an established physical source or a complete operator-limit theorem.",
-      "state": "OPEN_SUPPORTING_CUTOFF_FACE_PAIRING_AND_LIMIT_UNRESOLVED",
+      "summary": "The full paired Gaussian limit on tests touching only the a=2 face is now derived, with nonzero and boundary-condition-dependent zero examples. This resolves one combined face functional without assigning separate limits to all twelve delta/delta-prime terms. Other faces, joint box removal, domain selection and physical interpretation remain open; N=0 contact is a different object.",
+      "state": "OPEN_PARTIAL_A2_GREEN_FACE_LIMIT_RESOLVED_OTHER_FACES_AND_DOMAINS_OPEN",
       "question": "규제를 제거하면 경계에 무엇이 남는가? 같은 허용 경계상태에 대해 고정된 hard box의 열두 face 항이 상쇄되는가, 비영 경계 함수로 남는가, 아니면 극한이 존재하지 않는가? 경계조건 또는 상자 제거 순서를 바꾸면 어떤 항이 달라지는가?",
       "includes": [
         "The twelve a, phi and N lower/upper face terms in symbolic.defect.box_face_ledger of the existing raw result, with their signs and delta-prime terms retained",
@@ -16716,6 +16721,110 @@
         "Calling finite Gaussian BRST nonclosure a physical CPT violation, non-removable anomaly, Big-Bang cause, established physical mechanism or TOE result",
         "Treating graph neighbors, two representations of one residual, or evidence from another ontology graph as independent physical consumers"
       ]
+    },
+    {
+      "id": "concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux",
+      "type": "concept",
+      "title": "Weak Gaussian Ward pairing and a=2 Green cutoff-face flux",
+      "summary": "The regulator is tested as an actual bilinear distribution pairing, rather than by an off-diagonal defect/Gaussian quotient. The fixed-box weak limit is a Green boundary form determined by real boundary jets; common Dirichlet or real Robin jets cancel it, while an explicit other test pair detects it. This is a scoped domain diagnostic, not a physical state or a cosmological boundary source.",
+      "state": "SCOPED_ANALYTIC_PAIRING_AND_BOUNDARY_JET_DIAGNOSTIC"
+    },
+    {
+      "id": "scope:starobinsky-seam-ward-a2-compact-test-limit",
+      "type": "scope",
+      "title": "Starobinsky a=2 compact smooth test-pairing limit scope",
+      "summary": "One fixed-box weak limit of the declared Weyl/flat-density Gaussian Ward kernel, using real ambient smooth compact tests reaching only the upper a=2 face.",
+      "state": "DECLARED_SUPPORTING_FIXED_BOX_A2_REAL_TEST_SCOPE",
+      "includes": [
+        "The same homogeneous Starobinsky Weyl operator at hbar=1, flat real bilinear pairing and normalized R3 Gaussian used by the finite-width seam audit",
+        "Real C_c-infinity tests on (0,infinity)xR2 that vanish near all box faces except a=2; distribution derivatives of the full chi1 chi2 D_tau are paired before taking the limit",
+        "The left-rho1 Berezin dual of the constraint Ward component, zero primary N pairing on this test space, Green face functional and O(sqrt(tau)) bound for each fixed test pair",
+        "An explicit smooth test witness with transverse integral psi^2=1 and limit -1/(48*pi^2); zero interior, common Dirichlet and common real Robin limits",
+        "An analytic distribution proof in the pinned derivation, checked symbolic subidentities and five Lean finite boundary-jet theorems"
+      ],
+      "excludes": [
+        "A proof of the distributional limit in Lean, a uniform operator-norm bound, or independently assigned limits of every individual face delta/delta-prime term",
+        "A choice of physical BRST cohomology, complex physical inner product, self-adjoint realization or physical equivalence of different boundary conditions",
+        "Other faces, joint box removal, zero lapse, a=0 Big-Bang boundary, a full BFV trajectory source, original relative cycle, G1 closure or physical/TOE promotion"
+      ]
+    },
+    {
+      "id": "claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX",
+      "title": "The a=2 Gaussian Ward pairing limit equals the Green face functional",
+      "statement": "For the declared real compact smooth test pairs reaching only a=2 and the fixed Starobinsky Weyl/flat-density box, the full Ward pairing tends to f(2) integral_(phi,N)(u*d_a(v)-v*d_a(u)) with per-pair error <= (189*L/8+99*M0/8)*sqrt(2*tau/pi). A normalized smooth witness has limit -1/(48*pi^2); interior and common Dirichlet/real Robin test pairs have zero limits.",
+      "summary": "Supported by the pinned analytic approximate-identity/box-overlap derivation, independent mathematical reading, 18 exact symbolic controls and five finite Lean boundary-jet proofs. The result separates finite-width nonclosure from weak regulator removal and boundary-condition dependence; it does not construct a physical state or prove choice invariance.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_ANALYTIC_A2_TEST_LIMIT_WITH_FINITE_SYMBOLIC_AND_LEAN_CONTROLS"
+    },
+    {
+      "id": "evidence:starobinsky-ward-face-limit-result",
+      "type": "evidence",
+      "title": "Starobinsky a=2 Ward pairing limit evidence",
+      "summary": "One clean run checks the actual operator Green identity, graded dual, Gaussian absolute moment, box-overlap subidentities and nonzero/Dirichlet/Robin boundary jets. The pinned analytic derivation supplies the distribution-limit argument; Lean covers finite real jets only. The raw result is the complete check ledger.",
+      "state": "VALID_RUN_ANALYTIC_DERIVATION_AND_FINITE_SUBIDENTITY_CONTROLS",
+      "observed_status": "SCOPED_A2_WARD_LIMIT_EQUALS_GREEN_FACE_FUNCTIONAL",
+      "check_ids": [
+        "symbolic.checks.Green_current_from_actual_Weyl_operator",
+        "symbolic.checks.Berezin_dual_reads_constraint_and_kills_primary",
+        "symbolic.checks.declared_pairing_error_bound_coefficients",
+        "symbolic.checks.normalized_face_witness_is_strictly_negative",
+        "lean.theorems.CptSewing.WardFace.scaleUpperFace_witness_nonzero"
+      ]
+    },
+    {
+      "id": "artifact:starobinsky-ward-face-limit-derivation",
+      "type": "artifact",
+      "title": "Analytic a=2 Ward weak-limit derivation",
+      "summary": "Pinned test-space definition, transpose pairing, explicit Gaussian/overlap convergence bound, Green face limit and smooth witness; this is the analytic proof, not a Lean distribution theorem.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "analytic_derivation",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT_DERIVATION.md",
+      "sha256": "5c09c5bfb9677cf02cec53a1657b3dda998097c88b733b4f4b30920ba211cd64",
+      "introduced_in_commit": "015dec477f28da101804ce5bd197b20dcbcdf5f7"
+    },
+    {
+      "id": "artifact:starobinsky-ward-face-limit-runner",
+      "type": "artifact",
+      "title": "Starobinsky Ward face-limit symbolic and Lean runner",
+      "summary": "Clean bounded runner for symbolic subidentities and the five-theorem Lean audit; no full trajectory or physical-state calculation.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_ward_face_limit.py",
+      "sha256": "193634930b93e1fc539e546075d22d5ea524011e15b1e5f657d9872c294a91b3",
+      "introduced_in_commit": "015dec477f28da101804ce5bd197b20dcbcdf5f7"
+    },
+    {
+      "id": "artifact:starobinsky-ward-face-limit-lean",
+      "type": "artifact",
+      "title": "Finite Green boundary-jet Lean proofs",
+      "summary": "Finite real antisymmetry, common Dirichlet/Robin cancellation and upper-face nonzero witness, with all theorem axioms audited.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/WardFace.lean",
+      "sha256": "c8506c49c143e26e7defc63fa475af0e9767458e98b10a188b1495bbb4279f54",
+      "introduced_in_commit": "015dec477f28da101804ce5bd197b20dcbcdf5f7"
+    },
+    {
+      "id": "artifact:starobinsky-ward-face-limit-result",
+      "type": "artifact",
+      "title": "Starobinsky Ward face-limit raw result",
+      "summary": "Raw SSOT for all 18 symbolic controls, five Lean theorem audits, source/environment pins, actual command and execution status.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT_RESULT.json",
+      "sha256": "e4d922b054ee5d8ad448fef856f82dc0239d3ca405ee3430f4eb8f47e0976a92"
+    },
+    {
+      "id": "artifact:starobinsky-ward-face-limit-report",
+      "type": "artifact",
+      "title": "Starobinsky a=2 Ward face-limit report",
+      "summary": "Completed scoped result, per-test O(sqrt(tau)) bound, nonzero/zero boundary comparisons, proof boundaries and a connected research map.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT.md",
+      "sha256": "42355545345a1b3727847da739aaebd134e574f9690b32e4f71bd3c14b7d56a1"
     }
   ],
   "edges": [
@@ -37167,7 +37276,24 @@
     {"id":"edge:3907","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"BLOCKED_BY","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"A candidate physical contribution must be separated from smoothing and pairing artifacts."},
     {"id":"edge:3908","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"BLOCKED_BY","to":"open:starobinsky-seam-ward-cutoff-boundary-limit","note":"The candidate's boundary contribution and domain dependence must be resolved before assigning a physical effect."},
     {"id":"edge:3909","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"BLOCKED_BY","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"The existing boundary regulator supplies no full same-model source, physical state/product or normalized observable."},
-    {"id":"edge:3910","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"GOVERNED_BY","to":"policy:choice-invariance-cross-domain-promotion","note":"Selection invariance and independent in-graph consumers are conditions for broader interpretation, never evidence supplied by this question."}
+    {"id":"edge:3910","from":"open:starobinsky-seam-ward-physical-effect-bridge","relation":"GOVERNED_BY","to":"policy:choice-invariance-cross-domain-promotion","note":"Selection invariance and independent in-graph consumers are conditions for broader interpretation, never evidence supplied by this question."},
+    {"id":"edge:3911","from":"concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"One declared supporting boundary-regulator compatibility test."},
+    {"id":"edge:3912","from":"concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux","relation":"CONTRASTS_WITH","to":"concept:pointwise-pole-versus-distributional-identity","note":"Use the established pointwise/distributional distinction; the prior concept is context, not independent evidence for this operator or limit."},
+    {"id":"edge:3913","from":"concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux","relation":"CONTRASTS_WITH","to":"concept:positive-half-lapse-resolvent-versus-projector","note":"The a=2 field-cutoff Green flux is not the N=0 contact of a positive-lapse resolvent."},
+    {"id":"edge:3914","from":"concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux","relation":"CITES","to":"source:cattaneo-mnev-reshetikhin-2015-quantum-bvbfv","note":"Method context for compatible boundary state/operator/pairing data; that spacetime-boundary theorem does not prove this artificial field-cutoff limit."},
+    {"id":"edge:3915","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"ABOUT","to":"concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux"},
+    {"id":"edge:3916","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"VALID_WITHIN","to":"scope:starobinsky-seam-ward-a2-compact-test-limit"},
+    {"id":"edge:3917","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-ward-face-limit-result","polarity":"SUPPORTS","note":"The limit is proved in the pinned analytic derivation; the raw run independently checks finite subidentities and Lean jets."},
+    {"id":"edge:3918","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-ward-face-limit-report"},
+    {"id":"edge:3919","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"FOLLOW_UP_TO","to":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","note":"A paired weak limit does not reverse the every-positive-width exact-nonclosure contradiction."},
+    {"id":"edge:3920","from":"evidence:starobinsky-ward-face-limit-result","relation":"PART_OF","to":"concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux"},
+    {"id":"edge:3921","from":"evidence:starobinsky-ward-face-limit-result","relation":"DEFINED_IN","to":"artifact:starobinsky-ward-face-limit-runner"},
+    {"id":"edge:3922","from":"evidence:starobinsky-ward-face-limit-result","relation":"RECORDED_IN","to":"artifact:starobinsky-ward-face-limit-result","note":"Raw result remains the sole complete check ledger."},
+    {"id":"edge:3923","from":"evidence:starobinsky-ward-face-limit-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-ward-face-limit-derivation","note":"The distributional proof and its test/domain hypotheses are pinned source inputs."},
+    {"id":"edge:3924","from":"evidence:starobinsky-ward-face-limit-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-ward-face-limit-lean","note":"Lean proves finite boundary-jet facts only."},
+    {"id":"edge:3925","from":"evidence:starobinsky-ward-face-limit-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-gaussian-seam-ward-result","note":"Reuses the same operator/kernel convention and finite-width result; this dependency is not independent physical evidence."},
+    {"id":"edge:3926","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-boundary-state-limit","note":"Narrows the existing question by resolving one real compact-test topology; other pairings and physical states remain open."},
+    {"id":"edge:3927","from":"claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX","relation":"MOTIVATES","to":"open:starobinsky-seam-ward-cutoff-boundary-limit","note":"Narrows the existing question to other faces and domain/joint-limit choices after the a=2 combined functional is resolved; no automatic successor run."}
   ],
   "kg_bridges": [
     {

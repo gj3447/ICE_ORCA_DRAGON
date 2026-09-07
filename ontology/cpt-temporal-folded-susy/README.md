@@ -3,10 +3,10 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-09-04T02:55:43Z`; 1484 nodes, 3855 edges). Run and analytic-evidence details live in the
+`2026-09-07T05:54:46Z`; 1526 nodes, 3923 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
-verifies 419/419 stored hashes.
+verifies stored artifact and policy hashes; use the current validator output for counts.
 
 The 2026-09-07 user-requested Gaussian seam questions are indexed in
 `reading-path:starobinsky-seam-ward-regulator-removal`:
@@ -17,10 +17,18 @@ The 2026-09-07 user-requested Gaussian seam questions are indexed in
 | 고정된 상자의 경계에는 무엇이 남으며, 경계조건이나 상자 제거가 결과를 바꾸는가? | `open:starobinsky-seam-ward-cutoff-boundary-limit` |
 | 남는 항이 정규화된 물리 관측량에 연결되고, 허용 규제·게이지 선택 아래 유지되는가? | `open:starobinsky-seam-ward-physical-effect-bridge` |
 
+The [a=2 Ward face-limit result](../../cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT.md)
+now partially resolves the first two questions. For real compact smooth tests reaching only a=2,
+the full paired Ward defect converges to the Green face functional with an explicit O(sqrt(tau))
+bound. A normalized smooth witness gives -1/(48*pi^2); interior, common Dirichlet and common real
+Robin pairs give zero. The analytic distribution proof is separate from the 18 symbolic checks and
+five finite Lean boundary-jet proofs. Other faces, physical products and full BFV sources remain open.
+
 Read the [existing finite-width report](../../cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md)
-first. Its nonzero defect/Gaussian quotient does not answer these limit questions. The graph records
-them as supporting or conditional open problems, with test-state, boundary-domain and physical-source
-dependencies; it adds no computational evidence or claim that BRST breaking caused the Big Bang.
+first. Its nonzero defect/Gaussian quotient alone does not answer the limit questions. The new
+concept connects the test pairing, Green flux, pointwise/distributional distinction and the separate
+positive-lapse contact concept through typed edges. The record remains supporting and supplies no
+claim that BRST breaking caused the Big Bang.
 
 ```bash
 ./ice ontology guide --graph cpt --path starobinsky-seam-ward-regulator-removal
