@@ -1,0 +1,36 @@
+{
+  "schema": "ice-lean-multimodule-proof-index/v1",
+  "modules": [
+    {
+      "source": "CptSewing/PrimaryReduction.lean",
+      "namespace": "CptSewing.PrimaryReduction",
+      "scope": "Generic chain maps, primary homotopy and reduced exactness; smooth integral/PDE realization is analytic",
+      "theorems": [
+        "project_q0",
+        "project_q1",
+        "include_chain",
+        "projection_section",
+        "homotopy_degree_zero",
+        "homotopy_degree_one",
+        "homotopy_degree_two",
+        "closed_degree_one_exact_of_reduced_injective",
+        "top_exact_iff_reduced_exact",
+        "same_projection_diff_exact"
+      ]
+    },
+    {
+      "source": "CptSewing/GradedDualSewing.lean",
+      "namespace": "CptSewing.GradedDualSewing",
+      "scope": "Degree-reversed algebraic dual, signed Ward evaluation and nonboundary detectors; no positive or quantum CPT pairing",
+      "theorems": [
+        "dual_differential_square",
+        "ward_degree_zero",
+        "ward_degree_one",
+        "top_detector_closed_iff",
+        "detector_witnesses_top_nonboundary",
+        "section_evaluation",
+        "section_detector_witnesses_top_nonboundary"
+      ]
+    }
+  ]
+}
