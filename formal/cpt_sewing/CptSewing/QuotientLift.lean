@@ -131,7 +131,7 @@ theorem zero_of_injective_symmetric_adjoint_kills_right
   have hOstar := adjoint_zero_of_injective_symmetric_kills_right
     p O Ostar hpInjective hpSymmetric hAdjoint hOp
   ext u
-  apply inner_self_eq_zero.mp
+  apply (inner_self_eq_zero (𝕜 := ℂ)).mp
   calc
     inner ℂ (O u) (O u) = inner ℂ u (Ostar (O u)) := hAdjoint u (O u)
     _ = 0 := by rw [LinearMap.congr_fun hOstar]; simp
