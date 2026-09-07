@@ -1,17 +1,17 @@
 {
   "schema": "ice-starobinsky-bfv-seam-ward/v1",
-  "started_at_utc": "2026-09-07T00:25:32.717074+00:00",
+  "started_at_utc": "2026-09-07T00:27:47.425938+00:00",
   "status": "SCOPED_GAUSSIAN_SEAM_HAS_NONZERO_BFV_WARD_DEFECT",
   "question": "Is the declared Gaussian-regulated Starobinsky boundary sewing exactly BFV closed at finite width?",
   "scope": "Supporting quantum boundary-pairing discriminator only, not a finite bulk path integral",
   "non_claim": "No full trajectory source, original relative class, self-adjoint completion, physical CPT or discovery.",
   "reproduction_command": "./ice run starobinsky_bfv_seam_ward",
   "provenance": {
-    "source_commit": "c2213b335d1c4ff0dbb5ac5bd2f0bf06bb593ee8",
+    "source_commit": "ce7b8c5fe711712c2f107ac08481cfed8bad6a72",
     "inputs": {
       "cpt_temporal_folded_susy/starobinsky_bfv_seam_ward.py": {
-        "sha256": "2b10fc919422bb25dbf75fec346fcfc71b38b08f93f107c1fe6fedaad410adbf",
-        "bytes": 14495
+        "sha256": "cd98cc9c2cad0f3aead59a769fdbf6f475702f250f80636e3b73ce3743c36671",
+        "bytes": 16509
       },
       "cpt_temporal_folded_susy/cpt_boundary_sewing_lean.py": {
         "sha256": "7013ffe5f6c334ea24731aa364d6ae51f3be9960639f78c655abae7e5e4f3fdb",
@@ -96,6 +96,11 @@
       },
       {
         "id": "hard_face_second_derivative",
+        "passed": true,
+        "residual": "0"
+      },
+      {
+        "id": "canonical_face_delta_coefficient",
         "passed": true,
         "residual": "0"
       },
@@ -208,6 +213,129 @@
         "chi''=delta'(x-lower)-delta'(x-upper)"
       ],
       "primary_flux": "D_tau*(chi2*d_N1 chi1 + chi1*d_N2 chi2)",
+      "box_face_ledger": [
+        {
+          "copy": 1,
+          "coordinate": "a1",
+          "face": "lower",
+          "location": "1/2",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "sqrt(2)*(2*a2 - 1)*exp((-(1/2 - a2)**2 - (N1 - N2)**2 - (phi1 - phi2)**2)/(2*tau))/(96*pi**(7/2)*tau**(5/2))",
+          "delta_prime_coefficient": "sqrt(2)*exp((-(1/2 - a2)**2 - (N1 - N2)**2 - (phi1 - phi2)**2)/(2*tau))/(48*pi**(7/2)*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 1,
+          "coordinate": "a1",
+          "face": "upper",
+          "location": "2",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "-sqrt(2)*(2*a2 - 4)*exp((-(2 - a2)**2 - (N1 - N2)**2 - (phi1 - phi2)**2)/(2*tau))/(384*pi**(7/2)*tau**(5/2))",
+          "delta_prime_coefficient": "-sqrt(2)*exp((-(2 - a2)**2 - (N1 - N2)**2 - (phi1 - phi2)**2)/(2*tau))/(192*pi**(7/2)*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 1,
+          "coordinate": "phi1",
+          "face": "lower",
+          "location": "-1",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "-sqrt(2)*(2*phi2 + 2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (-phi2 - 1)**2)/(2*tau))/(32*pi**(7/2)*a1**3*tau**(5/2))",
+          "delta_prime_coefficient": "-sqrt(2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (-phi2 - 1)**2)/(2*tau))/(16*pi**(7/2)*a1**3*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 1,
+          "coordinate": "phi1",
+          "face": "upper",
+          "location": "2",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "sqrt(2)*(2*phi2 - 4)*exp((-(2 - phi2)**2 - (N1 - N2)**2 - (a1 - a2)**2)/(2*tau))/(32*pi**(7/2)*a1**3*tau**(5/2))",
+          "delta_prime_coefficient": "sqrt(2)*exp((-(2 - phi2)**2 - (N1 - N2)**2 - (a1 - a2)**2)/(2*tau))/(16*pi**(7/2)*a1**3*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 1,
+          "coordinate": "N1",
+          "face": "lower",
+          "location": "1/4",
+          "ghost_factor": "-i*rho1*g",
+          "delta_coefficient": "sqrt(2)*exp((-(1/4 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))/(4*pi**(3/2)*tau**(3/2))",
+          "delta_prime_coefficient": "0",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 1,
+          "coordinate": "N1",
+          "face": "upper",
+          "location": "2",
+          "ghost_factor": "-i*rho1*g",
+          "delta_coefficient": "-sqrt(2)*exp((-(2 - N2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))/(4*pi**(3/2)*tau**(3/2))",
+          "delta_prime_coefficient": "0",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 2,
+          "coordinate": "a2",
+          "face": "lower",
+          "location": "1/2",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "-sqrt(2)*(2*a1 - 1)*exp((-(N1 - N2)**2 - (a1 - 1/2)**2 - (phi1 - phi2)**2)/(2*tau))/(96*pi**(7/2)*tau**(5/2))",
+          "delta_prime_coefficient": "-sqrt(2)*exp((-(N1 - N2)**2 - (a1 - 1/2)**2 - (phi1 - phi2)**2)/(2*tau))/(48*pi**(7/2)*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 2,
+          "coordinate": "a2",
+          "face": "upper",
+          "location": "2",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "sqrt(2)*(2*a1 - 4)*exp((-(N1 - N2)**2 - (a1 - 2)**2 - (phi1 - phi2)**2)/(2*tau))/(384*pi**(7/2)*tau**(5/2))",
+          "delta_prime_coefficient": "sqrt(2)*exp((-(N1 - N2)**2 - (a1 - 2)**2 - (phi1 - phi2)**2)/(2*tau))/(192*pi**(7/2)*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 2,
+          "coordinate": "phi2",
+          "face": "lower",
+          "location": "-1",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "sqrt(2)*(2*phi1 + 2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 + 1)**2)/(2*tau))/(32*pi**(7/2)*a2**3*tau**(5/2))",
+          "delta_prime_coefficient": "sqrt(2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 + 1)**2)/(2*tau))/(16*pi**(7/2)*a2**3*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 2,
+          "coordinate": "phi2",
+          "face": "upper",
+          "location": "2",
+          "ghost_factor": "c1*g",
+          "delta_coefficient": "-sqrt(2)*(2*phi1 - 4)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - 2)**2)/(2*tau))/(32*pi**(7/2)*a2**3*tau**(5/2))",
+          "delta_prime_coefficient": "-sqrt(2)*exp((-(N1 - N2)**2 - (a1 - a2)**2 - (phi1 - 2)**2)/(2*tau))/(16*pi**(7/2)*a2**3*tau**(3/2))",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 2,
+          "coordinate": "N2",
+          "face": "lower",
+          "location": "1/4",
+          "ghost_factor": "-i*rho1*g",
+          "delta_coefficient": "sqrt(2)*exp((-(N1 - 1/4)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))/(4*pi**(3/2)*tau**(3/2))",
+          "delta_prime_coefficient": "0",
+          "other_windows": "product of the other five declared coordinate indicators"
+        },
+        {
+          "copy": 2,
+          "coordinate": "N2",
+          "face": "upper",
+          "location": "2",
+          "ghost_factor": "-i*rho1*g",
+          "delta_coefficient": "-sqrt(2)*exp((-(N1 - 2)**2 - (a1 - a2)**2 - (phi1 - phi2)**2)/(2*tau))/(4*pi**(3/2)*tau**(3/2))",
+          "delta_prime_coefficient": "0",
+          "other_windows": "product of the other five declared coordinate indicators"
+        }
+      ],
+      "box_decomposition": "interior chi1*chi2*D_tau*difference times c1*g plus all twelve face distributions; no mixed-normal derivatives or corner delta products",
       "lapse_lower_face": "N=1/4, positive delta coefficient in derivative of zero extension; not N=0 contact",
       "lapse_upper_face": "N=2, negative delta coefficient in derivative of zero extension; not infinity",
       "zero_lapse_contact": "UNRESOLVED: no trajectory kernel or nu->0 identity limit constructed",
@@ -289,7 +417,7 @@
             "column": 6,
             "line": 129
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -306,7 +434,7 @@
             "column": 6,
             "line": 130
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -323,7 +451,7 @@
             "column": 6,
             "line": 131
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -340,7 +468,7 @@
             "column": 6,
             "line": 132
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -357,7 +485,7 @@
             "column": 6,
             "line": 133
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -374,7 +502,7 @@
             "column": 6,
             "line": 134
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -391,7 +519,7 @@
             "column": 6,
             "line": 135
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -408,7 +536,7 @@
             "column": 6,
             "line": 136
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -425,7 +553,7 @@
             "column": 6,
             "line": 137
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -442,7 +570,7 @@
             "column": 6,
             "line": 138
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -459,7 +587,7 @@
             "column": 6,
             "line": 139
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -476,7 +604,7 @@
             "column": 6,
             "line": 140
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -493,7 +621,7 @@
             "column": 6,
             "line": 141
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -510,7 +638,7 @@
             "column": 6,
             "line": 142
           },
-          "fileName": "/var/tmp/orca/ice-seam-ward-yvwk45_4/SeamWardAudit.lean",
+          "fileName": "/var/tmp/orca/ice-seam-ward-ldpijobu/SeamWardAudit.lean",
           "isSilent": false,
           "keepFullRange": false,
           "kind": "[anonymous]",
@@ -583,5 +711,5 @@
     "theorem_count": 7,
     "accepted": true
   },
-  "elapsed_seconds": 3.8321376480162144
+  "elapsed_seconds": 4.055415472947061
 }

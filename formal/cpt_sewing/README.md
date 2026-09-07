@@ -49,3 +49,10 @@ the physical source chart requires `a > 0`; this domain is recorded separately.
 No theorem proves the bulk variation/GHY reduction, full quantum CPT,
 ghost/BFV compatibility, boundary state, original integration cycle,
 global intersection vector or physical discovery. Those objects remain open.
+
+The separate [SeamWard module](CptSewing/SeamWard.lean) verifies finite ghost
+coefficient identities and a potential witness for the
+[regulated quantum boundary-sewing audit](../../cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md).
+Run `./ice run starobinsky_bfv_seam_ward` from the repository root for that
+module's fresh-source proof audit and the independent symbolic derivatives.
+It does not formalize distribution theory or construct a bulk trajectory source.

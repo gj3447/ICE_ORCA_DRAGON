@@ -220,3 +220,8 @@ class와 oriented intersection이 유지되는지 검사한다. 경계 상태, l
   finite-chain regulator와 primary-pair 한계를 대조했다. 새 scientific runner는 실행하지 않았다.
 - 방법 메모이므로 canonical claim/evidence 상태와 repro manifest는 바꾸지 않는다.
   새로운 물리적 발견, 물리 CPT 구현 또는 G1 완료를 주장하지 않는다.
+
+후속 [양자 경계 kernel/Ward 계산](../../cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md)은
+선언한 Gaussian 규제가 모든 양의 폭에서 exact BFV closure를 잃는 반례와 실제 box의
+12개 face 항을 도출했다. 이는 source에 필요한 boundary pairing 입력의 판별이며,
+위에서 요구한 full trajectory source와 zero-lapse contact는 아직 구성되지 않았다.

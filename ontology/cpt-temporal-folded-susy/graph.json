@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-06T17:12:49Z",
+  "updated_at_utc": "2026-09-07T00:27:47Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -16556,6 +16556,93 @@
       "artifact_kind": "report",
       "path": "cpt_temporal_folded_susy/CPT_BOUNDARY_SEWING_LEAN.md",
       "sha256": "abb446b236aa69c4b0289f3c38db6343b60672bac7864c134df64a2828ad757b"
+    },
+    {
+      "id": "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
+      "title": "Some positive Gaussian width gives an exactly BFV-closed declared Starobinsky seam",
+      "statement": "For the declared Weyl-ordered Starobinsky flat interior core, graded seam kernel and independent-coordinate Gaussian regulator, there exists tau>0 for which the regulated seam is exactly BFV closed.",
+      "summary": "Contradicted in the declared scope: the potential-bearing witness gives a nonzero Ward coefficient for every tau>0, while the finite box also carries explicit cutoff-face distributions.",
+      "epistemic_state": "CONTRADICTED",
+      "state": "CONTRADICTED_SCOPED_GAUSSIAN_SEAM_REGULATOR_ONLY"
+    },
+    {
+      "id": "scope:starobinsky-gaussian-seam-ward-flat-core",
+      "type": "scope",
+      "title": "Starobinsky Gaussian seam Ward flat-core scope",
+      "summary": "One finite-dimensional doubled boundary-pairing discriminator for a Weyl-ordered homogeneous Starobinsky operator, not a finite bulk trajectory path integral.",
+      "state": "DECLARED_SUPPORTING_GAUSSIAN_SEAM_DISCRIMINATOR_SCOPE",
+      "includes": [
+        "q=(a,phi,N) per copy, the stated Weyl ordering at hbar=1 and formal C-infinity compact interior transpose identity",
+        "the graded ghost kernel in the declared (c1,c2,rho1,rho2) order and its stated fiber Berezin pullback",
+        "the independent-coordinate normalized R3 Gaussian of every width tau>0, zero-extended by the declared hard box a in [1/2,2], phi in [-1,2], N in [1/4,2]",
+        "the explicit potential-bearing interior witness, primary-lapse cancellation, and the twelve canonical one-coordinate box-face distribution coefficients"
+      ],
+      "excludes": [
+        "a self-adjoint realization, exact heat kernel, tau-to-zero distributional completion or a zero-lapse contact term",
+        "a finite-m trajectory action, BFV functional measure, endpoint-state transform, determinant line, gauge atlas or Gribov theorem",
+        "a physical CPT implementation, full trajectory source, original relative class, saddle/Stokes census, global intersection vector, physics or TOE claim"
+      ]
+    },
+    {
+      "id": "evidence:starobinsky-gaussian-seam-ward-result",
+      "type": "evidence",
+      "title": "Starobinsky Gaussian seam Ward evidence",
+      "summary": "One clean run records exact symbolic interior, graded-Berezin and cutoff-face checks plus seven Lean coefficient proofs. The raw result is the complete source of truth for the declared regulator and its non-closure witness.",
+      "state": "VALID_RUN_SCOPED_GAUSSIAN_SEAM_NONCLOSURE",
+      "observed_status": "SCOPED_GAUSSIAN_SEAM_HAS_NONZERO_BFV_WARD_DEFECT",
+      "check_ids": [
+        "symbolic.checks.gaussian_H_difference_from_direct_derivatives",
+        "symbolic.checks.graded_Ward_factorization",
+        "symbolic.checks.Starobinsky_nonzero_Ward_witness",
+        "symbolic.checks.witness_nonzero_for_every_positive_width",
+        "symbolic.checks.canonical_face_delta_coefficient",
+        "lean.theorems.CptSewing.SeamWard.constraintGhost_wedge_kernel",
+        "lean.theorems.CptSewing.SeamWard.potential_witness_difference"
+      ]
+    },
+    {
+      "id": "artifact:starobinsky-gaussian-seam-ward-lean-source",
+      "type": "artifact",
+      "title": "Starobinsky Gaussian seam Ward Lean source",
+      "summary": "Pinned Lean source for the finite graded coefficient algebra and potential witness used by the scoped seam discriminator. The raw result pins the project toolchain and manifest separately.",
+      "state": "TRACKED_FORMAL_PROOF_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/SeamWard.lean",
+      "sha256": "0615f27a37286abbda7445fa905d8591b0688b5bacf5b82a37c730ee11ce085b",
+      "introduced_in_commit": "c2213b335d1c4ff0dbb5ac5bd2f0bf06bb593ee8"
+    },
+    {
+      "id": "artifact:starobinsky-gaussian-seam-ward-runner",
+      "type": "artifact",
+      "title": "Starobinsky Gaussian seam Ward runner",
+      "summary": "Clean bounded runner that pins the symbolic kernel and Lean inputs, checks the exact Ward/facial coefficients and records the declared non-closure witness.",
+      "state": "TRACKED_VALID_RUNNER",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_bfv_seam_ward.py",
+      "sha256": "cd98cc9c2cad0f3aead59a769fdbf6f475702f250f80636e3b73ce3743c36671",
+      "introduced_in_commit": "ce7b8c5fe711712c2f107ac08481cfed8bad6a72"
+    },
+    {
+      "id": "artifact:starobinsky-gaussian-seam-ward-result",
+      "type": "artifact",
+      "title": "Starobinsky Gaussian seam Ward raw result",
+      "summary": "Raw-result SSOT for the declared Gaussian kernel, symbolic Ward and box-face ledger, Lean theorem acceptance, provenance and explicit non-claims.",
+      "state": "TRACKED_VALID_RUN_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD_RESULT.json",
+      "sha256": "778964e519ec85e5602cbbd7960f2b6a8a302fd655cfb3fe24ee49155dd62bef"
+    },
+    {
+      "id": "artifact:starobinsky-bfv-seam-ward-report",
+      "type": "artifact",
+      "title": "Starobinsky Gaussian boundary-sewing Ward defect report",
+      "summary": "Declared polarized boundary pairing, every-positive-width potential counterexample, twelve hard-box face distributions, separate Lean/symbolic verification scope and remaining full trajectory/contact/cycle inputs.",
+      "state": "TRACKED_SCOPED_NEGATIVE_RESULT_REPORT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_SEAM_WARD.md",
+      "sha256": "3ca7116ae89d2b52d2dba8e6cbd9224dd9be4446a0930999d8f3da071f41b811"
     }
   ],
   "edges": [
@@ -36988,7 +37075,16 @@
     {"id":"edge:3888","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"DEFINED_IN","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-runner","note":"The runner verifies hashes, invokes Lean with warning-as-error, records theorem axioms and rejects the two negative controls."},
     {"id":"edge:3889","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"RECORDED_IN","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-result","note":"The raw result is the complete machine-readable source of truth for theorem acceptance, standard axioms, controls and provenance."},
     {"id":"edge:3890","from":"evidence:cpt-real-bosonic-boundary-sewing-lean-result","relation":"MOTIVATES","to":"open:gate1-starobinsky-exact-gauge-preserving-element-source","note":"The checked real ghost-number-zero boundary lemma leaves the required BFV/source extension, constrained composition, gauge-null mode and original-cycle construction open."},
-    {"id":"edge:3891","from":"claim:CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES","relation":"DOCUMENTED_BY","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-report","note":"The report separates the accepted real boundary algebra from the unconstructed BFV sewing, physical state and original joint relative cycle."}
+    {"id":"edge:3891","from":"claim:CPT_REAL_BOSONIC_SUM_SEAM_PRIMITIVE_VANISHES","relation":"DOCUMENTED_BY","to":"artifact:cpt-real-bosonic-boundary-sewing-lean-report","note":"The report separates the accepted real boundary algebra from the unconstructed BFV sewing, physical state and original joint relative cycle."},
+    {"id":"edge:3892","from":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","relation":"ABOUT","to":"concept:cpt-pin-sewing","note":"The claim concerns one declared graded boundary-sewing regulator, not a physical CPT source."},
+    {"id":"edge:3893","from":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","relation":"VALID_WITHIN","to":"scope:starobinsky-gaussian-seam-ward-flat-core"},
+    {"id":"edge:3894","from":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","relation":"HAS_EVIDENCE","to":"evidence:starobinsky-gaussian-seam-ward-result","polarity":"CONTRADICTS","note":"The exact potential-bearing witness is nonzero for every declared tau>0; hard cutoff faces provide additional regulator defects."},
+    {"id":"edge:3895","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"PART_OF","to":"concept:cpt-pin-sewing","note":"Supporting boundary-pairing discriminator only; no full trajectory source, relative cycle or physical state is constructed."},
+    {"id":"edge:3896","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"DERIVED_FROM","to":"artifact:starobinsky-gaussian-seam-ward-lean-source","note":"The pinned Lean source verifies seven finite graded coefficient and potential-witness facts used in the result."},
+    {"id":"edge:3897","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"DEFINED_IN","to":"artifact:starobinsky-gaussian-seam-ward-runner","note":"The runner performs the symbolic interior, Berezin and twelve-face checks and invokes the pinned Lean audit."},
+    {"id":"edge:3898","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"RECORDED_IN","to":"artifact:starobinsky-gaussian-seam-ward-result","note":"The raw result is the complete machine-readable source of truth for the regulator, exact checks, Lean acceptance and limits."},
+    {"id":"edge:3899","from":"evidence:starobinsky-gaussian-seam-ward-result","relation":"MOTIVATES","to":"open:gate1-starobinsky-finite-m2-replacement-bfv-source","note":"The declared Gaussian cannot serve as an exactly BFV-closed finite-width seam. A controlled regulator-removal limit is not excluded; the same-model finite trajectory source and relative-cycle data remain missing."},
+    {"id":"edge:3900","from":"claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH","relation":"DOCUMENTED_BY","to":"artifact:starobinsky-bfv-seam-ward-report"}
   ],
   "kg_bridges": [
     {
