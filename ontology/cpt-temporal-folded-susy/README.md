@@ -3,7 +3,7 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-09-08T01:59:10Z`; 1642 nodes, 4192 edges). Run and analytic-evidence details live in the
+`2026-09-08T03:43:41Z`; 1642 nodes, 4192 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
 verifies stored artifact and policy hashes; use the current validator output for counts.

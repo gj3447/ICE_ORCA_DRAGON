@@ -20,6 +20,7 @@ import { intuitionCommand } from "./intuition/cli.ts"
 import { comparatorProtocolCommand } from "./comparator-protocol/cli.ts"
 import { bridgeAuditCommand } from "./bridges/cli.ts"
 import { sidecarCollectionCommand } from "./sidecars/cli.ts"
+import { researchContextCommand } from "./research-context/cli.ts"
 import { WorkspaceLive } from "./workspace.ts"
 
 const json = Options.boolean("json").pipe(
@@ -106,7 +107,8 @@ const root = Command.make("ice", {}, () =>
     intuitionCommand,
     comparatorProtocolCommand,
     sidecarCollectionCommand,
-    bridgeAuditCommand
+    bridgeAuditCommand,
+    researchContextCommand
   ])
 )
 

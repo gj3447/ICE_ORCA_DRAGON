@@ -1,5 +1,7 @@
 # Scope decisions
 
+- [`ICE_HSWM_USL_RESEARCH_CONTEXT_2026-09-08.md`](ICE_HSWM_USL_RESEARCH_CONTEXT_2026-09-08.md) configures the user-authorized local HSWM research route: an ICE manifest uses authenticated Codex command cells and explicit `./ice run` compute cells, while USL remains a reference/status context helper; local feedback adjusts route estimates but neither supplies scientific truth nor bypasses ICE evidence and execution boundaries.
+
 - [`ICE_WORKBENCH_REFRAME_2026-05-18.md`](ICE_WORKBENCH_REFRAME_2026-05-18.md) is the active workbench/layer-disclosure decision.
 - [`ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md`](ICE_PHYSICS_PARTIAL_RETREAT_2026-05-17.md) is its preserved predecessor.
 - [`ICE_LEAN_RESEARCH_RULES_2026-08-31.md`](ICE_LEAN_RESEARCH_RULES_2026-08-31.md) is the active six-rule method for new unnumbered calculations: one scoped question, one raw record, failure-specific controls, proportional independent checks, layer separation, and no automatic offspring.

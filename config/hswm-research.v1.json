@@ -1,0 +1,193 @@
+{
+  "schema_version": "hswm-adaptive-program/v1",
+  "graph_id": "hswm-ice-research-v1",
+  "root": "researcher",
+  "context_domain": {
+    "mode": [
+      "investigate",
+      "review",
+      "compute"
+    ],
+    "graph": [
+      "cpt",
+      "hypercomplex",
+      "legacy",
+      "igrueqft"
+    ],
+    "tier": [
+      "core",
+      "supporting"
+    ]
+  },
+  "cells": [
+    {
+      "cell_id": "researcher",
+      "kind": "router",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1"
+    },
+    {
+      "cell_id": "references",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "references"
+      ]
+    },
+    {
+      "cell_id": "formulate",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "formulate"
+      ]
+    },
+    {
+      "cell_id": "adversary",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "adversary"
+      ]
+    },
+    {
+      "cell_id": "synthesize",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "synthesize"
+      ]
+    },
+    {
+      "cell_id": "compute",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "compute"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "uid": "proposal-first",
+      "source": "researcher",
+      "members": [
+        "references",
+        "formulate",
+        "adversary",
+        "synthesize"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "eq",
+        "left": {
+          "role": "context",
+          "field": "mode"
+        },
+        "right": "investigate"
+      }
+    },
+    {
+      "uid": "falsifier-first",
+      "source": "researcher",
+      "members": [
+        "references",
+        "adversary",
+        "formulate",
+        "synthesize"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "eq",
+        "left": {
+          "role": "context",
+          "field": "mode"
+        },
+        "right": "investigate"
+      }
+    },
+    {
+      "uid": "review",
+      "source": "researcher",
+      "members": [
+        "references",
+        "adversary",
+        "synthesize"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "eq",
+        "left": {
+          "role": "context",
+          "field": "mode"
+        },
+        "right": "review"
+      }
+    },
+    {
+      "uid": "compute",
+      "source": "researcher",
+      "members": [
+        "references",
+        "compute",
+        "adversary",
+        "synthesize"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "eq",
+        "left": {
+          "role": "context",
+          "field": "mode"
+        },
+        "right": "compute"
+      }
+    }
+  ]
+}

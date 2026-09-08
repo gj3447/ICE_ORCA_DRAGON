@@ -101,6 +101,29 @@ scope 확대와 물리 해석에 적용되는 정본 질문이다.
 
 ## Commands
 
+### HSWM · USL 기반 연구 수행 — ACTIVE
+
+사용자 요청에 따라 연구 과정 자체를 HSWM에서 수행한다. 구현·사용법 정본은
+`docs/decisions/ICE_HSWM_USL_RESEARCH_CONTEXT_2026-09-08.md`다.
+
+- 새 실질적 연구 질문은 `./ice research run "<한 질문>" --target <graph::node>
+  --reference <repo-relative-file> --json`으로 시작한다. 기본 `--tier supporting`;
+  CPT core는 기존 planner와 사람이 missing object·bounded output·TOE dependency path를 확인한 뒤
+  `--tier core`를 사용한다. 이 설정이 기존 과학적 판단 기준을 대신하지 않는다.
+- HSWM이 실제로 USL 참조 셀, 가설 제안·반례 검토·종합 LLM 셀의 호출 순서를 선택하고 trajectory를
+  저장한다. `--mode review`는 반례 검토, `--mode compute --runner <name>`은 명시한 계산만
+  기존 `./ice run`을 통해 실행한다. LLM은 설치된 Codex CLI의 모델·로그인을 사용한다.
+- 산출물을 검토한 뒤 `./ice research feedback <episode> --useful true|false --source "<검토 근거>"`로
+  연구 경로의 유용성을 피드백한다. 자동 exit-code 보상은 사용하지 않는다. 이 피드백은 로컬 route
+  선택 모델을 갱신하며 정리의 증명, 과학적 참, 인과 효과나 신경망 가중치 학습을 뜻하지 않는다.
+- `./ice research plan`은 호출 전 경로 선택, `state`는 현재 상태, `graph`는 실행·수정 이력,
+  `status`는 설치 인터페이스를 확인한다. `prepare`는 내부 USL 참조 준비 셀의 독립 진단이다.
+  설치가 없거나 실행이 실패하면 그 사실을 남기며 HSWM으로 수행했다고 보고하지 않는다.
+- 설치 기본값은 sibling `../HSWM`, `../USL`이며 `ICE_HSWM_ROOT`, `ICE_USL_ROOT`로 바꾼다.
+  연구 상태는 로컬 `.ice/hswm-research/`, 참조 관측은 `.ice/research-context/`에 저장한다.
+  Native ontology와 raw result가 과학적 정본이다. 외부 KG UID 생성·다른 graph evidence 병합·sibling
+  소스 수정은 이 연결에서 하지 않는다. 같은 질문의 중간 편집마다 새 episode를 만들 필요는 없다.
+
 제어면은 **Node 24 + strict TypeScript + Effect 3**이며 `package-lock.json`으로 고정한다.
 계산면은 기존 NumPy/SciPy/SymPy Python 커널이며 **Python 3.13 + `uv.lock`**으로
 고정한다. Phase-44 원문 수화에는 Git LFS가 필요하다. 호스트 전역 Python/Node에 설치하지 말고

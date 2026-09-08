@@ -10,6 +10,8 @@ export interface ProcessSpec {
   readonly args?: ReadonlyArray<string>
   readonly cwd?: string
   readonly captureLimitCharacters?: number
+  /** Supply and close stdin. An empty string sends EOF without inherited input. */
+  readonly stdin?: string
 }
 
 export interface ProcessResult {
@@ -22,7 +24,10 @@ const defaultCaptureLimitCharacters = 4 * 1024 * 1024
 const maximumCaptureLimitCharacters = 32 * 1024 * 1024
 
 const makeCommand = (spec: ProcessSpec): Command.Command => {
-  const command = Command.make(spec.command, ...(spec.args ?? []))
+  const base = Command.make(spec.command, ...(spec.args ?? []))
+  const command = spec.stdin === undefined ? base : base.pipe(
+    Command.stdin(spec.stdin === "" ? Stream.empty : Stream.make(new TextEncoder().encode(spec.stdin)))
+  )
   return spec.cwd === undefined
     ? command
     : command.pipe(Command.workingDirectory(spec.cwd))

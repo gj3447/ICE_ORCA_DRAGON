@@ -22,6 +22,8 @@ dist/
 node_modules/
 coverage/
 .ice/agent-runs/
+.ice/research-context/
+.ice/hswm-research/
 
 # Local-only test scratch
 .pytest_cache/

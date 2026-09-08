@@ -48,6 +48,21 @@ reported separately.
 
 ## Research graph navigation
 
+Research now runs inside the installed HSWM adaptive runtime, using USL for reference context:
+
+```bash
+./ice research run "<one bounded research question>" --target cpt::open:gate1-original-cycle-signed-global-intersections --reference <local-source.md> --json
+./ice research state --json
+./ice research feedback <episode> --useful true --source "<review rationale>" --json
+```
+
+HSWM selects and records a route through actual LLM formulation, adversarial review and synthesis
+cells. Explicit usefulness reviews update local route estimates. USL links the target and source roles;
+compute mode invokes a caller-selected runner through `./ice run`. The
+[setup and examples](docs/decisions/ICE_HSWM_USL_RESEARCH_CONTEXT_2026-09-08.md)
+cover planning, reference diagnostics, installed runtimes and persistent episode artifacts.
+LLM proposals and route feedback remain distinct from scientific evidence.
+
 The repository-local ontology is the standard navigation layer; raw result files remain the execution
 check ledgers. Obtain live graph scope and totals from `./ice ontology summary --json`, rather than from
 copied counts in documentation. The Hypercomplex, legacy, CPT, and IG-RUEQFT graphs are independent

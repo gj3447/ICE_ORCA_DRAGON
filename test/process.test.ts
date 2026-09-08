@@ -4,6 +4,17 @@ import { Effect, Fiber } from "effect"
 import { capture } from "../src/process.ts"
 
 layer(NodeContext.layer)("scoped process runner", (it) => {
+  it.effect("closes explicit empty stdin for tools that wait for EOF", () =>
+    Effect.gen(function* () {
+      const result = yield* capture({
+        command: process.execPath,
+        args: ["-e", "let input=''; process.stdin.on('data', chunk => input += chunk); process.stdin.on('end', () => process.stdout.write('EOF:' + input))"],
+        stdin: ""
+      })
+      expect(result).toEqual({ exitCode: 0, stdout: "EOF:", stderr: "" })
+    })
+  )
+
   it.effect("captures stdout, stderr, and the real exit code concurrently", () =>
     Effect.gen(function* () {
       const result = yield* capture({
