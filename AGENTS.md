@@ -134,6 +134,17 @@ scope 확대와 물리 해석에 적용되는 정본 질문이다.
   연구 상태는 로컬 `.ice/hswm-research/`, 참조 관측은 `.ice/research-context/`에 저장한다.
   Native ontology와 raw result가 과학적 정본이다. 외부 KG UID 생성·다른 graph evidence 병합·sibling
   소스 수정은 이 연결에서 하지 않는다. 같은 질문의 중간 편집마다 새 episode를 만들 필요는 없다.
+- HSWM은 사용하면서 구현·검증·피드백한다. 실사용의 오류나 기능 누락을 구체적 입력·관측 출력·
+  수정 또는 재현 사례로 남긴다. 실제 연구 유용성, 실행 품질, 물리적 참을 서로 다른 판단으로
+  기록하며, 관계 분화를 유도하려고 문맥이나 성공·실패 label을 꾸며내지 않는다.
+- 활성 실행기는 native TypeScript/Effect `hswm-live-process.js`다. Python은 USL preview와
+  과거 비교 도구에 남는다. `research status`에서 실제 native entry와 source/build pins를 읽는다.
+  검증한 임시 수정본을 쓸 때는 `.ice/hswm-research/native-entry.json`의 pin을 확인한다.
+  `ICE_HSWM_NATIVE_ENTRY`는 명시적 실행본 override다. HSWM 쪽 진행 중인 변경을 몰래 commit하지 않는다.
+- 단계별 검토는 `./ice research review <review-file> --json`으로 실제 artifact hash와 trajectory에
+  묶어 기록한다. 에이전트 판단은 author=agent/source=codex로 표시한다. 현재 native API의 root
+  feedback과 local stage review를 구별하고, 내부 분기에 피드백이 반영됐다고 추정하지 않는다.
+  근거와 재현 사례는 `docs/decisions/ICE_HSWM_DOGFOOD_FEEDBACK_2026-09-08.md`를 따른다.
 
 제어면은 **Node 24 + strict TypeScript + Effect 3**이며 `package-lock.json`으로 고정한다.
 계산면은 기존 NumPy/SciPy/SymPy Python 커널이며 **Python 3.13 + `uv.lock`**으로

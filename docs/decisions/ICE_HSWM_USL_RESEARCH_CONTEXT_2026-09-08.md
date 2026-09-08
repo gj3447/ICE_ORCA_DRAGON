@@ -22,11 +22,13 @@ ICE program manifest는 `config/hswm-research.v1.json`이며, HSWM의 선언 sch
 route, 비용·성공/유용성 feedback을 보존한다. Git evidence artifact나 외부 KG write가
 아니다.
 
-실제 runtime 호출은 sibling checkout을 project로 지정한다.
+현재 연구 runtime은 sibling의 native TypeScript/Effect 실행본이다. 초기 Python 회차의
+기록은 역사로 보존한다. 전환 중 발견한 결함, 검증한 로컬 수정본과 피드백은
+[실사용 개선 기록](ICE_HSWM_DOGFOOD_FEEDBACK_2026-09-08.md)을 따른다.
 
 ```bash
 # HSWM runtime의 직접 호출 형태. CONTEXT_JSON/TASK_JSON은 CLI가 만든 JSON 입력이다.
-uv run --locked --no-sync --project "$ICE_HSWM_ROOT" hswm-live \
+node "$ICE_HSWM_ROOT/src/hswm/effect-runtime/dist/hswm-live-process.js" \
   --program config/hswm-research.v1.json \
   --state .ice/hswm-research/runtime.sqlite3 \
   --workspace . run \
@@ -34,7 +36,8 @@ uv run --locked --no-sync --project "$ICE_HSWM_ROOT" hswm-live \
 ```
 
 기본 sibling root는 `../HSWM`이다. 위치가 다르면 `ICE_HSWM_ROOT`를 지정한다.
-HSWM checkout을 수정하거나 ICE의 package dependency로 복사하지 않는다.
+HSWM checkout을 ICE의 package dependency로 복사하지 않는다. 진행 중인 sibling 변경은
+보존하며, 필요한 수정은 재현 사례·patch와 무시되는 로컬 검증본으로 먼저 시험한다.
 
 ## ICE 연구 인터페이스
 
@@ -69,7 +72,8 @@ HSWM checkout을 수정하거나 ICE의 package dependency로 복사하지 않�
   --mode investigate --tier supporting --budget 600 --json
 ```
 
-`--source`는 ICE prefix를 제외한 228자 이내의 검토 근거다. USL에서 관측한 참조 파일의
+`--source`는 `agent(codex): research-usefulness-review: `를 제외한 214자 이내의 검토 근거다.
+현재 CLI feedback의 평가자는 agent로 명시한다. USL에서 관측한 참조 파일의
 내용 hash는 LLM 셀에서 다시 비교하며, 변경된 입력은 거부한다.
 
 `--runner`는 `compute` mode에서만 허용한다. compute cell은 이름이 지정된 clean,
@@ -93,7 +97,10 @@ truth label이 아니다. [실제 4-cell 회차와 피드백 검증](ICE_HSWM_RE
 
 ## Feedback의 한계
 
-HSWM feedback은 선택한 context에서 relation/route의 유용성·비용 추정을 갱신한다.
+현재 native HSWM episode feedback은 root relation의 유용성·비용 추정을 갱신한다.
+내부 분기에는 자동 배분하지 않는다. `./ice research review <review-file> --json`은
+실제 stage trajectory와 출력 hash에 묶인 별도 검토 기록이며, 현재 native 학습에
+전달되지 않았음을 명시한다.
 이는 local adaptive relation estimate이지 neural weight training, full world model,
 인과 검증, 혹은 HSWM의 대형 정체성 검증이 아니다. 모델의 유용성이나 full-world-model
 성립은 이 feedback만으로 검증되지 않는다. `--useful`의 source rationale은 사용자 또는
@@ -119,10 +126,10 @@ USL v2 adapter/status는 선택적인 context helper이며 HSWM feedback이나 I
 ## 구현 출처와 적용 범위
 
 - HSWM runtime schema·routing·SQLite feedback: sibling
-  `HSWM/src/hswm/cells/adaptive_runtime.py`와
-  `HSWM/src/hswm/infrastructure/adaptive_cli.py`.
-- command-cell 실행 및 bounded output: sibling
-  `HSWM/src/hswm/cells/adaptive_executor.py`.
+  `HSWM/src/hswm/effect-runtime/src/adaptive-domain.ts`, `adaptive-runtime.ts`,
+  `adaptive-cli.ts`, `adaptive-store.ts`.
+- command-cell 실행 및 bounded output: 같은 디렉토리의 `adaptive-executor.ts`,
+  `effect-bounded-subprocess.ts`.
 - HSWM의 현재 구현과 검증 범위: sibling
   `HSWM/README.md`, `HSWM/docs/canon/HSWM_CONSTITUTION_2026-08-20.md`.
 - USL reference/status adapter: sibling

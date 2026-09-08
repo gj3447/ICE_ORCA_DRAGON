@@ -1,0 +1,16 @@
+{
+  "schema": "ice-research-stage-review/v1",
+  "id": "primary-pilot-synthesize-review-20260908",
+  "author": "agent",
+  "source": "codex",
+  "target": {
+    "episode": "c8247949-b803-4620-9c2e-b235d86330d3",
+    "stage": "synthesize",
+    "output_sha256": "eca99a34db160b9085d2401bd3e8325d001d7f043fd271faaf8b9dbc7e05c1f2",
+    "trajectory": "trajectory:c8247949-b803-4620-9c2e-b235d86330d3:4"
+  },
+  "verdict": "useful",
+  "dimension": "research_usefulness",
+  "rationale": "전체 차수 chain 항등식과 비영 pairing 손실을 구분하고 미확보 입력을 유지했다. domain 출력을 사용한 종합이므로 독립 증명으로 세지 않는다.",
+  "non_claim": "과학적 참, 실제 계산 성공, 물리적 상태·CPT 접합 또는 인과적 credit을 판정하지 않는다."
+}

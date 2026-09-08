@@ -1,0 +1,16 @@
+{
+  "schema": "ice-research-stage-review/v1",
+  "id": "primary-m-synthesize-review-20260908",
+  "author": "agent",
+  "source": "codex",
+  "target": {
+    "episode": "15218ec9-ad22-4e48-9f57-056158ef70ae",
+    "stage": "synthesize",
+    "output_sha256": "1efb0e0cd26896016940c60d903e043ce5961506aa9b32739fcad8f68e3c531e",
+    "trajectory": "trajectory:15218ec9-ad22-4e48-9f57-056158ef70ae:4"
+  },
+  "verdict": "useful",
+  "dimension": "research_usefulness",
+  "rationale": "공동 kernel과 적분 contraction을 분리하고 U, 전치, 정의역, 차수 및 detector 보존 조건을 명시해 유용하다. Δ=0/-1은 실제 seed가 검출하는 허용 v와 정규화가 있을 때의 예상값이다. 종합은 앞 단계의 독립 증거가 아니다.",
+  "non_claim": "조건부 제안의 연구 유용성에 대한 agent 평가다. 실제 seed 계산, source-derived 양자화, 물리 CPT, 양의 내적, regulator 극한, G1 진전 또는 native 내부 분기의 학습을 검증한 것이 아니다."
+}

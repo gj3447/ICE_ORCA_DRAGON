@@ -48,7 +48,7 @@ reported separately.
 
 ## Research graph navigation
 
-Research now runs inside the installed HSWM adaptive runtime, using USL for reference context:
+Research runs inside the native TypeScript/Effect HSWM adaptive runtime, using USL for reference context:
 
 ```bash
 ./ice research run "<one bounded research question>" --target cpt::open:gate1-original-cycle-signed-global-intersections --reference <local-source.md> --json
@@ -62,6 +62,8 @@ compute mode invokes a caller-selected runner through `./ice run`. The
 [setup and examples](docs/decisions/ICE_HSWM_USL_RESEARCH_CONTEXT_2026-09-08.md)
 cover planning, reference diagnostics, installed runtimes and persistent episode artifacts.
 LLM proposals and route feedback remain distinct from scientific evidence.
+The [dogfood and feedback record](docs/decisions/ICE_HSWM_DOGFOOD_FEEDBACK_2026-09-08.md)
+tracks actual failures, tested patches and stage reviews from using this workflow.
 
 For the reviewed boundary-state question, a typed research state makes joint premises,
 missing inputs and falsifiers visible and selects a nested HSWM review cell:

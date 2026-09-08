@@ -38,6 +38,7 @@ const maxReferenceTotalCharacters = 60_000
 const maxModelOutputCharacters = 12_000
 const maxCaptureCharacters = 64 * 1024
 const maxStdinCharacters = 64 * 1024
+const maxStdinBytes = maxStdinCharacters * 4
 const previousPacketPrefix = ".ice/hswm-research/episodes/"
 const episodeId = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|[A-Za-z0-9][A-Za-z0-9_-]{0,95})$/i
 
@@ -97,6 +98,19 @@ const parsePayload = (source: string): { readonly payload: CellPayload; readonly
       ...(state ? { research_state: { path: state.path as string, sha256: state.sha256 as string } } : {}) },
     artifacts: priorArtifacts
   }
+}
+
+/** Read the inherited Node stdin stream; /dev/stdin is unavailable for socket-backed children. */
+export const readResearchCellStdin = async (): Promise<string> => {
+  const chunks: Buffer[] = []
+  let bytes = 0
+  for await (const chunk of process.stdin) {
+    const buffer = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)
+    bytes += buffer.length
+    if (bytes > maxStdinBytes) throw new Error(`cell stdin exceeds ${maxStdinCharacters} characters`)
+    chunks.push(buffer)
+  }
+  return Buffer.concat(chunks).toString("utf8")
 }
 
 const io = <A>(operation: string, run: () => Promise<A>) => Effect.tryPromise({
@@ -159,7 +173,7 @@ const cumulativeArtifacts = (prior: readonly PacketArtifact[], next: readonly Pa
 
 export const researchCellCommand = (stage: ResearchStage) => Effect.gen(function* () {
   const workspace = yield* Workspace
-  const source = yield* io("read cell stdin", () => fs.readFile("/dev/stdin", "utf8"))
+  const source = yield* io("read cell stdin", readResearchCellStdin)
   const { payload, task, artifacts: priorArtifacts } = yield* Effect.try({
     try: () => parsePayload(source),
     catch: (error) => iceError("HSWM_RESEARCH_CELL_INPUT", error instanceof Error ? error.message : String(error))

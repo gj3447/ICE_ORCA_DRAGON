@@ -1,0 +1,16 @@
+{
+  "schema": "ice-research-stage-review/v1",
+  "id": "primary-pilot-domain-review-20260908",
+  "author": "agent",
+  "source": "codex",
+  "target": {
+    "episode": "c8247949-b803-4620-9c2e-b235d86330d3",
+    "stage": "domain",
+    "output_sha256": "7afd40e38f9a3744f5f78d0539ef76ad5fc5e096099955403c12808107a16f77",
+    "trajectory": "trajectory:c8247949-b803-4620-9c2e-b235d86330d3:3"
+  },
+  "verdict": "useful",
+  "dimension": "research_usefulness",
+  "rationale": "후보 C/E와 BFV 규약, U_P와 비영 detector 손실을 구체화해 검토에 유용했다. 형식적 slice는 source 양자화나 bulk BV gauge fixing으로 해석하지 않는다.",
+  "non_claim": "과학적 참, 실제 계산 성공, 물리적 상태·CPT 접합 또는 인과적 credit을 판정하지 않는다."
+}

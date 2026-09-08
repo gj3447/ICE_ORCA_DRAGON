@@ -3,6 +3,7 @@ import { Console } from "effect"
 import { researchPrepareCommand, researchStatusCommand } from "./commands.ts"
 import { researchEpisodeCommand, researchFeedbackCommand, researchStateCommand, researchIntuitionCommand } from "../research-engine/commands.ts"
 import { researchCellCommand } from "../research-engine/cell.ts"
+import { researchReviewCommand } from "../research-engine/review-repository.ts"
 
 const json = Options.boolean("json")
 const status = Command.make("status", { json }, ({ json }) => researchStatusCommand(json)).pipe(
@@ -45,6 +46,10 @@ const feedback = Command.make("feedback", {
   source: Options.text("source"), json
 }, ({ episode, useful, source, json }) => researchFeedbackCommand(episode, useful, source, json)).pipe(
   Command.withDescription("update HSWM route estimates using an explicit research usefulness review"))
+const review = Command.make("review", {
+  path: Args.text({ name: "review-file" }), json
+}, ({ path, json }) => researchReviewCommand(path, json)).pipe(
+  Command.withDescription("record a stage review bound to the observed trajectory and output hash"))
 const cell = Command.make("cell", {
   stage: Args.choice([
     ["references", "references"], ["formulate", "formulate"], ["adversary", "adversary"],
@@ -54,6 +59,6 @@ const cell = Command.make("cell", {
 }, ({ stage }) => researchCellCommand(stage)).pipe(Command.withDescription("internal HSWM JSON-stdin research cell adapter"))
 
 export const researchContextCommand = Command.make("research", {}, () =>
-  Console.log("Use `ice research run <question>`, `intuition <state-file>`, `plan`, `state`, `graph`, or `feedback <episode>`."))
+  Console.log("Use `ice research run <question>`, `intuition <state-file>`, `plan`, `state`, `graph`, `feedback <episode>`, or `review <review-file>`."))
   .pipe(Command.withDescription("HSWM research execution and USL reference context"),
-    Command.withSubcommands([run, plan, intuition, state, graph, feedback, status, prepare, cell]))
+    Command.withSubcommands([run, plan, intuition, state, graph, feedback, review, status, prepare, cell]))

@@ -1,5 +1,5 @@
 import { expect, it } from "vitest"
-import { researchInvocation, type ResearchOptions } from "../src/research-engine/commands.ts"
+import { researchInvocation, nativeResearchRuntimeCommand, type ResearchOptions } from "../src/research-engine/commands.ts"
 
 const valid: ResearchOptions = {
   question: "Which declared input can falsify this supporting route?",
@@ -10,6 +10,16 @@ const valid: ResearchOptions = {
   runner: "",
   budget: 120
 }
+
+it("uses the native HSWM process while preserving separate v1/v2 historical state paths", () => {
+  const args = ["plan", "--context", '{"domain":"missing"}']
+  const native = nativeResearchRuntimeCommand("/ice", "/hswm", args, "v2")
+  expect(native.command).toBe("node")
+  expect(native.args[0]).toBe("/hswm/src/hswm/effect-runtime/dist/hswm-live-process.js")
+  expect(native.args).toContain("/ice/.ice/hswm-research/runtime.v2.sqlite3")
+  expect(nativeResearchRuntimeCommand("/ice", "/hswm", args).args).toContain("/ice/.ice/hswm-research/runtime.sqlite3")
+  expect(native.args.slice(-3)).toEqual(args)
+})
 
 it("builds the bounded HSWM task without changing caller reference order", () => {
   const actual = researchInvocation(valid)

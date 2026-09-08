@@ -12,6 +12,7 @@ import { capture } from "../process.ts"
 import { Workspace } from "../workspace.ts"
 import { asJsonObject, buildHswmRequest, buildResearchContextSource, type PreparedResource } from "./core.ts"
 import { observeResearchReferences } from "./usl.ts"
+import { resolveNativeEntry } from "../research-engine/native-entry.ts"
 
 const maxReferenceBytes = 1_000_000
 const sha = (bytes: string | Uint8Array): string => createHash("sha256").update(bytes).digest("hex")
@@ -33,9 +34,12 @@ export const externalRoots = (root: string) => ({
 const runtimeFiles = {
   hswm: ["pyproject.toml", "uv.lock", "src/hswm/infrastructure/usl_cli.py",
     "src/hswm/infrastructure/usl_adapter.py", "src/hswm/infrastructure/usl_observation_v2.py",
-    "src/hswm/cells/conditional.py", "src/hswm/infrastructure/adaptive_cli.py",
-    "src/hswm/cells/adaptive_runtime.py", "src/hswm/cells/adaptive_executor.py",
-    "src/hswm/cells/adaptive_learning.py", "src/hswm/cells/adaptive_store.py"],
+    "src/hswm/cells/conditional.py",
+    "src/hswm/effect-runtime/package.json", "src/hswm/effect-runtime/package-lock.json",
+    ...["adaptive-cli", "adaptive-runtime", "adaptive-domain", "adaptive-executor", "adaptive-store",
+      "hswm-live-process", "effect-bounded-subprocess", "effect-process-main"].flatMap((name) => [
+      `src/hswm/effect-runtime/src/${name}.ts`, `src/hswm/effect-runtime/dist/${name}.js`
+    ])],
   usl: ["package.json", "package-lock.json", "src/language/index.ts",
     "src/language/compiler.ts", "src/language/runtime.ts", "src/language/digest.ts",
     "src/language/observation-schema.ts", "src/language/parser.ts", "src/language/model.ts",
@@ -57,10 +61,13 @@ export const researchRuntimeStatus = (root: string) => io(async () => {
     join(roots.usl, "node_modules/effect/dist/esm/index.js")]) {
     try { await fs.access(path) } catch { missing.push(path) }
   }
+  const nativeEntry = await resolveNativeEntry(root, roots.hswm)
+  try { fingerprints["native_entry"] = sha(await fs.readFile(nativeEntry.path)) } catch { missing.push(nativeEntry.path) }
+  Object.assign(fingerprints, nativeEntry.pins)
   return {
-    schema: "ice-hswm-usl-runtime/v1", available: missing.length === 0, roots,
+    schema: "ice-hswm-usl-runtime/v1", available: missing.length === 0, roots, backend: "typescript-effect", native_entry: nativeEntry.path, native_entry_origin: nativeEntry.origin,
     missing, fingerprints,
-    fingerprint_scope: "Listed interface sources and lockfiles; not a full dependency attestation",
+    fingerprint_scope: "Listed interface sources, executed native build files and lockfiles; not source-build equivalence or full dependency attestation",
     mode: "HSWM_ADAPTIVE_RESEARCH_WITH_USL_CONTEXT",
     semantic_truth: "NOT_EVALUATED", learning: "EXPLICIT_REVIEW_FEEDBACK",
     execution: "HSWM_COMMAND_CELLS_WITH_CODEX_LLM_AND_ICE_RUN",

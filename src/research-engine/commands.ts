@@ -10,6 +10,7 @@ import { asJsonObject } from "../research-context/core.ts"
 import { Workspace } from "../workspace.ts"
 import { loadResearchStateFile } from "./state-repository.ts"
 import { renderResearchState } from "./state.ts"
+import { resolveNativeEntry } from "./native-entry.ts"
 
 export interface ResearchOptions {
   readonly question: string
@@ -42,12 +43,17 @@ const io = <A>(run: () => Promise<A>) => Effect.tryPromise({ try: run,
   catch: (error) => iceError("HSWM_RESEARCH_IO", error instanceof Error ? error.message : String(error)) })
 
 type Profile = "v1" | "v2"
-const runtimeCall = (root: string, args: readonly string[], seconds: number, profile: Profile = "v1") => capture({
-  command: "uv", args: ["run", "--locked", "--no-sync", "--project", externalRoots(root).hswm,
-    "hswm-live", "--program", join(root, `config/hswm-research.${profile}.json`),
+export const nativeResearchRuntimeCommand = (root: string, hswmRoot: string, args: readonly string[], profile: Profile = "v1", nativeEntry?: string) => ({
+  command: "node", args: [nativeEntry ?? join(hswmRoot, "src/hswm/effect-runtime/dist/hswm-live-process.js"),
+    "--program", join(root, `config/hswm-research.${profile}.json`),
     "--state", join(root, `.ice/hswm-research/runtime${profile === "v1" ? "" : ".v2"}.sqlite3`), "--workspace", root, ...args],
   cwd: root, captureLimitCharacters: 4_194_304
-}, seconds)
+})
+const runtimeCall = (root: string, args: readonly string[], seconds: number, profile: Profile = "v1") => Effect.gen(function* () {
+  const hswm = externalRoots(root).hswm
+  const entry = yield* io(() => resolveNativeEntry(root, hswm))
+  return yield* capture(nativeResearchRuntimeCommand(root, hswm, args, profile, entry.path), seconds)
+})
 
 const emitRuntime = (result: { exitCode: number; stdout: string; stderr: string }, json: boolean) => Effect.gen(function* () {
   if (result.stdout.trim()) {
@@ -89,11 +95,13 @@ export const researchEpisodeCommand = (action: "run" | "plan", options: Research
     if (!interfaces.available) return yield* Effect.fail(iceError("HSWM_RESEARCH_RUNTIME_MISSING", interfaces.missing.join("\n")))
     const program = yield* io(() => fs.readFile(join(root, `config/hswm-research.${profile}.json`)))
     yield* io(() => fs.writeFile(join(directory, "invocation.json"), JSON.stringify({ schema: "ice-hswm-episode-invocation/v1", episode,
-      context, task, profile, research_state: semantic ?? null, budget_seconds: options.budget, max_calls: 4, program_sha256: createHash("sha256").update(program).digest("hex"),
+      context, task, profile, backend: "typescript-effect", research_state: semantic ?? null, budget_seconds: options.budget, max_calls: 4, program_sha256: createHash("sha256").update(program).digest("hex"),
       runtime_interfaces: interfaces, llm_port: "installed Codex CLI; model/auth inherited; reviewed feedback only" }, null, 2) + "\n", { flag: "wx" }))
   }
+  const started = performance.now()
   const result = yield* runtimeCall(root, args, options.budget + 30, profile)
-  if (action === "run") yield* io(() => fs.writeFile(join(directory, "runtime.json"), JSON.stringify(result, null, 2) + "\n", { flag: "wx" }))
+  if (action === "run") yield* io(() => fs.writeFile(join(directory, "runtime.json"), JSON.stringify({ ...result,
+    wall_seconds: (performance.now() - started) / 1000, backend: "typescript-effect" }, null, 2) + "\n", { flag: "wx" }))
   yield* emitRuntime(result, json)
 })
 
@@ -104,8 +112,8 @@ export const researchStateCommand = (action: "status" | "graph", json: boolean, 
 
 export const researchFeedbackCommand = (episode: string, useful: "true" | "false", source: string, json: boolean) => Effect.gen(function* () {
   const { root } = yield* Workspace
-  const reviewSource = `research-usefulness-review: ${source}`
-  if (!/^[A-Za-z0-9_-]{1,96}$/.test(episode) || !source.trim() || reviewSource.length > 256) return yield* Effect.fail(iceError("HSWM_RESEARCH_FEEDBACK_INPUT", "Provide a valid episode and a review rationale of at most 228 characters", 2))
+  const reviewSource = `agent(codex): research-usefulness-review: ${source}`
+  if (!/^[A-Za-z0-9_-]{1,96}$/.test(episode) || !source.trim() || reviewSource.length > 256) return yield* Effect.fail(iceError("HSWM_RESEARCH_FEEDBACK_INPUT", "Provide a valid episode and a review rationale of at most 214 characters", 2))
   const invocation = yield* io(async () => JSON.parse(await fs.readFile(join(root, ".ice/hswm-research/episodes", episode, "invocation.json"), "utf8")) as unknown)
   const profile: Profile = asJsonObject(invocation)?.profile === "v2" ? "v2" : "v1"
   yield* emitRuntime(yield* runtimeCall(root, ["feedback", "--episode", episode, "--success", useful,

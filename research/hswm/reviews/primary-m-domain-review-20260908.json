@@ -1,0 +1,16 @@
+{
+  "schema": "ice-research-stage-review/v1",
+  "id": "primary-m-domain-review-20260908",
+  "author": "agent",
+  "source": "codex",
+  "target": {
+    "episode": "15218ec9-ad22-4e48-9f57-056158ef70ae",
+    "stage": "domain",
+    "output_sha256": "5772dc36d658dc298ba01a81565dcb504e5e06cb14a1d50586e38216e770f0fe",
+    "trajectory": "trajectory:15218ec9-ad22-4e48-9f57-056158ef70ae:3"
+  },
+  "verdict": "useful",
+  "dimension": "research_usefulness",
+  "rationale": "선언한 compact-N collar에서 ker p=0인 이유와 적분 cokernel의 차수 이동을 기존 유도와 대조했다. 고전적 M을 공동 kernel로 읽는 추가 가설을 드러내므로 유용하다. ker p=0 뒤 bar c 조건은 중복이며 top 증인은 cρ Jχv로 써야 한다.",
+  "non_claim": "조건부 제안의 연구 유용성에 대한 agent 평가다. 실제 seed 계산, source-derived 양자화, 물리 CPT, 양의 내적, regulator 극한, G1 진전 또는 native 내부 분기의 학습을 검증한 것이 아니다."
+}

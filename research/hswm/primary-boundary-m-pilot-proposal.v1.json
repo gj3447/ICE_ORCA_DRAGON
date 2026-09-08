@@ -1,0 +1,62 @@
+{
+  "schema": "ice-research-proposal/v1",
+  "state_id": "primary-boundary-state",
+  "summary": "권고는 cpt::open:starobinsky-seam-ward-boundary-state-limit의 SUPPORTING_METHOD 범위에서 공동 kernel 후보와 적분 축약의 detector 보존을 한 번 비교하는 것이다. 양 끝의 uniform collar에서 사라지는 매끄러운 N 의존성을 유지하면 p=-i∂N의 kernel은 영공간이다. 반면 적분 contraction은 N 방향의 cokernel을 차수 1에 남긴다. 이 차이는 고전적 M 축약을 공동 kernel로 구현한다는 가설의 직접적인 장애물이다. 제공된 참조와 이전 출력은 검증된 증명이 아닌 조건부 문맥으로만 사용했다. 도구 실행, 파일 변경, 커밋·푸시는 하지 않았다.",
+  "connections": [
+    {
+      "premises": [
+        "classical-relative-reductions",
+        "relative-endpoint-data",
+        "support-sensitive-carrier-contrast"
+      ],
+      "conclusion": "고전적 M:Π=bar c=0을 기존 compact-N 시험복합체의 공동 kernel로 구현하면서 적분 축약의 비영 top detector까지 보존할 수 있다는 가설은, 선언된 collar 조건 아래 실패할 것으로 제안한다.",
+      "explanation": "고전적 관계는 제약면의 특성 방향을 몫내는 것이므로, 상태에 미분 연산자의 kernel을 취하는 절차와의 동일시는 추가 가설이다. 특히 남는 두 endpoint 자료 +[bar c ρ]와 -[bar c δN]의 고전적 소거만으로 양자 상태공간은 정해지지 않는다.\n\n시험 후보를 C=Φ⊗Λ(c,ρ), deg c=deg ρ=1로 고정한다. Φ는 B×I, B=[1/2,2]×[-1,2], I=[1/4,2] 위 ambient smooth restrictions 중 lower-a, 두 φ-face와 두 N-face의 uniform collar에서 0이며, a=2에서 ∂a H^k p^m u=0을 모든 k,m≥0에 대해 만족하는 공간이다. 위상은 ambient C∞ seminorm의 부분공간 위상이다. H는 제공된 문맥의 N-독립 unscaled Weyl 연산자로 한정하며, 미제공된 미분식이나 정의역 불변성을 새로 검증했다고 간주하지 않는다. HΦ⊂Φ와 [H,p]=0을 후보 성립 조건으로 둔다. 좌표 polarization, 평탄 보손 밀도 da dφ dN, 그 형식적 half-density, ℏ=1, 왼쪽 Grassmann 미분, ghost 순서 cρ 및 ∫dρ dc cρ=1을 선언한다. p=-i∂N, bar c=i∂ρ, Ω=cH+ρp는 이 시험용 선택이며 source 유도가 아니다.\n\nψ=u+cx+ρy+cρz이면 ∂ρψ=y-cz이므로 bar cψ=0에서 y=z=0이다. pψ=0이면 u와 x는 N-상수인데, N 끝의 collar에서 0인 상수는 0뿐이다. 따라서 이 후보의 K_M=ker p∩ker bar c는 {0}이다. 이는 compact한 구간 자체가 아니라 끝 근방의 소멸 조건 때문에 생긴다. 원이나 상수를 허용하는 다른 carrier는 이 판단의 반례가 아니다.\n\n적분 축약은 다른 대상을 남긴다. Ψ를 N을 제거한 같은 matter 시험공간이라 하고, χ∈Cc∞(I°), ∫χ=1에 대해 R_Nu=∫Iu dN, Jχv=χv, Kχu=i∫N₋ᴺ(u-χR_Nu)dt로 둔다. 적분량을 빼는 항이 upper-N collar를 복구한다. 이 정의역에서 pKχ=1-JχR_N, Kχp=1, R_Np=0이므로 ker p=0과 coker p≅Ψ가 양립한다. q₀u=(Hu,pu), q₁(x,y)=Hy-px인 C의 축소 대상 A는 차수 1,2에 놓인 Ψ→HΨ이다. F¹(x,y)=R_Ny, F²z=R_Nz이고, 역방향 포함은 I¹v=(0,Jχv), I²v=Jχv이다. h¹(x,y)=Kχy, h²z=(-Kχz,0)는 1-IF=qh+hq를 준다. 따라서 통상 차수 0,1의 minimal 복합체와 비교할 때 이 차수 배치를 명시해야 한다. 물리 ghost 차수를 재지정할 근거는 아니다.\n\n핵심 기전은 support가 N-상수를 배제하면서 적분량의 몫을 남긴다는 것이다. 비영 detector를 실제로 확보하면 영공간으로의 사상은 그 값을 보존할 수 없다. 이 공격에는 전체 H¹ 소멸이나 H² 무한차원성까지 가정할 필요가 없다.",
+      "assumptions": [
+        "quantum-boundary-tuple"
+      ],
+      "falsifier": "동일한 Φ 안에서 비영 ψ가 pψ=bar cψ=0을 만족하면 kernel 붕괴 판단이 반박된다. HΦ⊂Φ 또는 적분 사상의 정의역 보존이 실패하면 해당 BFV·contraction 후보가 먼저 탈락한다. 비영 연속 top detector를 확보하지 못하면 detector 보존에 대한 반례는 아직 성립하지 않지만, collar에 의한 kernel 계산은 별개로 남는다.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "premises": [
+        "classical-relative-reductions",
+        "relative-endpoint-data",
+        "support-sensitive-carrier-contrast",
+        "quantum-boundary-tuple",
+        "quantum-comparison-map",
+        "allowed-boundary-test-pair"
+      ],
+      "conclusion": "차수를 뒤집은 연속 graded dual에서 적분 축약의 detector 전달은 조건부로 명시할 수 있지만, 이를 고전적 M의 양자 구현과 연결하는 정의역 보존 비교사상까지 구성할 수 있는지는 열린 질문이다.",
+      "explanation": "여기서 양자 tuple, 비교사상 및 허용 경계쌍은 확보된 결과가 아니라 함께 필요한 누락 입력이다. 반대쪽 carrier를 E라고 명명하고 E⁻²=(C²)′, E⁻¹=(C¹)′, E⁰=(C⁰)′로 고정한다. 프라임은 위 C∞ 부분공간 위상의 연속 복소선형 dual이며, E에는 약한 위상 σ(E,C)를 둔다. 미분은 δ⁻²=q₁ᵗ, δ⁻¹=-q₀ᵗ이다. Pairing은 λ₂(z)+λc(x)+λρ(y)+λ₀(u)의 복소 쌍선형 evaluation으로 정한다. 이에 따라 (δ⁻¹λ)(u)+λ(q₀u)=0과 T(q₁v)-(δ⁻²T)(v)=0이 Ward 부호를 고정한다. 이 선택은 켤레나 양의 내적을 제공하지 않는다.\n\n같은 top detector라는 표현에는 실제 t_g(v)=∫B s_gv da dφ가 필요하다. 선택한 seed s_g에 대해 t_gH=0, t_g≠0 및 연속성을 확인해야 한다. T_g=t_gR_N이면 T_gq₁=0이고, E⁻³=0이므로 비영 T_g는 E⁻²에서 boundary가 아니다. 반면 동일 차수를 유지한 계수 dual Φ′⊗Λ(c,ρ)에서는 V=T_g∘Kχ가 연속이고 pᵗV=T_g이므로, 계수에 Hᵗ,pᵗ가 작용하는 규약에서 Ω(-cV)=cρT_g이다. 같은 계수 functional을 다른 차수와 미분에 배치하면 exactness가 달라진다. 따라서 분포나 dual이라는 이름만으로 두 대상을 동일시할 수 없다.\n\n정확히 빠진 객체는 명명된 양자 경계 tuple과 그 사이의 연속 비교사상 U이다. 각 차수의 source·target carrier, 불변 정의역, support와 경계 jet, 위상, polarization, 측도·half-density, Berezin 순서·정규화, 잔여장·gauge-fixing 자료와 BFV 미분을 먼저 지정해야 한다. 그 위에서 U의 방향과 차수 배치를 고정하고 U가 정의역을 보존하며 Ω_target U=UΩ_source를 전체 선언 정의역에서 만족함을 보여야 한다. 차수 이동을 쓰면 이동된 복합체와 미분 부호까지 고정한 뒤 차수 0 사상으로 비교한다. Target의 연속 closed detector τ를 지정하여 Uᵗτ=T_g도 별도로 확인해야 한다. 이 두 등식은 서로 대체하지 않는다. 전체 cohomology 동등성에는 추가로 역방향 사상과 연속 chain homotopy 또는 별도의 준동형 동등성 논증이 필요하다.\n\n기존 적분 비교에서는 A의 차수 반전 연속 dual과 E 사이에 Fᵗ와 Iᵗ를 쓰고, top 성분에서 Fᵗt_g=T_g를 확인하는 것이 정확한 전달이다. F는 C→A이고 Fᵗ는 A의 dual→E이므로, 이것은 C→E의 동일시를 구성하지 않는다. 새로운 primal-dual 동일시를 원하면 별도의 pairing 또는 변환 kernel과 그 정의역·연속성·BFV 양립성이 필요하다.\n\n고전적 r_M과의 source 대응에는 위 자료를 실제 polarization 변환, half-density 및 순서가 고정된 ghost Fourier kernel, 두 endpoint 항, 잔여장 pushforward와 연결하는 유도가 추가로 필요하다. 특히 bar cψ=0에서 bar cρψ=0을 추론할 수 없다. 선언한 왼쪽 미분에서는 {bar c,ρ}=i이므로 연산자 순서가 남는다. Regulator 극한으로 연결하려면 허용 좌우 상태의 trace, pairing, 극한 위상과 제거 순서도 고정해야 한다. 현재 evaluation 보존은 그 극한의 판정이 아니다.",
+      "assumptions": [],
+      "falsifier": "선언한 U의 전치가 선택한 연속 dual에 들어가지 않거나 U가 target 정의역을 벗어나면 비교 자체가 정의되지 않는다. 허용 벡터에서 BFV intertwining 결함이 비영 functional에 검출되거나 Uᵗτ와 T_g의 값이 다르면 해당 보존 가설은 탈락한다. 이와 반대로 모든 자료와 등식을 제공한 명시적 source 대응 구성이 있으면 그 구성에 대한 누락 진단은 해소된다.",
+      "status": "QUESTION"
+    }
+  ],
+  "next_test": {
+    "question": "하나의 판별식 Δ_U(z)=τ(Uz)-T_g(z)로 top detector 보존을 비교한다. 먼저 연속 t_g에 대해 t_gH=0을 확인하고, 허용 v∈Ψ에서 t_g(v)=1이 되도록 정규화한다. 가능한 경우 interior bump를 쓰되 실제 seed가 그 bump를 비영으로 검출하는지 확인한다. ∫χ=1인 χ로 z=Jχv∈C²를 고정하면 T_g(z)=1이다. 적분 비교 U=F, τ=t_g에서는 Δ_F(z)=0이다. 공동-kernel target K_M={0}으로의 비교에서는 U와 τ가 영사상뿐이므로 Δ_U(z)=-1이다. 이 z가 동일 detector 보존 가설의 실패 증인이다. 영사상은 BFV chain map일 수 있으므로 chain-map 성질만으로 이 검사를 대체할 수 없다. 출력은 이 조건과 판별값을 담은 제한된 carrier 비교 메모 하나이며, 여기서는 실제 seed 평가를 실행했다고 보고하지 않는다.",
+    "inputs": [
+      "classical-relative-reductions",
+      "relative-endpoint-data",
+      "support-sensitive-carrier-contrast",
+      "bounded-domain-audit"
+    ],
+    "missing": [
+      "quantum-boundary-tuple",
+      "quantum-comparison-map",
+      "allowed-boundary-test-pair"
+    ],
+    "falsifier": "선택한 seed가 연속 annihilator가 아니거나 t_g(v)=1인 허용 v를 확보하지 못하거나 Jχv∉Φ이면 제안한 detector 증인은 무효다. 이를 Δ=0으로 기록해서는 안 된다. 모든 전제와 정의역 조건이 충족된 상태에서 Δ_U(z)=-1이면 오직 이 공동-kernel 구현의 detector 보존 가설이 반박된다. 한 증인의 Δ=0만으로 모든 상태에서의 보존이나 동등성이 성립하지는 않는다.",
+    "consumer": "bounded-domain-audit",
+    "non_claim": "이는 SUPPORTING_METHOD의 조건부 후보 검토다. Source-derived 양자화, 물리 CPT, 양의 물리 내적, regulator 제거, 과학적 발견·물리적 진실·TOE 완성·실험 성공을 주장하지 않는다. G1의 source-defined joint relative class, 전역 saddle·sheet·end census와 oriented intersection vector를 제공하지 않으므로 G1→G2→G3→G4→G5→full-theory/empirical review의 core 의존 경계는 유지된다. 이 제안은 후속 실행이나 evidence 승격을 자동 승인하지 않는다."
+  },
+  "reading_order": [
+    "classical-relative-reductions",
+    "relative-endpoint-data",
+    "support-sensitive-carrier-contrast",
+    "quantum-boundary-tuple",
+    "quantum-comparison-map",
+    "allowed-boundary-test-pair",
+    "bounded-domain-audit"
+  ]
+}
