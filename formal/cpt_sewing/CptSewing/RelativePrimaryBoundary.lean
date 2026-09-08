@@ -28,7 +28,11 @@ def qLin : Module.End ℂ Primary where
   map_add' := by
     intro x y
     funext i
-    fin_cases i <;> simp [q, rho, pi]
+    fin_cases i
+    · simp [q, rho, pi, add_comm]
+    · simp [q, rho, pi]
+    · simp [q, rho, pi]
+    · simp [q, rho, pi]
   map_smul' := by
     intro c x
     funext i
@@ -67,10 +71,10 @@ theorem q_nilpotent (x : Primary) : qLin (qLin x) = 0 := by
   fin_cases i <;> simp [qLin, q, rho, pi]
 
 theorem mProj_mem_M (x : Primary) : M (mProj x) := by
-  constructor <;> simp [M, pi, b, mProj]
+  constructor <;> simp [pi, b, mProj]
 
 theorem auxProj_mem_PN0 (x : Primary) : PN0 (auxProj x) := by
-  constructor <;> simp [PN0, n, rho, auxProj]
+  constructor <;> simp [n, rho, auxProj]
 
 theorem projections_sum (x : Primary) : mProj x + auxProj x = x := by
   funext i
@@ -79,14 +83,14 @@ theorem projections_sum (x : Primary) : mProj x + auxProj x = x := by
 theorem q_stable_M {x : Primary} (hx : M x) : M (qLin x) := by
   rcases hx with ⟨hpi, _⟩
   constructor
-  · simp [M, pi, qLin, q]
-  · simpa [M, b, qLin, q] using hpi
+  · simp [pi, qLin, q]
+  · simpa [b, qLin, q] using hpi
 
 theorem q_stable_PN0 {x : Primary} (hx : PN0 x) : PN0 (qLin x) := by
   rcases hx with ⟨_, hrho⟩
   constructor
-  · simpa [PN0, n, qLin, q] using hrho
-  · simp [PN0, rho, qLin, q]
+  · simpa [n, qLin, q] using hrho
+  · simp [rho, qLin, q]
 
 theorem q_mem_M_iff (x : Primary) : M (qLin x) ↔ pi x = 0 := by
   constructor
@@ -95,8 +99,8 @@ theorem q_mem_M_iff (x : Primary) : M (qLin x) ↔ pi x = 0 := by
     simpa [b, qLin, q] using hb
   · intro h
     constructor
-    · simp [M, pi, qLin, q]
-    · simpa [M, b, qLin, q] using h
+    · simp [pi, qLin, q]
+    · simpa [b, qLin, q] using h
 
 theorem q_mem_PN0_iff (x : Primary) : PN0 (qLin x) ↔ rho x = 0 := by
   constructor
@@ -105,8 +109,8 @@ theorem q_mem_PN0_iff (x : Primary) : PN0 (qLin x) ↔ rho x = 0 := by
     simpa [n, qLin, q] using hn
   · intro h
     constructor
-    · simpa [PN0, n, qLin, q] using h
-    · simp [PN0, rho, qLin, q]
+    · simpa [n, qLin, q] using h
+    · simp [rho, qLin, q]
 
 theorem M_inter_PN0_eq_zero {x : Primary} (hM : M x) (hP : PN0 x) : x = 0 := by
   funext i
