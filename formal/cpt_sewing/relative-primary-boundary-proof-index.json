@@ -1,0 +1,25 @@
+{
+  "schema": "ice-lean-multimodule-proof-index/v1",
+  "modules": [
+    {
+      "source": "CptSewing/RelativePrimaryBoundary.lean",
+      "namespace": "CptSewing.RelativePrimaryBoundary",
+      "scope": "Finite complex-linear primary-generator coefficients with shifted tangent n=N-N0 and scalar one-form bookkeeping; odd labels are not a Grassmann algebra and no BV pushforward, half-density, interval kernel, or physical state product is constructed",
+      "theorems": [
+        "q_nilpotent",
+        "mProj_mem_M",
+        "auxProj_mem_PN0",
+        "projections_sum",
+        "q_stable_M",
+        "q_stable_PN0",
+        "q_mem_M_iff",
+        "q_mem_PN0_iff",
+        "M_inter_PN0_eq_zero",
+        "alphaCoeff_vanishes_on_M",
+        "alphaCoeff_vanishes_on_PN0_tangent",
+        "q_commutes_mProj",
+        "q_commutes_auxProj"
+      ]
+    }
+  ]
+}
