@@ -105,6 +105,8 @@ scope 확대와 물리 해석에 적용되는 정본 질문이다.
 
 사용자 요청에 따라 연구 과정 자체를 HSWM에서 수행한다. 구현·사용법 정본은
 `docs/decisions/ICE_HSWM_USL_RESEARCH_CONTEXT_2026-09-08.md`다.
+역할을 가진 연구 상태·직관 연결의 확장은
+`docs/decisions/ICE_HSWM_RESEARCH_STATE_INTUITION_2026-09-08.md`를 따른다.
 
 - 새 실질적 연구 질문은 `./ice research run "<한 질문>" --target <graph::node>
   --reference <repo-relative-file> --json`으로 시작한다. 기본 `--tier supporting`;
@@ -113,12 +115,21 @@ scope 확대와 물리 해석에 적용되는 정본 질문이다.
 - HSWM이 실제로 USL 참조 셀, 가설 제안·반례 검토·종합 LLM 셀의 호출 순서를 선택하고 trajectory를
   저장한다. `--mode review`는 반례 검토, `--mode compute --runner <name>`은 명시한 계산만
   기존 `./ice run`을 통해 실행한다. LLM은 설치된 Codex CLI의 모델·로그인을 사용한다.
+- 검토한 research state가 있는 supporting 질문은 `--state-file research/hswm/<state>.json`으로
+  v2의 중첩 router를 사용한다. 가정·반례·누락 객체와 역할 관계, source hash, 기존 같은-graph
+  anchor를 입력으로 고정한다. `research intuition <state-file>`은 함께 필요한 조건과 반증 조건을
+  펼치고, `--without <object-id>`는 기록을 가상으로 제거했을 때의 경로를 비교한다.
+  가상 제거는 refutation이 아니며, 입력 가용성은 결론의 증명이나 승격이 아니다.
+- v2 제안은 기존 객체를 연결한 `HYPOTHESIS`/`QUESTION`과 하나의 판별 검사다. 모델은 state나
+  ontology를 자동 수정하지 않는다. 현재 경로 조건은 사람이 선언했고 서로 겹치지 않으므로,
+  상태에 따라 경로가 달라진다는 검증을 학습된 직관 또는 KG 대비 우월성으로 쓰지 않는다.
 - 산출물을 검토한 뒤 `./ice research feedback <episode> --useful true|false --source "<검토 근거>"`로
   연구 경로의 유용성을 피드백한다. 자동 exit-code 보상은 사용하지 않는다. 이 피드백은 로컬 route
   선택 모델을 갱신하며 정리의 증명, 과학적 참, 인과 효과나 신경망 가중치 학습을 뜻하지 않는다.
 - `./ice research plan`은 호출 전 경로 선택, `state`는 현재 상태, `graph`는 실행·수정 이력,
   `status`는 설치 인터페이스를 확인한다. `prepare`는 내부 USL 참조 준비 셀의 독립 진단이다.
   설치가 없거나 실행이 실패하면 그 사실을 남기며 HSWM으로 수행했다고 보고하지 않는다.
+  `state`/`graph --profile v2`로 v2를 조회한다. v1/v2 SQLite는 분리해 이전 이력을 보존한다.
 - 설치 기본값은 sibling `../HSWM`, `../USL`이며 `ICE_HSWM_ROOT`, `ICE_USL_ROOT`로 바꾼다.
   연구 상태는 로컬 `.ice/hswm-research/`, 참조 관측은 `.ice/research-context/`에 저장한다.
   Native ontology와 raw result가 과학적 정본이다. 외부 KG UID 생성·다른 graph evidence 병합·sibling

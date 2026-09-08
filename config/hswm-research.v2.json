@@ -1,0 +1,437 @@
+{
+  "schema_version": "hswm-adaptive-program/v1",
+  "graph_id": "hswm-ice-research-v2",
+  "root": "researcher",
+  "context_domain": {
+    "mode": [
+      "investigate",
+      "review",
+      "compute"
+    ],
+    "graph": [
+      "cpt",
+      "hypercomplex",
+      "legacy",
+      "igrueqft"
+    ],
+    "tier": [
+      "core",
+      "supporting"
+    ],
+    "domain": [
+      "declared",
+      "missing",
+      "unknown"
+    ],
+    "map": [
+      "candidate",
+      "missing",
+      "unknown"
+    ],
+    "obstruction": [
+      "present",
+      "not_recorded",
+      "unknown"
+    ]
+  },
+  "cells": [
+    {
+      "cell_id": "researcher",
+      "kind": "router",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1"
+    },
+    {
+      "cell_id": "semantic-review",
+      "kind": "router",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1"
+    },
+    {
+      "cell_id": "references",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "references"
+      ]
+    },
+    {
+      "cell_id": "compute",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "compute"
+      ]
+    },
+    {
+      "cell_id": "synthesize",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "synthesize"
+      ]
+    },
+    {
+      "cell_id": "domain",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "domain"
+      ]
+    },
+    {
+      "cell_id": "comparison",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "comparison"
+      ]
+    },
+    {
+      "cell_id": "obstruction",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "obstruction"
+      ]
+    },
+    {
+      "cell_id": "connections",
+      "kind": "command",
+      "owner": "local:ice-research",
+      "input_type": "ice-research-packet/v1",
+      "output_type": "ice-research-packet/v1",
+      "argv": [
+        "./ice",
+        "research",
+        "cell",
+        "connections"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "uid": "research-with-state",
+      "source": "researcher",
+      "members": [
+        "references",
+        "semantic-review",
+        "synthesize"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "any",
+        "children": [
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "mode"
+            },
+            "right": "investigate"
+          },
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "mode"
+            },
+            "right": "review"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "compute-with-state",
+      "source": "researcher",
+      "members": [
+        "references",
+        "compute",
+        "semantic-review",
+        "synthesize"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "eq",
+        "left": {
+          "role": "context",
+          "field": "mode"
+        },
+        "right": "compute"
+      }
+    },
+    {
+      "uid": "declare-domain",
+      "source": "semantic-review",
+      "members": [
+        "domain"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "eq",
+        "left": {
+          "role": "context",
+          "field": "domain"
+        },
+        "right": "missing"
+      }
+    },
+    {
+      "uid": "recover-domain-context",
+      "source": "semantic-review",
+      "members": [
+        "connections"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "eq",
+        "left": {
+          "role": "context",
+          "field": "domain"
+        },
+        "right": "unknown"
+      }
+    },
+    {
+      "uid": "construct-comparison",
+      "source": "semantic-review",
+      "members": [
+        "comparison"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "all",
+        "children": [
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "domain"
+            },
+            "right": "declared"
+          },
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "map"
+            },
+            "right": "missing"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "recover-map-context",
+      "source": "semantic-review",
+      "members": [
+        "connections"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "all",
+        "children": [
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "domain"
+            },
+            "right": "declared"
+          },
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "map"
+            },
+            "right": "unknown"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "attack-candidate",
+      "source": "semantic-review",
+      "members": [
+        "obstruction"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "all",
+        "children": [
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "domain"
+            },
+            "right": "declared"
+          },
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "map"
+            },
+            "right": "candidate"
+          },
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "obstruction"
+            },
+            "right": "present"
+          }
+        ]
+      }
+    },
+    {
+      "uid": "inspect-candidate",
+      "source": "semantic-review",
+      "members": [
+        "comparison"
+      ],
+      "reads": [
+        "mode",
+        "graph",
+        "tier",
+        "domain",
+        "map",
+        "obstruction"
+      ],
+      "cost_hint": 1,
+      "guard": {
+        "op": "all",
+        "children": [
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "domain"
+            },
+            "right": "declared"
+          },
+          {
+            "op": "eq",
+            "left": {
+              "role": "context",
+              "field": "map"
+            },
+            "right": "candidate"
+          },
+          {
+            "op": "any",
+            "children": [
+              {
+                "op": "eq",
+                "left": {
+                  "role": "context",
+                  "field": "obstruction"
+                },
+                "right": "unknown"
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "role": "context",
+                  "field": "obstruction"
+                },
+                "right": "not_recorded"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

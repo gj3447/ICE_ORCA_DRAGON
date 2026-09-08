@@ -1,0 +1,69 @@
+{
+  "schema": "ice-research-proposal/v1",
+  "state_id": "primary-boundary-state",
+  "summary": "권고는 P(N₀)의 점 평가·ρ 제거 후보를 하나의 상태–detector 쌍으로 공격하는 SUPPORTING_METHOD 검사다. 선언한 시험공간에서는 BFV chain-map 항등식이 성립하도록 후보를 만들 수 있지만, compact-N 비영 top class의 detector 입력이 유효하면 그 후보는 pairing을 보존하지 못한다. 정확한 누락 객체는 source에서 정당화된 양자 경계 tuple과 비교사상, 그 정의역에서 허용되는 연속 쌍대 pairing이다. 아래 구성은 이 객체들의 가설적 모형이며 누락 해소가 아니다. 제공된 참조와 이전 출력은 문맥으로만 사용했고, 실행 기록·해석학적 존재 주장을 독립 검증하지 않았다.",
+  "connections": [
+    {
+      "premises": [
+        "classical-relative-reductions",
+        "relative-endpoint-data"
+      ],
+      "conclusion": "P(N₀)에 대응하는 양자 시험 후보로, 차수 0의 사상 U_P를 N=N₀ 평가와 ρ 성분 제거로 정의하는 가설을 검토한다.",
+      "explanation": "고전적 P(N₀)는 N=N₀, ρ=0과 허용 변분 δN=δρ=0을 함께 요구한다. 제공된 부호 규약에서 이들은 +[bar cρ]와 −[bar cδN]을 소거하고 Q의 접선성과 양립한다. 이 동기가 양자 측도나 kernel을 결정하지는 않는다.\n\n후보의 좌표 polarization은 (a,φ,N;c,ρ), 축약 쪽은 (a,φ;c)로 선언한다. A=[1/2,2]×[−1,2], I=[1/4,2], N₀∈I°를 고정한다. H는 참조가 기술한 N-독립 unscaled Weyl 연산자로 가정하고 p=−i∂N, ℏ=1로 둔다. Ψ는 A 위 ambient smooth restriction 중 lower-a와 양쪽 φ-face의 uniform collar에서 0이며 모든 k≥0에 대해 ∂a Hᵏv|a=2=0인 공간이다. Φ는 A×I 위에서 같은 공간적 collar와 양쪽 N collar를 가지며 모든 k,m≥0에 대해 ∂a Hᵏpᵐu|a=2=0인 공간이다. 위상은 ambient C∞ seminorm의 부분공간 위상이다. H의 국소성·매끄러운 계수와 [H,p]=0을 전제로 이 조건은 HΨ⊂Ψ, HΦ⊂Φ, pΦ⊂Φ를 준다.\n\nCarrier와 연산자 정의역을 C=Φ⊗Λ(c,ρ), D_C=C 및 E=Ψ⊗Λ(c), D_E=E로 둔다. 진공 차수는 0, gh(c)=gh(ρ)=1이므로 C의 차수는 0,1,2이고 E는 0,1이다. 평탄 half-density |da dφ dN|¹ᐟ²와 |da dφ|¹ᐟ²를 자명화하고, 그 사이 계수 식별의 정규화를 1로 선언한다. 이는 정준 half-density pullback을 유도한 것이 아니다. Ghost 순서는 cρ, Berezin 정규화는 B(cρ)=1과 B_red(c)=1이며 나머지 단항식은 소거한다. Hilbert 완비화나 self-adjoint 정의역은 지정하지 않는다.\n\n왼쪽 odd 미분을 사용해 Π̂=p, barρ̂=i∂c, barĉ=i∂ρ, Ω_C=cH+ρp, Ω_E=cH로 둔다. 연산자에 대한 Q는 [Ω,·]_gr/i이며 QN=−ρ, Qbarĉ=p가 된다. [H,p]=0이면 Ω_C²=0이다. f=u+cx+ρy+cρz에 대해 Ω_Cf=cHu+ρpu+cρ(Hy−px)이고, U_Pf=u(N₀)+cx(N₀)로 정의한다. 평가가 물질 collar와 모든 H jet을 보존하므로 U_PD_C⊂D_E이며 U_PΩ_Cf=cHu(N₀)=Ω_EU_Pf다. 이는 모든 차수에 대한 형식적 항등식이다.\n\nΠ와 bar c는 이 configuration 표현의 독립 상태 좌표로 남기지 않으며 별도 primary 잔여장은 두지 않는다고 가정한다. N=N₀, ρ=0은 형식적 slice다. 잔여장 적분, gauge-fixing의 적합성, Faddeev–Popov 인자와 interval kernel은 공급하지 않았다. 정확히 빠진 것은 이 선택들을 실제 source 양자화와 연결하는 tuple 및 비교사상의 유도다. 특히 실제 ordering·측도가 H에 보정을 요구하는지 아직 확인되지 않았다.",
+      "assumptions": [
+        "quantum-boundary-tuple",
+        "quantum-comparison-map"
+      ],
+      "falsifier": "실제 source 양자화가 선언한 Ω와 양립하지 않거나, 허용 상태의 평가가 Ψ를 벗어나거나, 선언한 정의역에서 Ω_EU_P−U_PΩ_C가 비영이면 해당 source 대응 후보를 기각한다. 형식적 항등식만 성립하면 source 적합성은 미해결로 남는다.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "premises": [
+        "classical-relative-reductions",
+        "relative-endpoint-data",
+        "quantum-boundary-tuple",
+        "quantum-comparison-map",
+        "support-sensitive-carrier-contrast",
+        "allowed-boundary-test-pair"
+      ],
+      "conclusion": "이 U_P가 chain map이어도 기존 compact-N top class와 detector pairing을 보존하는 비교사상 후보로는 탈락하는지, 정규화된 한 쌍으로 판별할 것을 제안한다.",
+      "explanation": "조건부 입력으로 연속 선형함수 t_g∈Ψ′와 v∈Ψ가 존재하며 t_gH=0, t_g[v]=1이라고 둔다. 이 메모는 해당 Cauchy detector의 존재나 Green 경계항 소거를 새로 검증하지 않는다. χ∈C_c∞(I°)는 적분 1이고 N₀를 피하는 지지를 갖도록 선택하고, w=cρ χv로 둔다. w∈C²이고 Ω_Cw=0이다.\n\n반대쪽 carrier는 차수 반전 연속 쌍대 (C∨)ʲ=(C⁻ʲ)′로 고정한다. 차수 j의 λ에 대해 (d∨λ)(x)=−(−1)ʲλ(Ω_Cx)로 둔다. 차수 −2 detector는 T_g[cρz]=t_g[R_Nz], R_Nz=∫I z dN으로 정의한다. Pairing은 복소 쌍선형 evaluation이며 양의 내적이 아니다. t_g의 연속성과 R_N의 연속성으로 T_g는 연속이다. 양쪽 N collar에서 R_Np=0이고 H가 적분과 교환하므로 T_g[Ω_C(cx+ρy)]=t_g[H R_Ny−R_Npx]=0이다. 따라서 이 가정들이 확인되면 T_g[w]=1은 w의 비정확성을 검출한다. 그러나 U_Pw=0이고 E²=0이다. 어떤 선형 target detector도 그 영상에 값 1을 줄 수 없으므로 T_g를 U_P를 통한 pairing으로 보존할 수 없다. Chain-map 조건은 exact 상태가 exact 상태로 가도록 하지만 비영 class의 소실을 막지는 않는다.\n\n기존 적분 contraction과 달라진 입력은 세 가지다. 기존 표적 D는 차수 1,2에 Ψ를 두고 미분 H를 사용한다. F¹(cx+ρy)=R_Ny, F²(cρz)=R_Nz이므로 F²w=v이고 t_g[F²w]=1이다. 반면 U_P는 N 적분을 점 평가로 바꾸고, ρ 및 cρ 성분을 버리며, 표적 차수를 0,1로 바꾼다. 또한 half-density 식별과 source slice에 관한 새 가정이 들어간다. 이는 같은 carrier에서 normalized bump 대표만 바꾸는 선택이 아니다. 단순한 차수 재명명으로 영상을 0에서 비영으로 되돌릴 수도 없다.\n\n기전은 support 조건에 있다. χv의 단순 N primitive는 상단에 누적값 v를 남겨 원래 collar 정의역을 벗어난다. 기존 Kχu=i∫(u−χR_Nu)는 그 누적값을 JχR_N 쪽에 따로 남기고 나머지의 양쪽 collar를 복구한다. 이 때문에 적분 contraction은 top class를 옮길 수 있지만 ρ 제거는 그 성분을 지운다. N₀를 피하는 χ는 점 평가가 적분량을 읽지 못한다는 추가 통제이며, U_Pw=0 자체는 χ의 위치와 무관하게 ρ 제거만으로 발생한다. 고전적 endpoint 소거, 양자 정의역의 불변성, cohomology와 pairing 보존은 모두 함께 확인해야 하는 서로 다른 의무다.",
+      "assumptions": [
+        "support-sensitive-carrier-contrast",
+        "allowed-boundary-test-pair",
+        "quantum-boundary-tuple",
+        "quantum-comparison-map"
+      ],
+      "falsifier": "v 또는 w가 정의역 밖이거나 t_g가 연속이 아니거나 t_gH=0 및 t_g[v]=1이 확인되지 않으면 이 쌍은 반례로 사용할 수 없다. 반대로 입력이 확인되고 T_g[w]=1, U_Pw=0이면 이 특정 U_P의 pairing 보존 가설을 기각한다. 이는 모든 P(N₀) 양자화 후보의 불가능성을 뜻하지 않는다.",
+      "status": "QUESTION"
+    }
+  ],
+  "next_test": {
+    "question": "고정한 후보 tuple에서 한 쌍 w=cρ χv와 T_g를 검증하여, 전체 정의역의 chain 항등식과 이 쌍의 pairing 소실을 구별할 수 있는가? 출력은 정의역 적합 여부, detector closedness, 그리고 (chain 결함, 원 pairing, 영상, 적분 contraction 뒤 pairing)의 단일 판별 기록이다. 먼저 v∈Ψ, χ∈C_c∞(I°), ∫χ=1, N₀∉suppχ 및 w∈Φ⊗Λ²를 확인한다. 다음으로 실제 t_g에 대해 연속성, t_gH=0, t_g[v]=1과 collar에 따른 R_Np=0을 확인한다. 일반 f=u+cx+ρy+cρz에서 Ω_EU_P−U_PΩ_C=0을 검사한 뒤 같은 w에서 예상값 (0,1,0,1)을 비교한다. Top 상태 하나에서의 chain 결함 0만으로 전체 chain-map 검사를 통과했다고 판정하지 않는다.",
+    "inputs": [
+      "classical-relative-reductions",
+      "relative-endpoint-data",
+      "support-sensitive-carrier-contrast",
+      "quantum-boundary-tuple",
+      "quantum-comparison-map",
+      "allowed-boundary-test-pair"
+    ],
+    "missing": [
+      "quantum-boundary-tuple",
+      "quantum-comparison-map",
+      "allowed-boundary-test-pair"
+    ],
+    "falsifier": "주 실패 원인은 inference이며 통제는 정의역, detector closedness, 원상·영상 pairing의 세 묶음으로 제한한다. 검증된 입력에서 (0,1,0,1)이 나오면 chain-map 통과와 상태 보존이 다름을 판별하고 이 U_P의 동치 후보 지위를 기각한다. 입력이나 source 대응을 확인할 수 없으면 해당 부분은 INCONCLUSIVE다. 후보를 메모 안에 지정한 사실만으로 missing 배열을 비우지 않는다.",
+    "consumer": "bounded-domain-audit",
+    "non_claim": "대상은 cpt::open:starobinsky-seam-ward-boundary-state-limit의 SUPPORTING_METHOD다. 도구 실행, 파일 수정·커밋·푸시는 하지 않았다. 규제 제거의 수렴, 양의 물리 내적, 관측가능량의 공통 정의역, CPT identity-cylinder는 이 검사로 구성되지 않는다. G1의 source-defined joint relative class·완전한 census·signed global intersection vector와 G1→G2→G3→G4→G5→full-theory/empirical review 의존 경계는 그대로다. 과학적 발견, 물리적 진실, TOE 완성 또는 실험 성공을 주장하지 않으며 후속 실행을 자동 승인하지 않는다."
+  },
+  "reading_order": [
+    "classical-relative-reductions",
+    "relative-endpoint-data",
+    "quantum-boundary-tuple",
+    "quantum-comparison-map",
+    "support-sensitive-carrier-contrast",
+    "allowed-boundary-test-pair",
+    "bounded-domain-audit"
+  ]
+}

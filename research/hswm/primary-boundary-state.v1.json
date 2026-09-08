@@ -1,0 +1,211 @@
+{
+  "schema": "ice-research-state/v1",
+  "id": "primary-boundary-state",
+  "target": "cpt::open:starobinsky-seam-ward-boundary-state-limit",
+  "scope": "SUPPORTING_METHOD",
+  "question": "두 고전적 relative primary 축약 뒤, 허용 경계상태에서 규제 잔여항과 관측가능량·내적·CPT 접합을 함께 판정하려면 어떤 양자 경계 객체와 검사가 먼저 필요한가?",
+  "sources": [
+    {
+      "id": "relative-primary",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_RELATIVE_PRIMARY_BOUNDARY.md",
+      "sha256": "a3120fbebe45bfa862c5aa6f6e7c718ab12b2b3e68d86296641f0562af0ff726"
+    },
+    {
+      "id": "primary-graded-sewing",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_PRIMARY_REDUCTION_GRADED_SEWING.md",
+      "sha256": "0d40cc6f1366595f21cbd1ea56e80370b6654169cc621d0d709e2f204201e89c"
+    },
+    {
+      "id": "state-criterion",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_BFV_STATE_CRITERION_AUDIT.md",
+      "sha256": "6f38da66b0fc511c21c8f26919a41417200ff36e00346997b095f3f261c72da6"
+    },
+    {
+      "id": "ward-face-limit",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_WARD_FACE_LIMIT.md",
+      "sha256": "42355545345a1b3727847da739aaebd134e574f9690b32e4f71bd3c14b7d56a1"
+    },
+    {
+      "id": "graded-seam-review",
+      "path": "docs/research/ICE_STAROBINSKY_GRADED_SEAM_ADVERSARIAL_REVIEW_2026-09-07.md",
+      "sha256": "4c9e5f9aa6a6c2d18484300955a9f19e6b4138cd64c86d19a79d49527a2cff7b"
+    }
+  ],
+  "objects": [
+    {
+      "id": "classical-relative-reductions",
+      "kind": "result",
+      "label": "두 고전적 relative primary 축약",
+      "status": "established",
+      "summary": "M: Pi=bar c=0 및 P(N0): N=N0, rho=0는 선언한 고전적 chart에서 Q, alpha, Omega와 두 relative endpoint 항을 같은 minimal/matter quotient로 내린다.",
+      "anchors": ["cpt::claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA", "cpt::concept:starobinsky-relative-coisotropic-primary-reduction"],
+      "sources": ["relative-primary"]
+    },
+    {
+      "id": "relative-endpoint-data",
+      "kind": "result",
+      "label": "bulk 축약 후 남는 두 endpoint 자료",
+      "status": "established",
+      "summary": "Local CMW primary split 뒤 action의 -[sigma-plus rho]와 BV-cotangent의 [sigma-plus delta N]은 함께 남으며, bulk doublet 소거만으로 state-space equivalence가 되지 않는다.",
+      "anchors": ["cpt::claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS", "cpt::concept:starobinsky-bulk-reduction-and-relative-endpoint-data"],
+      "sources": ["primary-graded-sewing"]
+    },
+    {
+      "id": "quantum-boundary-tuple",
+      "kind": "missing_object",
+      "label": "source-compatible quantum boundary tuple",
+      "status": "missing",
+      "summary": "For each X=M,P, declare graded carrier and invariant domain, polarization, measure/half-density, ghost/Berezin orientation, residual and gauge-fixing data, and quantum BFV differential. This is the first object that lets the established classical quotient maps r_M,r_P become a question about quantum states.",
+      "anchors": ["cpt::open:starobinsky-seam-ward-boundary-state-limit", "cpt::concept:starobinsky-source-boundary-quantization-handoff"],
+      "sources": ["relative-primary", "graded-seam-review"]
+    },
+    {
+      "id": "quantum-comparison-map",
+      "kind": "missing_object",
+      "label": "actual quantum comparison maps U_M and U_P",
+      "status": "missing",
+      "summary": "A degree-zero comparison must have a declared source and target domain and satisfy U_X D_X subset D_red and Omega_hat_red U_X=U_X Omega_hat_X there. Classical r_M,r_P are not these maps.",
+      "anchors": ["cpt::open:starobinsky-seam-ward-boundary-state-limit", "cpt::concept:starobinsky-cohomology-preserving-carrier-comparison"],
+      "sources": ["relative-primary", "primary-graded-sewing"]
+    },
+    {
+      "id": "support-sensitive-carrier-contrast",
+      "kind": "counterexample",
+      "label": "support와 dualization이 바꾸는 cohomology",
+      "status": "established",
+      "summary": "The declared compact-N primary complex has H0=H1=0 and infinite-dimensional H2, while a specified same-degree continuous coefficient dual has zero top cohomology; degree-reversed graded-dual detectors are a third object. A carrier name alone does not identify a physical state space.",
+      "anchors": ["cpt::claim:STAROBINSKY_PRIMARY_REDUCTION_CHAIN_HAS_H0_H1_ZERO_AND_INFINITE_DIMENSIONAL_H2", "cpt::claim:STAROBINSKY_AMBIENT_SMOOTH_CONTINUOUS_COEFFICIENT_DUAL_HAS_ZERO_TOP_COHOMOLOGY", "cpt::concept:starobinsky-test-carrier-versus-physical-state-carrier"],
+      "sources": ["primary-graded-sewing", "state-criterion"]
+    },
+    {
+      "id": "allowed-boundary-test-pair",
+      "kind": "missing_object",
+      "label": "allowed boundary-state pair and limiting topology",
+      "status": "missing",
+      "summary": "Name the left/right test or dual state spaces, their boundary traces, bosonic/Berezin pairing, and the weak or stronger topology before reading a regulated Ward functional as zero, nonzero distribution, or nonconvergence.",
+      "anchors": ["cpt::open:starobinsky-seam-ward-boundary-state-limit", "cpt::concept:starobinsky-regulator-limit-versus-boundary-limit"],
+      "sources": ["ward-face-limit", "graded-seam-review"]
+    },
+    {
+      "id": "fixed-box-face-flux",
+      "kind": "result",
+      "label": "fixed-box a=2 Green face flux",
+      "status": "established",
+      "summary": "For the declared real compact test pairing reaching only a=2, the Gaussian Ward limit is a boundary Green form. It may vanish under declared common Dirichlet/real Robin jets or be nonzero on another allowed pair; this does not settle other faces or a physical state family.",
+      "anchors": ["cpt::claim:STAROBINSKY_A2_GAUSSIAN_WARD_PAIRING_LIMIT_EQUALS_GREEN_FACE_FLUX", "cpt::concept:starobinsky-seam-ward-weak-pairing-versus-a2-face-flux"],
+      "sources": ["ward-face-limit"]
+    },
+    {
+      "id": "regulator-removal-decision",
+      "kind": "candidate",
+      "label": "residual-after-action decision record",
+      "status": "candidate",
+      "summary": "For one declared test pair and removal order, record whether the paired residual tends to zero, a nonzero boundary distribution, or fails to converge. Finite positive regulator width is not itself the decision.",
+      "anchors": ["cpt::open:starobinsky-seam-ward-boundary-state-limit", "cpt::open:starobinsky-seam-ward-cutoff-boundary-limit"],
+      "sources": ["ward-face-limit"]
+    },
+    {
+      "id": "physical-product-and-observables",
+      "kind": "missing_object",
+      "label": "positive physical product with observable common domain",
+      "status": "missing",
+      "summary": "A physical product requires a chosen constrained or rigged state carrier, positivity/completion, and observables plus adjoints preserving a common domain. Dual evaluation or a complex-bilinear Green form does not provide it.",
+      "anchors": ["cpt::concept:starobinsky-pairing-versus-positive-state-product", "cpt::concept:starobinsky-observable-common-domain-and-star-product", "cpt::open:starobinsky-seam-ward-boundary-state-limit"],
+      "sources": ["state-criterion", "graded-seam-review"]
+    },
+    {
+      "id": "cpt-identity-cylinder-datum",
+      "kind": "missing_object",
+      "label": "CPT-compatible identity-cylinder datum",
+      "status": "missing",
+      "summary": "A left/right polarization pairing, half-density and ordered ghost Fourier kernel, interval kernel and anti-linear convention must satisfy the distributional BFV intertwining and gluing normalization on the same domains.",
+      "anchors": ["cpt::open:starobinsky-seam-ward-boundary-state-limit", "cpt::concept:cpt-pin-sewing", "cpt::concept:starobinsky-source-boundary-quantization-handoff"],
+      "sources": ["graded-seam-review"]
+    },
+    {
+      "id": "positive-weight-nonselection",
+      "kind": "counterexample",
+      "label": "positive CPT-like label weight의 비선택성",
+      "status": "established",
+      "summary": "Declared Cauchy-label exchange, positivity and W covariance admit arbitrary smooth positive weights in their stated scope. Symmetry covariance alone therefore does not select a physical product or vacuum.",
+      "anchors": ["cpt::claim:STAROBINSKY_POSITIVE_CAUCHY_LABEL_EXCHANGE_LEAVES_ARBITRARY_SMOOTH_WEIGHT_UNSELECTED", "cpt::concept:starobinsky-admissible-choice-invariance-versus-state-selection"],
+      "sources": ["state-criterion"]
+    },
+    {
+      "id": "bounded-domain-audit",
+      "kind": "candidate",
+      "label": "first bounded falsifiable domain audit",
+      "status": "candidate",
+      "summary": "Fix one candidate quantum boundary tuple and one X in {M,P}; either exhibit an allowed vector for which U_X leaves the target domain or its BFV chain defect has nonzero pairing, or report that the tuple needed to state the test is absent.",
+      "anchors": ["cpt::open:starobinsky-seam-ward-boundary-state-limit", "cpt::concept:starobinsky-cohomology-preserving-carrier-comparison"],
+      "sources": ["relative-primary", "graded-seam-review"]
+    }
+  ],
+  "links": [
+    {
+      "id": "classical-reduction-needs-quantum-tuple",
+      "label": "classical quotient maps become quantum questions only with analytic data",
+      "relation": "requires",
+      "inputs": [{"role": "classical_relation", "object": "classical-relative-reductions"}, {"role": "retained_endpoint_data", "object": "relative-endpoint-data"}],
+      "output": "quantum-boundary-tuple",
+      "explanation": "The common classical quotient fixes neither carrier nor measure, so it cannot itself act on a quantum boundary state.",
+      "falsifier": "A source-compatible quantization theorem that supplies all tuple roles directly from the stated classical data would make this missing-object diagnosis too strong.",
+      "sources": ["relative-primary", "primary-graded-sewing", "graded-seam-review"]
+    },
+    {
+      "id": "quantum-tuple-needs-comparison-map",
+      "label": "declared carriers expose the actual comparison obligation",
+      "relation": "requires",
+      "inputs": [{"role": "quantum_data", "object": "quantum-boundary-tuple"}, {"role": "classical_relation", "object": "classical-relative-reductions"}],
+      "output": "quantum-comparison-map",
+      "explanation": "Only after source and target domains are declared can one ask whether the reduction is a BFV chain map or preserves cohomology.",
+      "falsifier": "An explicit source-to-target quantum construction with a proven intertwining identity and no extra analytic choices would supersede this route.",
+      "sources": ["relative-primary", "graded-seam-review"]
+    },
+    {
+      "id": "carrier-contrast-obstructs-automatic-equivalence",
+      "label": "cohomology depends on the carrier, support and dual convention",
+      "relation": "obstructs",
+      "inputs": [{"role": "carrier_counterexample", "object": "support-sensitive-carrier-contrast"}, {"role": "proposed_map", "object": "quantum-comparison-map"}],
+      "output": "bounded-domain-audit",
+      "explanation": "A map cannot be called an equivalence until its support, topology, ghost degree and induced cohomology map are tested on named spaces.",
+      "falsifier": "A named map with a proof of quasi-isomorphism on the declared carriers removes this obstruction for that datum.",
+      "sources": ["primary-graded-sewing", "state-criterion"]
+    },
+    {
+      "id": "residual-needs-state-action",
+      "label": "a finite-width residual becomes a decision only after pairing",
+      "relation": "requires",
+      "inputs": [{"role": "fixed_box_control", "object": "fixed-box-face-flux"}, {"role": "test_pair_and_topology", "object": "allowed-boundary-test-pair"}],
+      "output": "regulator-removal-decision",
+      "explanation": "The same local face flux has declared zero and nonzero instances; the regulator conclusion therefore belongs to a state pair, topology and removal order.",
+      "falsifier": "A uniform operator or distributional convergence theorem over the proposed state family would make individual-pair testing unnecessary in that family.",
+      "sources": ["ward-face-limit"]
+    },
+    {
+      "id": "sewing-needs-product-and-kernel",
+      "label": "CPT sewing is a compatibility test of product, domains and kernel",
+      "relation": "requires",
+      "inputs": [{"role": "quantum_data", "object": "quantum-boundary-tuple"}, {"role": "physical_product", "object": "physical-product-and-observables"}, {"role": "comparison_map", "object": "quantum-comparison-map"}],
+      "output": "cpt-identity-cylinder-datum",
+      "explanation": "An anti-linear sign table or formal endpoint delta does not establish the identity-cylinder intertwining or gluing normalization.",
+      "falsifier": "A fully specified kernel with a proven BFV intertwining and normalized gluing on the stated physical product discharges this relation for that construction.",
+      "sources": ["graded-seam-review", "state-criterion"]
+    },
+    {
+      "id": "symmetry-does-not-select-product",
+      "label": "CPT-like covariance does not choose a weight",
+      "relation": "obstructs",
+      "inputs": [{"role": "nonselection_control", "object": "positive-weight-nonselection"}, {"role": "desired_product", "object": "physical-product-and-observables"}],
+      "output": "cpt-identity-cylinder-datum",
+      "explanation": "A CPT-compatible product still needs an additional source, observable, or selection principle; covariance alone leaves a weight family.",
+      "falsifier": "A derivation from the declared source that fixes one weight while preserving the stated covariance would remove this particular nonselection.",
+      "sources": ["state-criterion"]
+    }
+  ],
+  "routing": {
+    "domain": "quantum-boundary-tuple",
+    "map": "quantum-comparison-map",
+    "obstruction": "support-sensitive-carrier-contrast"
+  }
+}

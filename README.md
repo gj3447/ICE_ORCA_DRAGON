@@ -63,6 +63,22 @@ compute mode invokes a caller-selected runner through `./ice run`. The
 cover planning, reference diagnostics, installed runtimes and persistent episode artifacts.
 LLM proposals and route feedback remain distinct from scientific evidence.
 
+For the reviewed boundary-state question, a typed research state makes joint premises,
+missing inputs and falsifiers visible and selects a nested HSWM review cell:
+
+```bash
+./ice research intuition research/hswm/primary-boundary-state.v1.json
+./ice research intuition research/hswm/primary-boundary-state.v1.json --without quantum-boundary-tuple
+./ice research run "<one boundary-state question>" --target cpt::open:starobinsky-seam-ward-boundary-state-limit --state-file research/hswm/primary-boundary-state.v1.json --reference cpt_temporal_folded_susy/STAROBINSKY_RELATIVE_PRIMARY_BOUNDARY.md --json
+./ice research state --profile v2 --json
+```
+
+The [research intuition map](docs/research/ICE_HSWM_BOUNDARY_INTUITION_2026-09-08.md)
+connects domains, cohomology, residual limits and CPT sewing. The
+[state integration record](docs/decisions/ICE_HSWM_RESEARCH_STATE_INTUITION_2026-09-08.md)
+distinguishes the authored routing conditions and structured LLM hypotheses from the
+original HSWM goal of learned, evolving role-bearing relations.
+
 The repository-local ontology is the standard navigation layer; raw result files remain the execution
 check ledgers. Obtain live graph scope and totals from `./ice ontology summary --json`, rather than from
 copied counts in documentation. The Hypercomplex, legacy, CPT, and IG-RUEQFT graphs are independent

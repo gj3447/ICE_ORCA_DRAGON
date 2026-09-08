@@ -10,6 +10,12 @@ feedback은 연구 제안·경로 선택의 기록일 뿐, 물리적 사실·evi
 
 ## 선언된 프로그램과 상태
 
+이 문서의 기본 route는 v1이다. 검토한 연구 상태를 `--state-file`로 넘기는 v2는
+[역할 관계·직관 확장 기록](ICE_HSWM_RESEARCH_STATE_INTUITION_2026-09-08.md)을 따른다.
+v2는 별도 manifest와 SQLite를 사용하고, 실제 domain/map/obstruction 상태에 따라
+중첩된 검토 셀을 선택한다. 아래 v1의 두 경쟁 경로와 v2의 상호 배타적 조건 경로를
+같은 학습 검증으로 해석하지 않는다.
+
 ICE program manifest는 `config/hswm-research.v1.json`이며, HSWM의 선언 schema는
 `hswm-adaptive-program/v1`이다. 실행 상태는 저장소 밖의 전역 상태가 아니라
 `.ice/hswm-research/runtime.sqlite3`에만 지속한다. 이 SQLite 기록은 episode, 선택한
