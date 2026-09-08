@@ -47,6 +47,12 @@ precise carriers, maps and products. Start with
 `choice-preservation-and-physical-selection`. The added concept definitions organize existing
 scoped results; they do not change scientific claim, evidence or gate status.
 
+The [connectivity-pattern audit](../docs/research/ICE_CONNECTIVITY_PATTERN_AUDIT_2026-09-08.md)
+compares those recent concepts with older operator/RAQ, lapse and orientation records.
+Four direct `CONTRASTS_WITH` links now expose distinctions that previously required long
+indirect paths. Other similarities remain prose comparisons or already-covered navigation;
+they do not transfer evidence between models or graphs.
+
 Start with live collection scope and counts, rather than copying a dated total into prose:
 
 ```bash

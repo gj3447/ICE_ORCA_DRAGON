@@ -3,7 +3,7 @@
 > This page is a human-readable memory and index generated from the current repository graph and evidence. It is **not** a preregistration, research contract, substitute for the calculations, scientific canon, or KG ratification.
 
 Canonical machine record: [`graph.json`](./graph.json) (`research-graph/v1`, updated
-`2026-09-07T14:15:18Z`; 1631 nodes, 4164 edges). Run and analytic-evidence details live in the
+`2026-09-08T00:24:20Z`; 1632 nodes, 4173 edges). Run and analytic-evidence details live in the
 [evidence guide](./references/evidence.md);
 literature coverage lives in the [source inventory](./references/source-inventory.md). The validator
 verifies stored artifact and policy hashes; use the current validator output for counts.
@@ -14,6 +14,11 @@ explicit distinctions and three reading paths. Read `state-sewing-typed-handoffs
 `counterexamples-to-state-space-repair` through the failed inferences, or
 `choice-preservation-and-physical-selection` to compare allowed choices. These are
 conceptual navigation over existing scoped results; no claim or evidence status changes.
+
+The [connectivity audit](../../docs/research/ICE_CONNECTIVITY_PATTERN_AUDIT_2026-09-08.md)
+adds four direct comparisons to older operator/RAQ, lapse-integral and half-form/Pin
+concepts. They identify different typed objects and missing maps; they add no evidence,
+new research dependency or collection path.
 
 The 2026-09-07 user-requested Gaussian seam questions are indexed in
 `reading-path:starobinsky-seam-ward-regulator-removal`:

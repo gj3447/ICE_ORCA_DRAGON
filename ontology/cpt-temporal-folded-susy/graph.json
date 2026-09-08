@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-07T14:15:18Z",
+  "updated_at_utc": "2026-09-08T00:24:20Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -18067,6 +18067,16 @@
       "artifact_kind": "research_guide",
       "path": "docs/research/ICE_RESEARCH_INTUITION_KG_MAP_2026-09-07.md",
       "sha256": "9655b4682d9868b4b2d43b3dc93d34a41be7aee6379822a3f98716e327dc794c"
+    },
+    {
+      "id": "artifact:ice-research-connectivity-pattern-audit",
+      "type": "artifact",
+      "title": "연결성 감사: 정의역·상태 선택·lapse 적분·orientation의 구별",
+      "summary": "Source-checked navigation audit of four missing CPT comparison links. Distinguishes operator domains, declared state/extension choices, different lapse integrations and classical versus quantum orientation. Other patterns remain explicitly rejected or already covered; no scientific claim or evidence is added.",
+      "state": "REVIEWED_NAVIGATION_ONLY",
+      "artifact_kind": "navigation_review",
+      "path": "docs/research/ICE_CONNECTIVITY_PATTERN_AUDIT_2026-09-08.md",
+      "sha256": "792d3766f3fb9f30abed513e5d3aef530e7fc3910a93dc462dc3009a8ad38e14"
     }
   ],
   "edges": [
@@ -39242,6 +39252,69 @@
       "relation": "PART_OF",
       "to": "programme:cpt-temporal-folded-susy",
       "note": "CPT case study with collection-level navigation to other independent programmes."
+    },
+    {
+      "id": "edge:4169",
+      "from": "concept:starobinsky-observable-common-domain-and-star-product",
+      "relation": "CONTRASTS_WITH",
+      "to": "concept:raw-c-weyl-spectral-raq-bridge-design",
+      "note": "C1: The compact Starobinsky carrier admits differential constraint annihilation but does not supply the self-adjoint domain, spectral transform or rigging construction required by the separate raw-C route. Compare the missing domain/product inputs; no common operator, intertwiner, successor or transferred evidence is asserted. Source locators: connectivity audit section 2 C1."
+    },
+    {
+      "id": "edge:4170",
+      "from": "concept:starobinsky-admissible-choice-invariance-versus-state-selection",
+      "relation": "CONTRASTS_WITH",
+      "to": "concept:raw-c-constant-boundary-direct-integral",
+      "note": "C2: An unselected positive Cauchy-label weight and the declared raw-C Gamma1=0 extension are different additional data. Neither is automatically an equivalent gauge/representation choice. No shared selection family, physical state or quantum equivalence is asserted. Source locators: connectivity audit section 2 C2."
+    },
+    {
+      "id": "edge:4171",
+      "from": "concept:starobinsky-source-time-versus-carrier-lapse-coordinate",
+      "relation": "CONTRASTS_WITH",
+      "to": "concept:positive-half-lapse-resolvent-versus-projector",
+      "note": "C3: Source-time lapse histories and compact boundary-coordinate contraction maps differ from a lapse-parameter integral defining a sourced resolvent or constraint-supported distribution. The compact homotopy is not a group average or original-cycle prescription. Source locators: connectivity audit section 2 C3."
+    },
+    {
+      "id": "edge:4172",
+      "from": "concept:starobinsky-source-boundary-quantization-handoff",
+      "relation": "CONTRASTS_WITH",
+      "to": "concept:reduced-bosonic-half-form-versus-fermion-pfaffian-and-pin",
+      "note": "C4: An oriented classical endpoint primitive and its retained action/BV boundary terms do not constitute a determinant-line trivialization, fermionic Pfaffian or Pin lift. The separate reduced half-form record supplies none of the missing Starobinsky quantum boundary map. Source locators: connectivity audit section 2 C4."
+    },
+    {
+      "id": "edge:4173",
+      "from": "artifact:ice-research-connectivity-pattern-audit",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy",
+      "note": "Repository-local navigation audit; four programme evidence boundaries and all scientific statuses remain unchanged."
+    },
+    {
+      "id": "edge:4174",
+      "from": "artifact:ice-research-connectivity-pattern-audit",
+      "relation": "DOCUMENTS",
+      "to": "concept:starobinsky-observable-common-domain-and-star-product",
+      "note": "Documents the source-checked comparison, its baseline indirect path and rejected inferences; not a calculation ledger or evidence for the concept."
+    },
+    {
+      "id": "edge:4175",
+      "from": "artifact:ice-research-connectivity-pattern-audit",
+      "relation": "DOCUMENTS",
+      "to": "concept:starobinsky-admissible-choice-invariance-versus-state-selection",
+      "note": "Documents the source-checked comparison, its baseline indirect path and rejected inferences; not a calculation ledger or evidence for the concept."
+    },
+    {
+      "id": "edge:4176",
+      "from": "artifact:ice-research-connectivity-pattern-audit",
+      "relation": "DOCUMENTS",
+      "to": "concept:starobinsky-source-time-versus-carrier-lapse-coordinate",
+      "note": "Documents the source-checked comparison, its baseline indirect path and rejected inferences; not a calculation ledger or evidence for the concept."
+    },
+    {
+      "id": "edge:4177",
+      "from": "artifact:ice-research-connectivity-pattern-audit",
+      "relation": "DOCUMENTS",
+      "to": "concept:starobinsky-source-boundary-quantization-handoff",
+      "note": "Documents the source-checked comparison, its baseline indirect path and rejected inferences; not a calculation ledger or evidence for the concept."
     }
   ],
   "kg_bridges": [
