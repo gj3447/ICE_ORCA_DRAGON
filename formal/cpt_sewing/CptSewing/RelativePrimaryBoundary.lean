@@ -29,10 +29,10 @@ def qLin : Module.End ℂ Primary where
     intro x y
     funext i
     fin_cases i
-    · simp [q, rho, pi, add_comm]
-    · simp [q, rho, pi]
-    · simp [q, rho, pi]
-    · simp [q, rho, pi]
+    · simp [q, rho, add_comm]
+    · simp [q]
+    · simp [q]
+    · simp [q, pi]
   map_smul' := by
     intro c x
     funext i

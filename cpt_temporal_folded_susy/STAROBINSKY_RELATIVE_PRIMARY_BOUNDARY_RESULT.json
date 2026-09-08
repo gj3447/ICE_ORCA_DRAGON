@@ -1,7 +1,7 @@
 {
   "schema": "ice-starobinsky-relative-primary-boundary/v1",
   "status": "FAILED",
-  "started_at_utc": "2026-09-08T01:52:30.395515+00:00",
+  "started_at_utc": "2026-09-08T01:55:46.139278+00:00",
   "question": "Do two selected primary slices preserve the actual classical BFV data and both retained source endpoint terms under characteristic reduction?",
   "scope": "SUPPORTING_METHOD: classical relative boundary reduction in the fixed homogeneous source chart",
   "non_claim": "No quantum BV pushforward, positive physical state/product, CPT amplitude or G1 cycle resolution.",
@@ -27,243 +27,107 @@
         ],
         "exit_code": 1,
         "stderr": "",
-        "payload_sha256": "69f5104cbf8dace68809e1cbd46d27332369b5b437e5758224e51f077e08aa17",
+        "payload_sha256": "c2bec700181b3c0db5ac271dcc4ad314aa30604a286ab0188e1e320068117367",
         "messages": [
           {
             "caption": "",
-            "data": "unsolved goals\ncase «0»\nx y : Primary\n⊢ -y 2 + -x 2 = -x 2 + -y 2",
+            "data": "This simp argument is unused:\n  pi\n\nHint: Omit it from the simp argument list.\n  [apply] simp [q, rho, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
             "endPos": {
-              "column": 37,
-              "line": 31
+              "column": 22,
+              "line": 32
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "Tactic.unsolvedGoals",
-            "pos": {
-              "column": 14,
-              "line": 28
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "declaration uses `sorry`",
-            "endPos": {
-              "column": 28,
-              "line": 67
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "hasSorry",
-            "pos": {
-              "column": 24,
-              "line": 67
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "This simp argument is unused:\n  M\n\nHint: Omit it from the simp argument list.\n  [apply] simp [pi, b, mProj]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-            "endPos": {
-              "column": 25,
-              "line": 70
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "linter.unusedSimpArgs",
             "pos": {
-              "column": 24,
-              "line": 70
+              "column": 20,
+              "line": 32
             },
             "severity": "error"
           },
           {
             "caption": "",
-            "data": "This simp argument is unused:\n  PN0\n\nHint: Omit it from the simp argument list.\n  [apply] simp [n, rho, auxProj]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-            "endPos": {
-              "column": 27,
-              "line": 73
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "linter.unusedSimpArgs",
-            "pos": {
-              "column": 24,
-              "line": 73
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "declaration uses `sorry`",
-            "endPos": {
-              "column": 21,
-              "line": 82
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "hasSorry",
-            "pos": {
-              "column": 17,
-              "line": 82
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "This simp argument is unused:\n  M\n\nHint: Omit it from the simp argument list.\n  [apply] simp [pi, qLin, q]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-            "endPos": {
-              "column": 11,
-              "line": 82
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "linter.unusedSimpArgs",
-            "pos": {
-              "column": 10,
-              "line": 82
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "declaration uses `sorry`",
-            "endPos": {
-              "column": 23,
-              "line": 88
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "hasSorry",
-            "pos": {
-              "column": 19,
-              "line": 88
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "This simp argument is unused:\n  PN0\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rho, qLin, q]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-            "endPos": {
-              "column": 13,
-              "line": 89
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "linter.unusedSimpArgs",
-            "pos": {
-              "column": 10,
-              "line": 89
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "declaration uses `sorry`",
+            "data": "This simp argument is unused:\n  rho\n\nHint: Omit it from the simp argument list.\n  [apply] simp [q, pi]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
             "endPos": {
               "column": 18,
-              "line": 95
+              "line": 33
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "hasSorry",
-            "pos": {
-              "column": 14,
-              "line": 95
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "This simp argument is unused:\n  M\n\nHint: Omit it from the simp argument list.\n  [apply] simp [pi, qLin, q]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-            "endPos": {
-              "column": 13,
-              "line": 98
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "linter.unusedSimpArgs",
             "pos": {
-              "column": 12,
-              "line": 98
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "declaration uses `sorry`",
-            "endPos": {
-              "column": 18,
-              "line": 105
-            },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
-            "isSilent": false,
-            "keepFullRange": false,
-            "kind": "hasSorry",
-            "pos": {
-              "column": 14,
-              "line": 105
-            },
-            "severity": "error"
-          },
-          {
-            "caption": "",
-            "data": "This simp argument is unused:\n  PN0\n\nHint: Omit it from the simp argument list.\n  [apply] simp [rho, qLin, q]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-            "endPos": {
               "column": 15,
-              "line": 109
+              "line": 33
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "severity": "error"
+          },
+          {
+            "caption": "",
+            "data": "This simp argument is unused:\n  pi\n\nHint: Omit it from the simp argument list.\n  [apply] simp [q, rho]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+            "endPos": {
+              "column": 22,
+              "line": 33
+            },
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "linter.unusedSimpArgs",
             "pos": {
-              "column": 12,
-              "line": 109
+              "column": 20,
+              "line": 33
             },
             "severity": "error"
           },
           {
             "caption": "",
-            "data": "declaration uses `sorry`",
+            "data": "This simp argument is unused:\n  rho\n\nHint: Omit it from the simp argument list.\n  [apply] simp [q, pi]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
             "endPos": {
-              "column": 50,
-              "line": 132
+              "column": 18,
+              "line": 34
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
-            "kind": "hasSorry",
+            "kind": "linter.unusedSimpArgs",
             "pos": {
-              "column": 46,
-              "line": 132
+              "column": 15,
+              "line": 34
             },
             "severity": "error"
           },
           {
             "caption": "",
-            "data": "declaration uses `sorry`",
+            "data": "This simp argument is unused:\n  pi\n\nHint: Omit it from the simp argument list.\n  [apply] simp [q, rho]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
             "endPos": {
-              "column": 50,
-              "line": 138
+              "column": 22,
+              "line": 34
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
-            "kind": "hasSorry",
+            "kind": "linter.unusedSimpArgs",
             "pos": {
-              "column": 46,
-              "line": 138
+              "column": 20,
+              "line": 34
+            },
+            "severity": "error"
+          },
+          {
+            "caption": "",
+            "data": "This simp argument is unused:\n  rho\n\nHint: Omit it from the simp argument list.\n  [apply] simp [q, pi]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+            "endPos": {
+              "column": 18,
+              "line": 35
+            },
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
+            "isSilent": false,
+            "keepFullRange": false,
+            "kind": "linter.unusedSimpArgs",
+            "pos": {
+              "column": 15,
+              "line": 35
             },
             "severity": "error"
           },
@@ -272,32 +136,32 @@
             "data": "CptSewing.RelativePrimaryBoundary.q_nilpotent (x : CptSewing.RelativePrimaryBoundary.Primary) :\n  CptSewing.RelativePrimaryBoundary.qLin (CptSewing.RelativePrimaryBoundary.qLin x) = 0",
             "endPos": {
               "column": 6,
-              "line": 142
+              "line": 146
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 142
+              "line": 146
             },
             "severity": "information"
           },
           {
             "caption": "",
-            "data": "'CptSewing.RelativePrimaryBoundary.q_nilpotent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+            "data": "'CptSewing.RelativePrimaryBoundary.q_nilpotent' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 143
+              "line": 147
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 143
+              "line": 147
             },
             "severity": "information"
           },
@@ -306,15 +170,15 @@
             "data": "CptSewing.RelativePrimaryBoundary.mProj_mem_M (x : CptSewing.RelativePrimaryBoundary.Primary) :\n  CptSewing.RelativePrimaryBoundary.M (CptSewing.RelativePrimaryBoundary.mProj x)",
             "endPos": {
               "column": 6,
-              "line": 144
+              "line": 148
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 144
+              "line": 148
             },
             "severity": "information"
           },
@@ -323,15 +187,15 @@
             "data": "'CptSewing.RelativePrimaryBoundary.mProj_mem_M' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 145
+              "line": 149
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 145
+              "line": 149
             },
             "severity": "information"
           },
@@ -340,15 +204,15 @@
             "data": "CptSewing.RelativePrimaryBoundary.auxProj_mem_PN0 (x : CptSewing.RelativePrimaryBoundary.Primary) :\n  CptSewing.RelativePrimaryBoundary.PN0 (CptSewing.RelativePrimaryBoundary.auxProj x)",
             "endPos": {
               "column": 6,
-              "line": 146
+              "line": 150
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 146
+              "line": 150
             },
             "severity": "information"
           },
@@ -357,15 +221,15 @@
             "data": "'CptSewing.RelativePrimaryBoundary.auxProj_mem_PN0' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 147
+              "line": 151
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 147
+              "line": 151
             },
             "severity": "information"
           },
@@ -374,15 +238,15 @@
             "data": "CptSewing.RelativePrimaryBoundary.projections_sum (x : CptSewing.RelativePrimaryBoundary.Primary) :\n  CptSewing.RelativePrimaryBoundary.mProj x + CptSewing.RelativePrimaryBoundary.auxProj x = x",
             "endPos": {
               "column": 6,
-              "line": 148
+              "line": 152
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 148
+              "line": 152
             },
             "severity": "information"
           },
@@ -391,15 +255,15 @@
             "data": "'CptSewing.RelativePrimaryBoundary.projections_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 149
+              "line": 153
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 149
+              "line": 153
             },
             "severity": "information"
           },
@@ -408,32 +272,32 @@
             "data": "CptSewing.RelativePrimaryBoundary.q_stable_M {x : CptSewing.RelativePrimaryBoundary.Primary}\n  (hx : CptSewing.RelativePrimaryBoundary.M x) :\n  CptSewing.RelativePrimaryBoundary.M (CptSewing.RelativePrimaryBoundary.qLin x)",
             "endPos": {
               "column": 6,
-              "line": 150
+              "line": 154
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 150
+              "line": 154
             },
             "severity": "information"
           },
           {
             "caption": "",
-            "data": "'CptSewing.RelativePrimaryBoundary.q_stable_M' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+            "data": "'CptSewing.RelativePrimaryBoundary.q_stable_M' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 151
+              "line": 155
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 151
+              "line": 155
             },
             "severity": "information"
           },
@@ -442,32 +306,32 @@
             "data": "CptSewing.RelativePrimaryBoundary.q_stable_PN0 {x : CptSewing.RelativePrimaryBoundary.Primary}\n  (hx : CptSewing.RelativePrimaryBoundary.PN0 x) :\n  CptSewing.RelativePrimaryBoundary.PN0 (CptSewing.RelativePrimaryBoundary.qLin x)",
             "endPos": {
               "column": 6,
-              "line": 152
+              "line": 156
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 152
+              "line": 156
             },
             "severity": "information"
           },
           {
             "caption": "",
-            "data": "'CptSewing.RelativePrimaryBoundary.q_stable_PN0' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+            "data": "'CptSewing.RelativePrimaryBoundary.q_stable_PN0' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 153
+              "line": 157
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 153
+              "line": 157
             },
             "severity": "information"
           },
@@ -476,32 +340,32 @@
             "data": "CptSewing.RelativePrimaryBoundary.q_mem_M_iff (x : CptSewing.RelativePrimaryBoundary.Primary) :\n  CptSewing.RelativePrimaryBoundary.M (CptSewing.RelativePrimaryBoundary.qLin x) ↔\n    CptSewing.RelativePrimaryBoundary.pi x = 0",
             "endPos": {
               "column": 6,
-              "line": 154
+              "line": 158
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 154
+              "line": 158
             },
             "severity": "information"
           },
           {
             "caption": "",
-            "data": "'CptSewing.RelativePrimaryBoundary.q_mem_M_iff' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+            "data": "'CptSewing.RelativePrimaryBoundary.q_mem_M_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 155
+              "line": 159
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 155
+              "line": 159
             },
             "severity": "information"
           },
@@ -510,32 +374,32 @@
             "data": "CptSewing.RelativePrimaryBoundary.q_mem_PN0_iff (x : CptSewing.RelativePrimaryBoundary.Primary) :\n  CptSewing.RelativePrimaryBoundary.PN0 (CptSewing.RelativePrimaryBoundary.qLin x) ↔\n    CptSewing.RelativePrimaryBoundary.rho x = 0",
             "endPos": {
               "column": 6,
-              "line": 156
+              "line": 160
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 156
+              "line": 160
             },
             "severity": "information"
           },
           {
             "caption": "",
-            "data": "'CptSewing.RelativePrimaryBoundary.q_mem_PN0_iff' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+            "data": "'CptSewing.RelativePrimaryBoundary.q_mem_PN0_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 157
+              "line": 161
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 157
+              "line": 161
             },
             "severity": "information"
           },
@@ -544,15 +408,15 @@
             "data": "CptSewing.RelativePrimaryBoundary.M_inter_PN0_eq_zero {x : CptSewing.RelativePrimaryBoundary.Primary}\n  (hM : CptSewing.RelativePrimaryBoundary.M x) (hP : CptSewing.RelativePrimaryBoundary.PN0 x) : x = 0",
             "endPos": {
               "column": 6,
-              "line": 158
+              "line": 162
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 158
+              "line": 162
             },
             "severity": "information"
           },
@@ -561,15 +425,15 @@
             "data": "'CptSewing.RelativePrimaryBoundary.M_inter_PN0_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 159
+              "line": 163
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 159
+              "line": 163
             },
             "severity": "information"
           },
@@ -578,15 +442,15 @@
             "data": "CptSewing.RelativePrimaryBoundary.alphaCoeff_vanishes_on_M {x : CptSewing.RelativePrimaryBoundary.Primary}\n  (hx : CptSewing.RelativePrimaryBoundary.M x) (dn drho : ℂ) :\n  CptSewing.RelativePrimaryBoundary.alphaCoeff x dn drho = 0",
             "endPos": {
               "column": 6,
-              "line": 160
+              "line": 164
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 160
+              "line": 164
             },
             "severity": "information"
           },
@@ -595,15 +459,15 @@
             "data": "'CptSewing.RelativePrimaryBoundary.alphaCoeff_vanishes_on_M' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 161
+              "line": 165
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 161
+              "line": 165
             },
             "severity": "information"
           },
@@ -612,15 +476,15 @@
             "data": "CptSewing.RelativePrimaryBoundary.alphaCoeff_vanishes_on_PN0_tangent (x : CptSewing.RelativePrimaryBoundary.Primary) :\n  CptSewing.RelativePrimaryBoundary.alphaCoeff x 0 0 = 0",
             "endPos": {
               "column": 6,
-              "line": 162
+              "line": 166
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 162
+              "line": 166
             },
             "severity": "information"
           },
@@ -629,15 +493,15 @@
             "data": "'CptSewing.RelativePrimaryBoundary.alphaCoeff_vanishes_on_PN0_tangent' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 163
+              "line": 167
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 163
+              "line": 167
             },
             "severity": "information"
           },
@@ -646,32 +510,32 @@
             "data": "CptSewing.RelativePrimaryBoundary.q_commutes_mProj :\n  CptSewing.RelativePrimaryBoundary.qLin ∘ₗ CptSewing.RelativePrimaryBoundary.mProj =\n    CptSewing.RelativePrimaryBoundary.mProj ∘ₗ CptSewing.RelativePrimaryBoundary.qLin",
             "endPos": {
               "column": 6,
-              "line": 164
+              "line": 168
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 164
+              "line": 168
             },
             "severity": "information"
           },
           {
             "caption": "",
-            "data": "'CptSewing.RelativePrimaryBoundary.q_commutes_mProj' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]",
+            "data": "'CptSewing.RelativePrimaryBoundary.q_commutes_mProj' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 165
+              "line": 169
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 165
+              "line": 169
             },
             "severity": "information"
           },
@@ -680,32 +544,32 @@
             "data": "CptSewing.RelativePrimaryBoundary.q_commutes_auxProj :\n  CptSewing.RelativePrimaryBoundary.qLin ∘ₗ CptSewing.RelativePrimaryBoundary.auxProj =\n    CptSewing.RelativePrimaryBoundary.auxProj ∘ₗ CptSewing.RelativePrimaryBoundary.qLin",
             "endPos": {
               "column": 6,
-              "line": 166
+              "line": 170
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 166
+              "line": 170
             },
             "severity": "information"
           },
           {
             "caption": "",
-            "data": "'CptSewing.RelativePrimaryBoundary.q_commutes_auxProj' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]",
+            "data": "'CptSewing.RelativePrimaryBoundary.q_commutes_auxProj' depends on axioms: [propext, Classical.choice, Quot.sound]",
             "endPos": {
               "column": 6,
-              "line": 167
+              "line": 171
             },
-            "fileName": "/var/tmp/orca/ice-relative-primary-vitrnh_b/RelativePrimaryBoundaryAudit.lean",
+            "fileName": "/var/tmp/orca/ice-relative-primary-6lpnx1im/RelativePrimaryBoundaryAudit.lean",
             "isSilent": false,
             "keepFullRange": false,
             "kind": "[anonymous]",
             "pos": {
               "column": 0,
-              "line": 167
+              "line": 171
             },
             "severity": "information"
           }
@@ -715,7 +579,7 @@
     }
   ],
   "provenance": {
-    "source_commit": "1ef15e56697edbfde34f0f7e99ab5f5fceabab2e",
+    "source_commit": "87a746fa80a698be321c555d9e34136339fae9ab",
     "inputs": {
       "cpt_temporal_folded_susy/starobinsky_relative_primary_boundary.py": {
         "sha256": "9b3f557ffdabdf33fdba346965894976851fb6934ec780d1bbda5ace910dd011",
@@ -730,8 +594,8 @@
         "bytes": 858
       },
       "formal/cpt_sewing/CptSewing/RelativePrimaryBoundary.lean": {
-        "sha256": "4eb65a1c1666d648a7e9780aa11e1ee9fcd6c916df50f6947260c1ec3726c3f6",
-        "bytes": 3972
+        "sha256": "81568cfae186aa9f424f2fae08c2dad7fa03beb9197a495cfbe22daa547c34f5",
+        "bytes": 4020
       },
       "docs/research/ICE_STAROBINSKY_SOURCE_INDUCED_INTERVAL_BVBFV_2026-09-07.md": {
         "sha256": "9b23db904839f4a68ccf7e569297d3d94825aa18784fcfffe3c0463bded3eb7a",
@@ -1189,5 +1053,5 @@
     "noncomputed": "No classification of all polarizations, interval BV gauge-fixing, residual measure, quantum chain map, physical cohomology/product, CPT amplitude or original integration cycle."
   },
   "failure": "ValueError: symbolic or Lean audit failed; see raw diagnostics",
-  "elapsed_seconds": 31.442820181138813
+  "elapsed_seconds": 27.960522663779557
 }
