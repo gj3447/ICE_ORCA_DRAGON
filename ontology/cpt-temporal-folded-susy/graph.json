@@ -4,7 +4,7 @@
   "graph_id": "research-graph:cpt-temporal-folded-susy",
   "title": "CPT × Temporal-Folded SUSY research graph",
   "description": "A compact, versioned semantic layer for claims, evidence, sources, scopes, artifacts, and open problems. It records what was calculated without turning repository metadata into a physics verdict.",
-  "updated_at_utc": "2026-09-08T00:24:20Z",
+  "updated_at_utc": "2026-09-08T01:59:10Z",
   "canonical_file": "ontology/cpt-temporal-folded-susy/graph.json",
   "source_inventory": "ontology/cpt-temporal-folded-susy/references/source-inventory.md",
   "quick_answers": [
@@ -1727,7 +1727,7 @@
     {
       "id": "reading-path:starobinsky-seam-ward-regulator-removal",
       "title": "Gaussian 접합: 경계상태에 작용시킨 잔여항과 규제 제거",
-      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다. The later quotient-lift review distinguishes an actual finite quotient lift from a same-carrier star observable and contrasts a failed free-ghost fixed-a ansatz with one ghost-fixed finite canonical endpoint; neither supplies a bulk/quantum BFV map. The later kernel/top-ghost result separates kernel-active noncommuting corrections, finite-rank quotient nonselection, compact-test top support, coefficient-algebraic-dual exactness and endpoint-trace exactness; it constructs no physical state or quantum BFV boundary object. The primary-reduction/graded-pairing result locates test support and preserves declared detector pairing without constructing a physical state or quantum BFV seam.",
+      "summary": "사용자 질문인 경계상태에 작용시킨 잔여항의 규제 제거와 남는 경계항을 추적한다. 모든 양의 폭의 exact nonclosure 뒤에 a=2 실수 smooth compact pairing의 O(sqrt(tau)) Green 경계형식과, 그 local Ward 소거가 same-space all-ghost Robin/Dirichlet ansatz의 H/p_N 불변성을 뜻하지 않는다는 domain 판별이 연결된다. 이는 closed/self-adjoint domain이나 physical BFV state를 만들지 않으며, 원래 cycle·물리 CPT 위반·빅뱅·TOE 증거가 아니다. The later quotient-lift review distinguishes an actual finite quotient lift from a same-carrier star observable and contrasts a failed free-ghost fixed-a ansatz with one ghost-fixed finite canonical endpoint; neither supplies a bulk/quantum BFV map. The later kernel/top-ghost result separates kernel-active noncommuting corrections, finite-rank quotient nonselection, compact-test top support, coefficient-algebraic-dual exactness and endpoint-trace exactness; it constructs no physical state or quantum BFV boundary object. The primary-reduction/graded-pairing result locates test support and preserves declared detector pairing without constructing a physical state or quantum BFV seam. Two selected classical relative primary reductions are now explicit; quantum boundary quantization, carrier comparison and state/product selection remain open.",
       "nodes": [
         "claim:STAROBINSKY_GAUSSIAN_SEAM_HAS_EXACT_BFV_CLOSURE_AT_SOME_POSITIVE_WIDTH",
         "scope:starobinsky-gaussian-seam-ward-flat-core",
@@ -1789,6 +1789,9 @@
         "claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS",
         "evidence:starobinsky-primary-reduction-graded-sewing-result",
         "artifact:starobinsky-primary-reduction-graded-sewing-report",
+        "concept:starobinsky-relative-coisotropic-primary-reduction",
+        "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+        "artifact:starobinsky-relative-primary-boundary-report",
         "open:starobinsky-seam-ward-boundary-state-limit",
         "open:starobinsky-seam-ward-cutoff-boundary-limit",
         "open:starobinsky-seam-ward-physical-effect-bridge",
@@ -1799,12 +1802,15 @@
     {
       "id": "reading-path:state-sewing-typed-handoffs",
       "title": "작용 → 상태공간 → 관측가능량·내적 → 접합: 무엇을 넘겨야 하나",
-      "summary": "Forward intuition route through source, boundary quantization, carrier comparison and product compatibility. The arrows are reading order, not completed implications or G1 evidence. Each claim retains its original scope and evidence edges.",
+      "summary": "Forward intuition route through source, boundary quantization, carrier comparison and product compatibility. The arrows are reading order, not completed implications or G1 evidence. Each claim retains its original scope and evidence edges. Two selected classical relative primary reductions are now explicit; quantum boundary quantization, carrier comparison and state/product selection remain open.",
       "nodes": [
         "artifact:ice-research-intuition-kg-map",
         "concept:starobinsky-source-time-versus-carrier-lapse-coordinate",
         "claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS",
         "concept:starobinsky-bulk-reduction-and-relative-endpoint-data",
+        "concept:starobinsky-relative-coisotropic-primary-reduction",
+        "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+        "artifact:starobinsky-relative-primary-boundary-report",
         "concept:starobinsky-source-boundary-quantization-handoff",
         "concept:starobinsky-finite-canonical-endpoint-versus-quantum-cauchy-data",
         "concept:starobinsky-test-carrier-versus-physical-state-carrier",
@@ -16783,7 +16789,7 @@
       "id": "open:starobinsky-seam-ward-boundary-state-limit",
       "type": "open_problem",
       "title": "Test the Gaussian Ward defect on allowed boundary states as the regulator is removed",
-      "summary": "The fixed-box Ward face limit and repaired compact-N test carrier are established in their declared scope. The actual primary contraction now gives H0=H1=0 and infinite-dimensional H2=Psi/H Psi; correct graded-dual evaluation preserves the Cauchy detectors, while the specified same-degree continuous coefficient dual has zero top cohomology. The local CMW primary split retains an action and BV-cotangent endpoint term. Missing are a source-compatible boundary quantization map, allowed support/topology and half-density module, quantum interval kernel with residual pushforward, a justified positive physical product, and CPT/gauge/regulator/cycle compatibility. These supporting results do not resolve the original joint cycle or G1 intersections.",
+      "summary": "The fixed-box Ward face limit and repaired compact-N test carrier are established in their declared scope. The actual primary contraction now gives H0=H1=0 and infinite-dimensional H2=Psi/H Psi; correct graded-dual evaluation preserves the Cauchy detectors, while the specified same-degree continuous coefficient dual has zero top cohomology. The local CMW primary split retains an action and BV-cotangent endpoint term. Two selected classical primary coisotropics now preserve both terms and Q under characteristic reduction to the same matter/minimal boundary target; no map to the compact-N quantum carrier has been constructed. Missing are a source-compatible boundary quantization map, allowed support/topology and half-density module, quantum interval kernel with residual pushforward, a justified positive physical product, and CPT/gauge/regulator/cycle compatibility. These supporting results do not resolve the original joint cycle or G1 intersections.",
       "state": "OPEN_PARTIAL_A2_REAL_TEST_LOCAL_DOMAIN_DIAGNOSTICS_DUAL_FAMILY_EXISTS_PHYSICAL_CARRIER_PRODUCT_CPT_OPEN",
       "question": "허용한 경계상태에 작용시켰을 때 Gaussian 규제를 제거하며 Ward 잔여항이 사라지는가? 명시한 test-state 공간, Berezin/bosonic pairing, 극한 위상과 제거 순서에서 실제 적분 잔여항이 0, 비영 함수/분포, 또는 비수렴 중 무엇이 되는가?",
       "includes": [
@@ -18077,6 +18083,118 @@
       "artifact_kind": "navigation_review",
       "path": "docs/research/ICE_CONNECTIVITY_PATTERN_AUDIT_2026-09-08.md",
       "sha256": "792d3766f3fb9f30abed513e5d3aef530e7fc3910a93dc462dc3009a8ad38e14"
+    },
+    {
+      "id": "scope:starobinsky-two-relative-primary-boundary-reductions",
+      "type": "scope",
+      "title": "Two selected classical relative primary boundary reductions",
+      "summary": "The fixed homogeneous Starobinsky source, two local primary slices M: Pi=barc=0 and P: N=N0,rho=0, their own allowed boundary variations, and characteristic quotient to the matter/minimal boundary target.",
+      "state": "DECLARED_SUPPORTING_CLASSICAL_RELATIVE_BOUNDARY_SCOPE",
+      "includes": [
+        "Actual graded classical Q, alpha and Omega pullbacks; retained action +[barc rho] and BV-cotangent -[barc deltaN] endpoint terms",
+        "Local lapse chart and declared endpoint N0; separate exact linear-generator Lean model"
+      ],
+      "excludes": [
+        "Classification of all polarizations, admissible full bulk BV gauge-fixing, quantum state-space chain map or equivalence to the compact-N test carrier",
+        "Measure, half-density, quantum kernel/CPT sewing, physical state/product, original cycle or G1/TOE promotion"
+      ]
+    },
+    {
+      "id": "concept:starobinsky-relative-coisotropic-primary-reduction",
+      "type": "concept",
+      "title": "경계항 소거·Q 보존·특성 방향 몫을 함께 맞추는 primary 축약",
+      "summary": "The two selected full boundary slices are Q-invariant coisotropics whose characteristic quotients have the same alpha_red and Omega_red. Their primary factors and reduction graphs in B_ext^- x B_red are graded Lagrangian; the full slices are not. Classical relation and quantum chain map remain different typed objects.",
+      "state": "DEFINED_SUPPORTING_CLASSICAL_REDUCTION"
+    },
+    {
+      "id": "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "type": "claim",
+      "claim_id": "STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "title": "Two selected primary boundary reductions preserve the relative classical BFV data",
+      "summary": "M: Pi=barc=0 and P: N=N0,rho=0 preserve Q and descend alpha/Omega to the same matter/minimal target while killing both displayed source endpoint terms under their allowed variations. Isolated barc=0 is not Q-stable; isolated rho=0 leaves the BV-cotangent residue.",
+      "statement": "In the declared local source chart both selected slices are Q-invariant coisotropics, with characteristic reduction maps r satisfying i*alpha=r*alpha_red, i*Omega=r*Omega_red and dr Q=Q_red r. Each graph is a graded Lagrangian canonical relation. This supplies no quantum boundary module, physical state or original integration cycle.",
+      "epistemic_state": "SUPPORTED",
+      "state": "SUPPORTED_SCOPED_CLASSICAL_RELATIVE_PRIMARY_REDUCTIONS"
+    },
+    {
+      "id": "evidence:starobinsky-relative-primary-boundary-result",
+      "type": "evidence",
+      "title": "Relative primary boundary reduction exact and Lean evidence",
+      "summary": "Accepted run gives 40 exact symbolic checks and 13 Lean finite linear-generator theorems. Geometric characteristic reduction and analytic extension are argued in the pinned derivation. The earlier failed Lean elaboration is preserved in Git history; the raw result is the complete current ledger.",
+      "state": "VALID_RUN_ANALYTIC_DERIVATION_AND_FINITE_LEAN_CONTROLS",
+      "observed_status": "SCOPED_TWO_CLASSICAL_RELATIVE_PRIMARY_REDUCTIONS",
+      "check_ids": [
+        "symbolic.checks.M_Q_bar_c_tangent",
+        "symbolic.checks.P_source_primitive_on_allowed_tangents",
+        "symbolic.checks.M_primary_Lagrangian_block",
+        "symbolic.checks.bar_c_only_is_not_Q_tangent",
+        "symbolic.checks.rho_only_retains_primitive",
+        "modules[0].theorems.CptSewing.RelativePrimaryBoundary.q_commutes_mProj"
+      ],
+      "source_anchors": [
+        "cpt_temporal_folded_susy/STAROBINSKY_RELATIVE_PRIMARY_BOUNDARY_DERIVATION.md sections 2-6",
+        "docs/research/ICE_STAROBINSKY_SOURCE_INDUCED_INTERVAL_BVBFV_2026-09-07.md section 3.1"
+      ]
+    },
+    {
+      "id": "artifact:starobinsky-relative-primary-boundary-runner",
+      "type": "artifact",
+      "title": "Starobinsky relative primary boundary runner",
+      "summary": "Bounded actual graded source checks and separate Lean theorem audit.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "runner",
+      "path": "cpt_temporal_folded_susy/starobinsky_relative_primary_boundary.py",
+      "sha256": "9b3f557ffdabdf33fdba346965894976851fb6934ec780d1bbda5ace910dd011"
+    },
+    {
+      "id": "artifact:starobinsky-relative-primary-boundary-derivation",
+      "type": "artifact",
+      "title": "Starobinsky relative primary boundary derivation",
+      "summary": "Classical relative pullbacks, characteristic quotients, canonical relations and isolated-condition falsifiers.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "derivation",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_RELATIVE_PRIMARY_BOUNDARY_DERIVATION.md",
+      "sha256": "335b1d984bd0161cf3fdb529c6be8fd71017c64a202ceda78f89c5659f64c7b3"
+    },
+    {
+      "id": "artifact:starobinsky-relative-primary-boundary-lean",
+      "type": "artifact",
+      "title": "Starobinsky relative primary boundary lean",
+      "summary": "Finite complex-linear primary-generator model; odd labels are not a Grassmann algebra.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "lean_source",
+      "path": "formal/cpt_sewing/CptSewing/RelativePrimaryBoundary.lean",
+      "sha256": "248a38cae8c8506b3c33a531076a487586d2a346a78528f3a9ba4b028dfb0897"
+    },
+    {
+      "id": "artifact:starobinsky-relative-primary-boundary-proof-index",
+      "type": "artifact",
+      "title": "Starobinsky relative primary boundary proof-index",
+      "summary": "Complete 13-theorem inventory and limited formalization scope.",
+      "state": "TRACKED_COMMITTED_SOURCE",
+      "artifact_kind": "proof_index",
+      "path": "formal/cpt_sewing/relative-primary-boundary-proof-index.json",
+      "sha256": "dfaaa7e2aa3d033fc7f8a4a452ee28ab7a28afafd32c5b06d811636c2f36bb32"
+    },
+    {
+      "id": "artifact:starobinsky-relative-primary-boundary-result",
+      "type": "artifact",
+      "title": "Starobinsky relative primary boundary result",
+      "summary": "Current raw SSOT for execution, exact checks and Lean diagnostics.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "result",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_RELATIVE_PRIMARY_BOUNDARY_RESULT.json",
+      "sha256": "12f7506ff015e38934634f47e2e92c6e5e40bd67bdc5ea1cf6b47776ad9b5ff1"
+    },
+    {
+      "id": "artifact:starobinsky-relative-primary-boundary-report",
+      "type": "artifact",
+      "title": "Starobinsky relative primary boundary report",
+      "summary": "Scoped result, preserved failed first elaboration and remaining quantum handoff.",
+      "state": "TRACKED_SCOPED_RESULT",
+      "artifact_kind": "report",
+      "path": "cpt_temporal_folded_susy/STAROBINSKY_RELATIVE_PRIMARY_BOUNDARY.md",
+      "sha256": "a3120fbebe45bfa862c5aa6f6e7c718ab12b2b3e68d86296641f0562af0ff726"
     }
   ],
   "edges": [
@@ -39315,6 +39433,129 @@
       "relation": "DOCUMENTS",
       "to": "concept:starobinsky-source-boundary-quantization-handoff",
       "note": "Documents the source-checked comparison, its baseline indirect path and rejected inferences; not a calculation ledger or evidence for the concept."
+    },
+    {
+      "id": "edge:4178",
+      "from": "scope:starobinsky-two-relative-primary-boundary-reductions",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy",
+      "note": "Supporting source boundary method only; no G1 evidence edge changes."
+    },
+    {
+      "id": "edge:4179",
+      "from": "concept:starobinsky-relative-coisotropic-primary-reduction",
+      "relation": "PART_OF",
+      "to": "programme:cpt-temporal-folded-susy"
+    },
+    {
+      "id": "edge:4180",
+      "from": "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "relation": "ABOUT",
+      "to": "concept:starobinsky-relative-coisotropic-primary-reduction"
+    },
+    {
+      "id": "edge:4181",
+      "from": "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "relation": "VALID_WITHIN",
+      "to": "scope:starobinsky-two-relative-primary-boundary-reductions"
+    },
+    {
+      "id": "edge:4182",
+      "from": "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "relation": "HAS_EVIDENCE",
+      "to": "evidence:starobinsky-relative-primary-boundary-result",
+      "polarity": "SUPPORTS"
+    },
+    {
+      "id": "edge:4183",
+      "from": "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "relation": "FOLLOW_UP_TO",
+      "to": "claim:STAROBINSKY_PRIMARY_BULK_DOUBLET_SPLIT_RETAINS_TWO_RELATIVE_ENDPOINT_TERMS",
+      "note": "Checks the exact two retained source terms on two declared Q-stable boundary slices."
+    },
+    {
+      "id": "edge:4184",
+      "from": "concept:starobinsky-relative-coisotropic-primary-reduction",
+      "relation": "EXTENDS",
+      "to": "concept:starobinsky-bulk-reduction-and-relative-endpoint-data",
+      "note": "Adds two explicit classical characteristic reduction relations with allowed variations."
+    },
+    {
+      "id": "edge:4185",
+      "from": "concept:starobinsky-relative-coisotropic-primary-reduction",
+      "relation": "CONTRASTS_WITH",
+      "to": "concept:starobinsky-source-boundary-quantization-handoff",
+      "note": "Classical symplectic relation does not supply a quantum complex, measure, polarization or pushforward."
+    },
+    {
+      "id": "edge:4186",
+      "from": "concept:starobinsky-relative-coisotropic-primary-reduction",
+      "relation": "CONTRASTS_WITH",
+      "to": "concept:starobinsky-primary-contraction-and-right-graded-pairing",
+      "note": "Classical characteristic quotient and compact-N test-space chain homotopy are different typed maps; no bridge is inferred."
+    },
+    {
+      "id": "edge:4187",
+      "from": "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "relation": "CITES",
+      "to": "source:cattaneo-mnev-wernli-2022-constrained-interval",
+      "note": "Uses the source component and endpoint convention, with the local reduction derived explicitly."
+    },
+    {
+      "id": "edge:4188",
+      "from": "evidence:starobinsky-relative-primary-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:ice-starobinsky-source-induced-interval-bvbfv",
+      "note": "Boundary identification barc=-sigma-plus and the two retained endpoint terms."
+    },
+    {
+      "id": "edge:4189",
+      "from": "evidence:starobinsky-relative-primary-boundary-result",
+      "relation": "DEFINED_IN",
+      "to": "artifact:starobinsky-relative-primary-boundary-runner"
+    },
+    {
+      "id": "edge:4190",
+      "from": "evidence:starobinsky-relative-primary-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:starobinsky-relative-primary-boundary-derivation"
+    },
+    {
+      "id": "edge:4191",
+      "from": "evidence:starobinsky-relative-primary-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:starobinsky-relative-primary-boundary-lean"
+    },
+    {
+      "id": "edge:4192",
+      "from": "evidence:starobinsky-relative-primary-boundary-result",
+      "relation": "DERIVED_FROM",
+      "to": "artifact:starobinsky-relative-primary-boundary-proof-index"
+    },
+    {
+      "id": "edge:4193",
+      "from": "evidence:starobinsky-relative-primary-boundary-result",
+      "relation": "RECORDED_IN",
+      "to": "artifact:starobinsky-relative-primary-boundary-result"
+    },
+    {
+      "id": "edge:4194",
+      "from": "evidence:starobinsky-relative-primary-boundary-result",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:starobinsky-relative-primary-boundary-report"
+    },
+    {
+      "id": "edge:4195",
+      "from": "claim:STAROBINSKY_TWO_SELECTED_PRIMARY_BOUNDARY_REDUCTIONS_PRESERVE_RELATIVE_BFV_DATA",
+      "relation": "DOCUMENTED_BY",
+      "to": "artifact:starobinsky-relative-primary-boundary-report"
+    },
+    {
+      "id": "edge:4196",
+      "from": "concept:starobinsky-relative-coisotropic-primary-reduction",
+      "relation": "CONTRASTS_WITH",
+      "to": "open:starobinsky-seam-ward-boundary-state-limit",
+      "note": "Resolves the selected classical relative reduction only; the source-selected quantum handoff and physical state problem remain open."
     }
   ],
   "kg_bridges": [
