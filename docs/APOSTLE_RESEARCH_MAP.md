@@ -3,6 +3,7 @@
 | 주체 | 관계 | 대상 | 공개 근거 | 상태 |
 |---|---|---|---|---|
 | 계산 워크벤치 | 문서화한다 | 연구 질문·계산·검토 기록 | [README](../README.md), [연구 지도](../research/README.md) | SOURCE_DOCUMENT |
+| workbench reframe | 분리한다 | 신화·대수 계산·물리 예측 가설의 주장 층 | [reframe](decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md) | SOURCE_DOCUMENT |
 | 과학 CLI | 제공한다 | 재현 가능한 명령 경계 | [SCIENTIFIC_CLI_MANUAL](SCIENTIFIC_CLI_MANUAL.md) | SOURCE_DOCUMENT |
 | 계산 결과 | 증명하지 않는다 | 물리학적 사실 | [AGENTS](../AGENTS.md) | SOURCE_DOCUMENT |
 | hypercomplex programme | 사용한다 | Cayley–Dickson·sedenion·zero-divisor kernel | [research/README](../research/README.md) | SOURCE_DOCUMENT |
@@ -13,6 +14,8 @@
 | sidecar registry | 감사한다 | intuition/comparator sidecar hash | [research/README](../research/README.md) | SOURCE_DOCUMENT |
 | `ice list` | 열거한다 | 이동 후에도 안정적인 runnable name | [research/README](../research/README.md) | SOURCE_DOCUMENT |
 | CLI manual | 구분한다 | 저장소 잠금 환경과 Jupyter 도구 환경 | [SCIENTIFIC_CLI_MANUAL](SCIENTIFIC_CLI_MANUAL.md#2-python-) | SOURCE_DOCUMENT |
+| lean research rules | 제한한다 | 질문·raw result·control·해석 범위의 최소 기록 | [rules](decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md) | SOURCE_DOCUMENT |
+| status ledger | 구분한다 | 현행 bounded result·quarantine·open scope | [STATUS](STATUS.md) | SOURCE_DOCUMENT |
 
 공개 자료는 계산·형식·보고서를 구분한다. 현재 공개 문서만 이 지도에 포함하며, 물리적 해석과 반증의 충분성은 별도 검토 대상이다.
 

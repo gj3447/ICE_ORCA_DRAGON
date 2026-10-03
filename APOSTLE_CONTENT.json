@@ -3,15 +3,60 @@
   "position": 2,
   "repository": "gj3447/ICE_ORCA_DRAGON",
   "source_repository": "https://github.com/gj3447/ICE_ORCA_DRAGON",
-  "source_revision": "c83f66d1fb9861d507428f49f72490b047085a93",
+  "source_revision": "32d8f8eb2d80b3ebd2f2ddc21775bbb92798cb22",
   "documents": [
     {
       "uid": "apostle-document:dc6967d876813b091984ab9dda64508345af61c9c5e0d14bd34824a785899869",
       "repository_path": "README.md",
       "source_path": "README.md",
-      "source_revision": "c83f66d1fb9861d507428f49f72490b047085a93",
+      "source_revision": "32d8f8eb2d80b3ebd2f2ddc21775bbb92798cb22",
       "sha256": "ed1116f526319bbbfe34a727789463ace7c70cb08dc1200c9a97680bfcab855d",
       "bytes": 61161,
+      "authority": "SOURCE_DOCUMENT"
+    },
+    {
+      "uid": "apostle-document:8260ca274843266bacaba5b21e1d9bd720dbfa32c3931a133d37015a169219a2",
+      "repository_path": "research/README.md",
+      "source_path": "research/README.md",
+      "source_revision": "32d8f8eb2d80b3ebd2f2ddc21775bbb92798cb22",
+      "sha256": "039483c3f49ed84f18ac9f6a4478f5e4f83a748420beac9d0fe8331213b83c7d",
+      "bytes": 1706,
+      "authority": "SOURCE_DOCUMENT"
+    },
+    {
+      "uid": "apostle-document:ac8c45f8930f779a611d6f3d8392825bf968494e72ef0ebda9b2397581c0773b",
+      "repository_path": "docs/SCIENTIFIC_CLI_MANUAL.md",
+      "source_path": "docs/SCIENTIFIC_CLI_MANUAL.md",
+      "source_revision": "32d8f8eb2d80b3ebd2f2ddc21775bbb92798cb22",
+      "sha256": "34fd62e81a06ed3e847738ee7b61eacbfa20f7c77f91e8dec6587a8aa8b73b00",
+      "bytes": 17601,
+      "authority": "SOURCE_DOCUMENT"
+    },
+    {
+      "uid": "apostle-document:aedf77121f2e9831bf343db2f2029dd504f4475992027b2a55ef625cbf8372e4",
+      "repository_path": "docs/STATUS.md",
+      "source_path": "docs/STATUS.md",
+      "source_revision": "32d8f8eb2d80b3ebd2f2ddc21775bbb92798cb22",
+      "sha256": "1ce70050231cbd44809122e8812ad480ebcae8a7add40910093e0e1d480fa273",
+      "bytes": 93229,
+      "authority": "SOURCE_DOCUMENT"
+    },
+    {
+      "uid": "apostle-document:a3e6b8680cf59794dc06365b85168ef1effd30000b7ceeabe93fef103f569749",
+      "repository_path": "docs/decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md",
+      "source_path": "docs/decisions/ICE_WORKBENCH_REFRAME_2026-05-18.md",
+      "source_revision": "32d8f8eb2d80b3ebd2f2ddc21775bbb92798cb22",
+      "sha256": "e884e729531ee30a77360406a3c9db7285e7ac6dc06b81d3187af6d4c2c1cd6b",
+      "bytes": 10161,
+      "authority": "SOURCE_DOCUMENT"
+    },
+    {
+      "uid": "apostle-document:4e6a2f355709b595951157f6018265724e7bf96921ae6811070d23f411100576",
+      "repository_path": "docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md",
+      "source_path": "docs/decisions/ICE_LEAN_RESEARCH_RULES_2026-08-31.md",
+      "source_revision": "32d8f8eb2d80b3ebd2f2ddc21775bbb92798cb22",
+      "sha256": "0169898ddb3d3e189d1bcc7bd75411df7a28ecf1458e7e7d92995c74b878fd85",
+      "bytes": 5079,
       "authority": "SOURCE_DOCUMENT"
     }
   ],
@@ -23,14 +68,14 @@
     },
     {
       "repository_path": "docs/APOSTLE_WHAT_IS.md",
-      "sha256": "ac0bc9d444f5620a810696a2a6406959f9ba803f24f805fa95fc367a1840cce4",
+      "sha256": "0d2d37d301ac7eedca552c1c902916d9074277ebc96bd2cf4ee8217de1de4bde",
       "authority": "SECONDARY_AI"
     },
     {
       "repository_path": "docs/APOSTLE_HOW_TO.md",
-      "sha256": "376da1b4a13eacb3ca322c76e4ad685fc29b1887752e8f5f75618479a3f78748",
+      "sha256": "1e07d9e84446bb718c90ac03f84bc256193dc1f9a9d3ae04406904b782af71fa",
       "authority": "SECONDARY_AI"
     },
-    {"repository_path":"docs/APOSTLE_RESEARCH_MAP.md","sha256":"80ec73631b64c2e717b8971e821317b860b09a328edbdee46c9c527a557d02d7","authority":"SECONDARY_AI"}
+    {"repository_path":"docs/APOSTLE_RESEARCH_MAP.md","sha256":"83fc906c9601679e2511bcb99a9eae372d7dd19cabf790f64b6e77df3d594bdf","authority":"SECONDARY_AI"}
   ]
 }
