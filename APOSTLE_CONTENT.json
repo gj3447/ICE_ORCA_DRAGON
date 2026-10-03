@@ -1,0 +1,35 @@
+{
+  "schema": "apostle-content/1",
+  "position": 2,
+  "repository": "gj3447/ICE_ORCA_DRAGON",
+  "source_repository": "https://github.com/gj3447/ICE_ORCA_DRAGON",
+  "source_revision": "c83f66d1fb9861d507428f49f72490b047085a93",
+  "documents": [
+    {
+      "uid": "apostle-document:dc6967d876813b091984ab9dda64508345af61c9c5e0d14bd34824a785899869",
+      "repository_path": "README.md",
+      "source_path": "README.md",
+      "source_revision": "c83f66d1fb9861d507428f49f72490b047085a93",
+      "sha256": "ed1116f526319bbbfe34a727789463ace7c70cb08dc1200c9a97680bfcab855d",
+      "bytes": 61161,
+      "authority": "SOURCE_DOCUMENT"
+    }
+  ],
+  "guides": [
+    {
+      "repository_path": "docs/APOSTLE_INDEX.md",
+      "sha256": "d5032061d14339f4982f220bef74f129414b4bc911307a1ed5e47b085b7fc75b",
+      "authority": "SECONDARY_AI"
+    },
+    {
+      "repository_path": "docs/APOSTLE_WHAT_IS.md",
+      "sha256": "1d4630a7f47259608bacbd3ffb28fd8323920570b64e959115073c6a64c430b5",
+      "authority": "SECONDARY_AI"
+    },
+    {
+      "repository_path": "docs/APOSTLE_HOW_TO.md",
+      "sha256": "a447fada10037b11794241f76073802eda10017f9229cecddea8a89f999540a2",
+      "authority": "SECONDARY_AI"
+    }
+  ]
+}
