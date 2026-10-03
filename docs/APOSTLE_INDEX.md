@@ -4,5 +4,6 @@
 
 - [무엇인가](APOSTLE_WHAT_IS.md)
 - [어떻게 검토하는가](APOSTLE_HOW_TO.md)
+- [연구 관계 지도](APOSTLE_RESEARCH_MAP.md)
 - [연구 지도](../research/README.md)
 - [과학 CLI 설명](SCIENTIFIC_CLI_MANUAL.md)
