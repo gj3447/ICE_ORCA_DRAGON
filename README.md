@@ -17,7 +17,7 @@
 [![Runnable kernels](https://img.shields.io/badge/Committed_kernels-92-3776ab?style=for-the-badge&logo=python&logoColor=white)](#current-snapshot)
 [![Reproduction ledger](https://img.shields.io/badge/Repro_cases-14-10b981?style=for-the-badge)](#reproduction-ledger)
 [![Control plane](https://img.shields.io/badge/Control_plane-TypeScript_%2B_Effect-3178c6?style=for-the-badge)](package.json)
-[![License](https://img.shields.io/badge/License-AGPL--3.0--or--later-yellow?style=for-the-badge)](LICENSING.md)
+[![License](https://img.shields.io/badge/license-MHL--1.2-blue)](LICENSE-NOTICE.md)
 
 </div>
 
@@ -757,5 +757,8 @@ is not a sign, root, spectrum, RAQ, quantum-gravity, physics, or TOE result.
 
 ## License
 
-AGPL-3.0-or-later, with a separate commercial-license option. See
-[`LICENSING.md`](LICENSING.md).
+**MetaHumotonic License 1.2** — [LICENSE](LICENSE); [scope, prior grants and third-party notices](LICENSE-NOTICE.md).
+
+지정한 하드웨어의 접근권한과 전체 관리 권한을 합의한 명세서에 따라 공유하고, **CHU의 일부가 된다**는 참여 원칙을 적용합니다. 실제 접근에는 별도 승인이 필요합니다.
+
+Source-available; not OSI-approved. Existing grants and separately licensed material remain valid.
